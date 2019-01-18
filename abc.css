@@ -2,6 +2,21 @@
   display: flex; justify-content: space-between;
 }
 
+.wrap {
+  padding: 1.5em 0 1.5em 0 !important
+}
+
+.menu-scroll-down {
+  position: relative;
+  top: 1.5em !important;
+  left: 72em !important;
+}
+
 .entry-header {
   margin-bottom: 1.5em !important
+}
+
+.article-anchor {
+  position: relative;
+  top: -4em !important;
 }
