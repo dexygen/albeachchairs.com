@@ -121,10 +121,10 @@ img.emoji {
   <div class="menu-top-menu-container">
     <ul id="top-menu" class="menu">
       <li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-93"><a href="./">Home</a></li>
-      <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="#about-anchor">About Us</a></li>
-      <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="#rentals-anchor">Equipment Rentals</a></li>
-      <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="#contact-anchor">Contact Us</a></li>
-      <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="#properties-anchor">Properties</a></li>
+      <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="#about-to">About Us</a></li>
+      <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="#rentals-to">Equipment Rentals</a></li>
+      <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="#contact-to">Contact Us</a></li>
+      <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="#properties-to">Properties</a></li>
     </ul>
   </div>
 			<a href="#content" class="menu-scroll-down"><svg class="icon icon-arrow-right" aria-hidden="true" role="img"> <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use> </svg><span class="screen-reader-text">Scroll down to content</span></a>
@@ -158,7 +158,7 @@ img.emoji {
       </div><!-- .panel-content -->
     </article><!-- #post-## -->
 		
-    <span id='about-anchor' class='article-anchor'>&nbsp;</span>
+    <span id='about-to' class='article-anchor'>&nbsp;</span>
     <article id="panel1" class="twentyseventeen-panel  post-75 page type-page status-publish hentry" >
       <div class="panel-content">
         <div class="wrap">
@@ -167,7 +167,7 @@ img.emoji {
           </header><!-- .entry-header -->
           <div class="entry-content">
             <p><span style="color: #333333; font-family: 'libre franklin', 'helvetica neue', helvetica, arial, sans-serif;">
-            Alabama Beach Chairs' proprietor has 29 years experience in the on-site, beach rental industry, which ensures the safest,
+            Alabama Beach Chairs' proprietor has <span id="yrs-exp">29</span> years experience in the on-site, beach rental industry, which ensures the safest,
             most professionally operated beach service for all guests, with customer service as priority one
             </span></p>
             <p><span style="font-family: 'libre franklin', 'helvetica neue', helvetica, arial, sans-serif; font-size: 1rem;">
@@ -182,7 +182,7 @@ img.emoji {
       </div><!-- .panel-content -->
     </article><!-- #post-## -->
 
-    <span id='rentals-anchor' class='article-anchor'>&nbsp;</span>
+    <span id='rentals-to' class='article-anchor'>&nbsp;</span>
     <article id="panel3" class="twentyseventeen-panel post-136 page type-page status-publish hentry" >
       <div class="panel-content">
         <div class="wrap">
@@ -226,7 +226,7 @@ img.emoji {
       </div><!-- .panel-content -->
     </article><!-- #post-## -->
     
-  <span id='contact-anchor' class='article-anchor'>&nbsp;</span>
+  <span id='contact-to' class='article-anchor'>&nbsp;</span>
     <article id="panel4" class="twentyseventeen-panel  post-76 page type-page status-publish hentry" >
       <div class="panel-content">
         <div class="wrap">
@@ -253,7 +253,7 @@ img.emoji {
 
     </article><!-- #post-## -->
   
-    <span id='properties-anchor' class='article-anchor'>&nbsp;</span>
+    <span id='properties-to' class='article-anchor'>&nbsp;</span>
     <article id="panel2" class="twentyseventeen-panel  post-123 page type-page status-publish hentry" >
       <div class="panel-content">
         <div class="wrap">
@@ -263,9 +263,9 @@ img.emoji {
           <div class="entry-content">
             <h4>Orange Beach</h4>
             <div>
-              <ul>
-                <li>Windward Pointe Condominiums</li>
-                <li>Summer Salt East Beach Houses</li>
+              <ul id="properties-list">
+                <li><a href="#" data-img-src="./prop-imgs/windward.png">Windward Pointe Condominiums</a></li>
+                <li><a href="#" data-img-src="./prop-imgs/summer-salt-east.png">Summer Salt East Beach Houses</a></li>
                 <li>Sugar Beach Condominiums</li>
                 <li>Seascape Condominiums</li>
                 <li>Hammock Dunes Beach Houses</li>
@@ -273,6 +273,10 @@ img.emoji {
               </ul>
             </div>
             <h4>Gulf Shores, Coming Soon</h4>
+            <p></p>
+            <p>Property Images (hover over property links above)</p>
+            <div id="img-prop-name"></div>
+            <img id="prop-img" src="" style="width: inherit" />
           </div><!-- .entry-content -->
         </div><!-- .wrap -->
       </div><!-- .panel-content -->
@@ -315,6 +319,19 @@ img.emoji {
 </div><!-- #page -->
 	<div style="display:none">
 	</div>
+  <script>
+    var propertyLinks = document.getElementById("properties-list").getElementsByTagName("A");
+    for (var i = 0, n = propertyLinks.length; i < n; i++) {
+      (function (propertyLink) {
+        if (propertyLink.dataset.imgSrc) {
+          propertyLink.onmouseover = function () {
+            document.getElementById("img-prop-name").innerHTML = propertyLink.innerHTML;
+            document.getElementById("prop-img").src = propertyLink.dataset.imgSrc;
+          }
+        }
+      })(propertyLinks[i]);
+    }
+  </script>
 <script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201903'></script>
 <script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2019Janaa'></script>
 <script type='text/javascript'>
