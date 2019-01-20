@@ -264,19 +264,21 @@ img.emoji {
             <h4>Orange Beach</h4>
             <div>
               <ul id="properties-list">
-                <li><a href="#" data-img-src="./prop-imgs/windward.png">Windward Pointe Condominiums</a></li>
-                <li><a href="#" data-img-src="./prop-imgs/summer-salt-east.png">Summer Salt East Beach Houses</a></li>
+                <li>
+                  <a href="#" data-img-src="./prop-imgs/windward.png">Windward Pointe Condominiums</a>
+                  <img src="" style="width: inherit" />
+                </li>
+                <li>
+                  <a href="#" data-img-src="./prop-imgs/summer-salt-east.png">Summer Salt East Beach Houses</a>
+                  <img src="" style="width: inherit" />
+                </li>
                 <li>Sugar Beach Condominiums</li>
                 <li>Seascape Condominiums</li>
-                <li>Hammock Dunes Beach Houses</li>
                 <li>Romar Beach Bed and Breakfast</li>
+                <li>Hammock Dunes Beach Houses</li>
               </ul>
             </div>
             <h4>Gulf Shores, Coming Soon</h4>
-            <p></p>
-            <p>Property Images (hover over property links above)</p>
-            <div id="img-prop-name"></div>
-            <img id="prop-img" src="" style="width: inherit" />
           </div><!-- .entry-content -->
         </div><!-- .wrap -->
       </div><!-- .panel-content -->
@@ -323,11 +325,19 @@ img.emoji {
     var propertyLinks = document.getElementById("properties-list").getElementsByTagName("A");
     for (var i = 0, n = propertyLinks.length; i < n; i++) {
       (function (propertyLink) {
-        if (propertyLink.dataset.imgSrc) {
+        if (propertyLink.nextSibling 
+            && propertyLink.nextSibling.nextSibling 
+            && propertyLink.nextSibling.nextSibling.tagName === 'IMG' 
+            && propertyLink.dataset.imgSrc) {
+          
+          var imgEl = propertyLink.nextSibling.nextSibling;
+          
           propertyLink.onmouseover = function () {
-            document.getElementById("img-prop-name").innerHTML = propertyLink.innerHTML;
-            document.getElementById("prop-img").src = propertyLink.dataset.imgSrc;
+            propertyLink.nextSibling.nextSibling.src = propertyLink.dataset.imgSrc;
           }
+          propertyLink.onmouseleave = function () {
+            propertyLink.nextSibling.nextSibling.src = "";
+          }  
         }
       })(propertyLinks[i]);
     }
