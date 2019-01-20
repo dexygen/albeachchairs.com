@@ -322,7 +322,9 @@ img.emoji {
 	<div style="display:none">
 	</div>
   <script>
-    var propertyLinks = document.getElementById("properties-list").getElementsByTagName("A");
+    var propertyList = document.getElementById("properties-list");
+    var propertyLinks = propertyList.getElementsByTagName("A");
+    
     for (var i = 0, n = propertyLinks.length; i < n; i++) {
       (function (propertyLink) {
         if (propertyLink.nextSibling 
@@ -333,11 +335,20 @@ img.emoji {
           var imgEl = propertyLink.nextSibling.nextSibling;
           
           propertyLink.onmouseover = function () {
+            for (var j = 0, k = propertyLinks.length; j < k; j++) {
+              var propLink = propertyLinks[j];
+              if (propLink.nextSibling 
+                  && propLink.nextSibling.nextSibling 
+                  && propLink.nextSibling.nextSibling.tagName === 'IMG' 
+                  && propLink.dataset.imgSrc 
+                  && propLink.nextSibling.nextSibling.src.indexOf('prop-imgs') >= 0) {
+                
+                propLink.nextSibling.nextSibling.src = '';
+              }
+            }
+            
             propertyLink.nextSibling.nextSibling.src = propertyLink.dataset.imgSrc;
           }
-          propertyLink.onmouseleave = function () {
-            propertyLink.nextSibling.nextSibling.src = "";
-          }  
         }
       })(propertyLinks[i]);
     }
