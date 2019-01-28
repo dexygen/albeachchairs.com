@@ -121,7 +121,7 @@
                     <!-- .entry-header -->
                     <div class="entry-content">
                       <p><span style="color: #333333; font-weight: bold !important; font-family: 'Montserrat', 'helvetica neue', helvetica, arial, sans-serif;">
-                        Alabama Beach Chairs' proprietor has <span id="yrs-exp">29</span> years experience in the on-site, beach rental industry, which ensures the safest,
+                        Alabama Beach Chairs' proprietor has <span id="yrs-exp"></span> years experience in the on-site, beach rental industry, which ensures the safest,
                         most professionally operated beach service for all guests, with customer service as priority one.  Just ask Summer!
                         </span>
                       </p>
@@ -306,6 +306,9 @@
     <div style="display:none">
     </div>
     <script>
+      var yrsExpEl = document.getElementById('yrs-exp');
+      yrsExpEl.innerHTML = (new Date().getFullYear()) - 1990;
+      
       var propertyList = document.getElementById("properties-list");
       var propertyLinks = propertyList.getElementsByTagName("A");
       
