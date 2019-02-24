@@ -230,7 +230,7 @@
                     <div class="entry-content">
                       <h4 style="font-family: 'Comic Sans MS' !important">Orange Beach</h4>
                       <div>
-                        <ul id="properties-list">
+                        <ul id="ob-properties-list">
                           <li>
                             <a href="#" data-img-src="./prop-imgs/windward.png">Windward Pointe Condominiums</a>
                             <img src="" style="width: inherit" />
@@ -257,7 +257,19 @@
                           </li>
                         </ul>
                       </div>
-                      <h4 style="font-family: 'Comic Sans MS' !important">Gulf Shores, Coming Soon</h4>
+                      <h4 style="font-family: 'Comic Sans MS' !important">Gulf Shores</h4>
+                      <div>
+                        <ul id="gs-properties-list">
+                          <li>
+                            <a href="#" data-img-src="./prop-imgs/whaler.png">Whaler Condominiums</a>
+                            <img src="" style="width: inherit" />
+                          </li>
+                          <li>
+                            <a href="#" data-img-src="./prop-imgs/gulf-house.png">Gulf House Condominiums</a>
+                            <img src="" style="width: inherit" />
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <!-- .entry-content -->
                   </div>
@@ -309,8 +321,11 @@
       var yrsExpEl = document.getElementById('yrs-exp');
       yrsExpEl.innerHTML = (new Date().getFullYear()) - 1990;
       
-      var propertyList = document.getElementById("properties-list");
-      var propertyLinks = propertyList.getElementsByTagName("A");
+      var obPropertyList = document.getElementById("ob-properties-list");
+      var gsPropertyList = document.getElementById("gs-properties-list");
+      
+      var propertyLinks = Array.prototype.concat.apply([], obPropertyList.getElementsByTagName("A"));
+      propertyLinks = Array.prototype.concat.apply(propertyLinks, gsPropertyList.getElementsByTagName("A"));
       
       for (var i = 0, n = propertyLinks.length; i < n; i++) {
         (function (propertyLink) {
