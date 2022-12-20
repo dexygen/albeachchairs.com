@@ -1,1 +1,0 @@
-<?php header('Location: ./abc/'); exit;
