@@ -12,8 +12,19 @@ body#abc-viewport {
   font-family: Pangolin, serif;
 }
 
-.abc-phone {
+.abc-header-links, .abc-phone {
   margin-top: -0.875rem;
+}
+
+.abc-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.abc-section {
+  margin: 0;
+  scroll-margin-top: 5rem;
 }
 
 .abc-property-city-section {
