@@ -22,6 +22,21 @@ body#abc-viewport {
   top: 0;
 }
 
+@media (max-width:768px) {
+  .abc-menu-links {
+    display: none;
+  }
+}
+
+@media (min-width:769px) {
+  .abc-toggle-menu-mobile {
+    display: none;
+  }
+  .abc-menu-links {
+    display: flex !important;
+  }
+}
+
 .abc-section {
   margin: 0;
   scroll-margin-top: 5rem;

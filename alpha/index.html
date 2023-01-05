@@ -34,19 +34,18 @@
           <div class="has-text-success-dark is-size-3 mb-1 font-pangolin">CALL TO RESERVE YOUR PLACE ON THE BEACH</div>
           <div class="mb-3 font-pangolin abc-header-links">
             <a class="is-size-2 is-underlined" href="tel:8502551515">850-255-1515</a>
-            <div class="has-text-danger-dark is-block is-size-3">We will 
-              <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
-                deliver to YOUR location
-              </a>
+            <div class="has-text-danger-dark is-block is-size-3">
+              <a class="has-text-danger-dark is-underlined" href="#abc-delivery">We deliver</a>
+              to YOUR location
             </div>
             <div class="is-size-4 has-text-success-dark ">
-              OR you can reserve at <a class="is-underlined" href="#abc-properties">properties we serve</a> 
+              OR reserve at <a class="is-underlined" href="#abc-properties">properties we serve</a> 
               <div class="is-italic">
                 (NO delivery fees apply at <a class="is-underlined" href="#abc-properties">THESE condos)</a>
               </span>
             </div>
           </div>
-          <div id="abc-carousel" class="mb-5">
+          <div id="abc-carousel" class="mt-2 mb-5">
             <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/sunrise.jpg"></img></div>
@@ -57,7 +56,11 @@
           <div class="pt-2 has-text-danger-dark is-size-4 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs
           </div>
-          <div class="columns">
+          <div class="mb-5 is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
+            <!-- Hidden except on mobile, text gets toggled between Show and Hide -->
+            <div>Show Menu</div>
+          </div>
+          <div class="columns abc-menu-links">
             <a class="column is-2" href="#abc-delivery">Delivery Service</a>
             <a class="column is-2" href="#abc-condo-service">Condo Service</a>
             <a class="column is-2" href="#abc-equipment-pricing">Equipment/Pricing</a>
@@ -67,7 +70,7 @@
           </div>
         </nav>
         <!-- DELIVERY -->
-        <section class="mt-6 mb-6 abc-section" id="abc-delivery">
+        <section class="pt-2 mb-6 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
               <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
@@ -80,14 +83,16 @@
                 <div class="has-text-success-dark is-size-2 font-pangolin abc-phone">
                   <a class="is-size-2 is-underlined" href="tel:8502551515">850-255-1515</a>
                 </div>
-                <div class="has-text-primary-dark is-size-4">Alabama Beach Chairs' Delivery Sets</div>
-                <ul class="is-size-5">
+                <div class="has-text-primary-dark is-size-3">Alabama Beach Chairs' Delivery Sets</div>
+                <ul class="is-size-4">
                   <li>Two folding beach chairs with footrests</li>
                   <li>One 7' beach umbrella</li>
-                  <li><a class="is-underlined" href="#abc-chair-set-pricing">Tap or scroll down for pricing (left column)</a></li>
+                  <li>
+                    <a class="is-underlined" href="#abc-chair-set-pricing">Tap or scroll down for pricing (left column)</a>
+                  </li>
                   <li>Setup by 9 am, Pick up at 5 pm</li>
                   <li>Setup/Pickup $30 per day</li>
-                  <li class="has-text-weight-bold is-size-4 mt-5 font-kalam has-text-danger-dark">
+                  <li class="has-text-weight-bold is-size-4 mt-4 font-kalam has-text-danger-dark">
                     Setup/Pickup fees apply ONLY for Deliveries,
                     <br>NOT for
                     <a class="is-underlined" href="abc-properties">properties we serve</a> 
@@ -97,28 +102,30 @@
             </article>
           </div>
         </section>
+        <!-- CONDO SERVICE -->
         <section class="mb-6 mx-4">
           <header class="columns is-mobile is-centered">
             <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
             CONDO SERVICE
             </div>
           </header>
-          <div class="is-block"><img src="./assets/images/slideshow/loungers.jpg"></img></div>
+          <div class="is-block pt-1"><img src="./assets/images/slideshow/loungers.jpg"></img></div>
           <article class="columns is-mobile is-centered font-pangolin">
-            <section class="column is-10">
-              <header class="column is-10 is-offset-1 is-size-5">
+            <section class="column is-10  is-size-4">
+              <header class="column is-8 is-offset-2">
                 Alabama Beach Chairs provides wooden beach loungers, folding beach chairs, beach umbrellas, kayaks, paddleboards, 
                 fun beach games, and a full rental inventory
               </header>
-              <div class="is-size-4 has-text-success-dark ">
+              <div>
                 <span class="has-text-info-dark">Delivery fees</span> 
-                <span class="is-italic">
-                  DO NOT APPLY at <a class="is-underlined" href="abc-properties">properties we serve</a>
+                <span class="is-italic has-text-success-dark">
+                  DO NOT APPLY&nbsp;<a class="is-underlined" href="abc-properties">at properties we serve</a>  
                 </span>
               </div>
             </section>
           </article>
         </section>
+        <!-- EQUIPMENT/PRICING -->
         <section class="mb-6">
           <header class="columns is-mobile is-centered">
             <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
@@ -164,5 +171,6 @@
 
     <!-- SCRIPTS BELOW HERE -->
     <script src="./assets/js/abc-carousel.js"></script>
+    <script src="./assets/js/abc-toggle-menu-mobile.js"></script>
     <script src="./assets/js/abc-property-pic-events.js"></script>
 </body></html>
