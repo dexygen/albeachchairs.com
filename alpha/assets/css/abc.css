@@ -22,6 +22,10 @@ body#abc-viewport {
   top: 0;
 }
 
+.abc-menu-about-link {
+  margin-left: -1.25rem;
+}
+
 @media (max-width:768px) {
   .abc-menu-links {
     display: none;
