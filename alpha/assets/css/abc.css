@@ -46,6 +46,10 @@ body#abc-viewport {
   scroll-margin-top: 6.25rem;
 }
 
+.abc-featured-property-label {
+  margin-top: -0.5rem;
+}
+
 .abc-property-city-section {
   margin-top: -1.5rem 
 }
