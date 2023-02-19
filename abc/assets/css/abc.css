@@ -12,8 +12,42 @@ body#abc-viewport {
   font-family: Pangolin, serif;
 }
 
-.abc-phone {
+.abc-header-links, .abc-phone {
   margin-top: -0.875rem;
+}
+
+.abc-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.abc-menu-about-link {
+  margin-left: -1.25rem;
+}
+
+@media (max-width:768px) {
+  .abc-menu-links {
+    display: none;
+  }
+}
+
+@media (min-width:769px) {
+  .abc-toggle-menu-mobile {
+    display: none;
+  }
+  .abc-menu-links {
+    display: flex !important;
+  }
+}
+
+.abc-section {
+  margin: 0;
+  scroll-margin-top: 6.25rem;
+}
+
+.abc-featured-property-label {
+  margin-top: -0.5rem;
 }
 
 .abc-property-city-section {
