@@ -36,7 +36,9 @@
             CONTACT US TO RESERVE YOUR PLACE ON THE BEACH
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
-            <?php include("./contact_component.php"); ?>
+            <div class="abc-contact-component">
+              <?php include("./contact_component.php"); ?>
+            </div>
             <div class="has-text-danger-dark is-block is-size-3 mt-3">
               <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
                 We deliver to YOUR location
@@ -76,15 +78,19 @@
         <!-- DELIVERY -->
         <section class="pt-2 mb-6 abc-section" id="abc-delivery">
           <div class="pt-3">
-            <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
-              DELIVERY
+            <header>
+              <div class="columns is-mobile is-centered">
+                <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+                DELIVERY
+                </div>
+              </div>
+              <div class="has-text-primary-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
+              <div class="mb-3 abc-contact-component">
+                <?php include("./contact_component.php"); ?>
               </div>
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 offset-1 has-text-centered">
-                <div class="has-text-success-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
-                <?php include("./contact_component.php"); ?>
                 <div class="has-text-primary-dark is-size-3 mt-3">Alabama Beach Chairs' Delivery Sets</div>
                 <ul class="is-size-4">
                   <li>Two folding beach chairs with footrests</li>
@@ -280,15 +286,19 @@
         <!-- ABOUT/CONTACT -->
         <section class="pt-2 mb-6 abc-section abc-about-contact" id="abc-about-contact">
           <div class="pt-3">
-            <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
-                ABOUT/CONTACT
+            <header>
+              <div class="columns is-mobile is-centered mb-2">
+                <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+                  ABOUT/CONTACT
+                </div>
+              </div>
+              <div class="mb-3 abc-contact-component has-text-centered">
+                <?php include("./contact_component.php"); ?>
               </div>
             </header>
           </div>
           <article class="columns is-mobile has-text-centered font-pangolin">
             <section class="column is-10 is-offset-1">
-              <?php include("./contact_component.php"); ?>
               <div class="is-size-4 mt-3">
                 <div class="mb-4">
                   Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,

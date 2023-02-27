@@ -3,10 +3,16 @@
     $isPhone = stripos($ua, 'Android') || stripos($ua, 'iPhone');
     if ($isPhone) {
 ?>
-    <div class="is-size-4">Tap a contact method below</div>
-    <div><a class="is-size-2 is-underlined" href="tel:2512334000">Call: 251-233-4000</a></div>
+    <div class="is-size-5 font-pangolin">Tap a contact method below</div>
+    <a class="button abc-contact-button is-rounded is-link is-size-2 is-underlined" href="tel:2512334000">
+        251-233-4000
+    </a>
 <?php } else { ?>
-    <div class="is-size-2 has-text-link">Call: 251-233-4000</div>
-    <div class="is-size-4">Or click below</div>
+    <div class="font-pangolin">
+        <div class="is-size-2 has-text-link">251-233-4000</div>
+        <div class="is-size-5">Or click below for email form</div>
+    </div>
 <?php } ?>
-<a id="email_modal_link" class="is-size-3 is-underlined" href="#">Email/form (albeachchairs@gmail.com)</a>
+    <div class="button abc-contact-button abc-email-button is-rounded is-link is-underlined mt-1 font-pangolin">
+        albeachchairs@gmail.com
+    </div>

@@ -12,6 +12,21 @@ body#abc-viewport {
   font-family: Pangolin, serif;
 }
 
+.abc-contact-component {
+  line-height: normal;
+}
+
+.abc-contact-button, .button.is-rounded {
+  padding-left: calc(0.5em + .25em);
+  padding-right: calc(0.5em + .25em);
+}
+
+.abc-email-button {
+  font-size: 1.625rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .abc-header-links, .abc-phone {
   margin-top: -0.875rem;
 }
