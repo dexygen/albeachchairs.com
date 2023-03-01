@@ -92,8 +92,7 @@
                   <li>Setup by 9 am, Pick up at 5 pm</li>
                   <li>Setup/Pickup $30 per day</li>
                   <li class="has-text-weight-bold is-size-4 mt-4 font-kalam has-text-danger-dark">
-                    Setup/Pickup fees apply ONLY for Deliveries,
-                    <br>NOT for
+                    Setup/Pickup fees apply ONLY for Deliveries, NOT for
                     <a class="is-underlined" href="#abc-properties">properties we serve</a> 
                   </li>
                 </ul>
@@ -140,7 +139,7 @@
               </div>
               <div class="is-size-3 has-text-warning-dark mt-3">CONDO EQUIPMENT PRICING</div>
               <div class="columns is-mobile is-centered">
-                <aside class="column has-text-left is-size-5-mobile is-two-fifths-tablet">
+                <aside class="column has-text-left is-size-5-mobile is-3-tablet">
                   <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
                   <ul class="has-text-weight-semibold">
                     <li>1 hour: $10</li>
@@ -159,7 +158,7 @@
                     <li>1 day: $25</li>
                   </ul>
                 </aside>
-                <aside class="column has-text-left is-size-5-mobile is-two-fifths-tablet">
+                <aside class="column has-text-left is-size-5-mobile is-4-tablet">
                   <div class="has-text-primary-dark">Kayaks and Paddleboards, may switch between the two during your time</div>
                   <ul class="has-text-weight-semibold">
                     <li>1 hour: $30</li>
