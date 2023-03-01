@@ -177,52 +177,6 @@
             </section>
           </article>
         </section>
-        <!-- EQUIPMENT/PRICING 
-        <section class="mb-6 abc-section" id="abc-equipment-pricing">
-          <header class="columns is-mobile is-centered">
-            <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
-            EQUIPMENT/PRICING
-            </div>
-          </header>
-          <article class="columns is-mobile is-centered font-pangolin mt-1">
-              <section class="columns is-mobile is-centered">
-                <aside class="column is-two-fifths has-text-left is-size-5">
-                  <div id="abc-chair-set-pricing" class="has-text-success-dark">2-person Chair Sets, with Umbrella</div>
-                  <ul class="has-text-weight-semibold">
-                    <li>1 hour: $10</li>
-                    <li>1 day: $40</li>
-                    <li>2 days: $70</li>
-                    <li>3 days: $100</li>
-                    <li>4 days: $130</li>
-                    <li>5 days: $160</li>
-                    <li>6 days: $180</li>
-                    <li>7 days: $200</li>
-                    <li>After 2pm: $25 that day</li>
-                    <li>After 3pm: $15 that day</li>
-                    <li class="mt-2 has-text-success-dark has-text-weight-normal">
-                      ONE chair, OR umbrella
-                    </li>
-                    <li>1 day: $25</li>
-                  </ul>
-                </aside>
-                <aside class="column is-two-fifths has-text-left is-size-5 ">
-                  <div class="has-text-success-dark">Kayaks and Paddleboards, may switch between the two during your time</div>
-                  <ul class="has-text-weight-semibold">
-                    <li>1 hour: $30</li>
-                    <li>2 hours: $50</li>
-                    <li>1 day: $100</li>
-                  </ul>
-                  <div class="is-size-5 has-text-success-dark pt-2">Beach Games</div>
-                  <ul class="has-text-weight-semibold">
-                    <li>1 hour: $15</li>
-                    <li>2 hours: $20</li>
-                    <li>1 day: $30</li>
-                  </ul>
-                </aside>
-            </section>
-          </article>		  
-        </section>
-        -->
         <!-- FEATURED PROPERTY -->
         <section class="pt-2 mb-6 abc-section" id="abc-featured-property">
           <div class="pt-3">
@@ -311,7 +265,7 @@
                     <li>
                       <a href="#">Phoenix VII</a>
                       <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/phoenix-vii.PNG" />
+                        <img class="column is-8 is-offset-2" src="./assets/images/properties/phoenix-vii-small.png" />
                       </div>
                     </li>
                     <li>
