@@ -62,11 +62,10 @@
             <!-- Hidden except on mobile, text gets toggled between Show and Hide -->
             <div>Show Menu</div>
           </div>
-          <div class="columns abc-menu-links">
+          <div class="columns abc-menu-links is-size-3-mobile">
             <a class="column is-2" href="#abc-delivery">Delivery Service</a>
             <a class="column is-2" href="#abc-condo-service">Condo Service</a>
-            <a class="column is-2" href="#abc-equipment-pricing">Equipment/Pricing</a>
-            <a class="column is-2 ml-3" href="#abc-featured-property">Featured Property</a>
+            <a class="column is-4" href="#abc-featured-property">Featured Property</a>
             <a class="column is-2" href="#abc-properties">Properties</a>
             <a class="column is-2 abc-menu-about-link" href="#abc-about-contact">About/Contact</a>
           </div>
@@ -89,9 +88,7 @@
                 <ul class="is-size-4">
                   <li>Two folding beach chairs with footrests</li>
                   <li>One 7' beach umbrella</li>
-                  <li>
-                    <a class="is-underlined" href="#abc-chair-set-pricing">Tap or scroll down for pricing (left column)</a>
-                  </li>
+                  <li>Umbrellas securely fastened by one of our friendly attendants</li>
                   <li>Setup by 9 am, Pick up at 5 pm</li>
                   <li>Setup/Pickup $30 per day</li>
                   <li class="has-text-weight-bold is-size-4 mt-4 font-kalam has-text-danger-dark">
@@ -100,6 +97,23 @@
                     <a class="is-underlined" href="#abc-properties">properties we serve</a> 
                   </li>
                 </ul>
+                <div class="is-size-3 has-text-warning-dark mt-3">DELIVERY EQUIPMENT PRICING</div>
+                <section class="is-size-4">
+                  <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
+                  <ul class="has-text-weight-semibold">
+                    <li>1 day: $40</li>
+                    <li>2 days: $70</li>
+                    <li>3 days: $90</li>
+                    <li>4 days: $110</li>
+                    <li>5 days: $130</li>
+                    <li>6 days: $150</li>
+                    <li>7 days: $170</li>
+                    <li class="mt-2 has-text-primary-dark has-text-weight-normal">
+                      ONE chair, OR umbrella
+                    </li>
+                    <li>1 day: $20</li>
+                  </ul>
+                </section>
               </div>
             </article>
           </div>
@@ -120,14 +134,50 @@
               </header>
               <div>
                 <span class="has-text-info-dark">Delivery fees</span> 
-                <span class="is-italic has-text-success-dark">
+                <span class="is-italic has-text-primary-dark">
                   DO NOT APPLY&nbsp;<a class="is-underlined" href="#abc-properties">at properties we serve</a>  
                 </span>
+              </div>
+              <div class="is-size-3 has-text-warning-dark mt-3">CONDO EQUIPMENT PRICING</div>
+              <div class="columns is-mobile is-centered">
+                <aside class="column has-text-left is-size-5-mobile is-two-fifths-tablet">
+                  <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
+                  <ul class="has-text-weight-semibold">
+                    <li>1 hour: $10</li>
+                    <li>1 day: $40</li>
+                    <li>2 days: $70</li>
+                    <li>3 days: $100</li>
+                    <li>4 days: $130</li>
+                    <li>5 days: $160</li>
+                    <li>6 days: $180</li>
+                    <li>7 days: $200</li>
+                    <li>After 2pm: $25 that day</li>
+                    <li>After 3pm: $15 that day</li>
+                    <li class="mt-2 has-text-primary-dark has-text-weight-normal">
+                      ONE chair, OR umbrella
+                    </li>
+                    <li>1 day: $25</li>
+                  </ul>
+                </aside>
+                <aside class="column has-text-left is-size-5-mobile is-two-fifths-tablet">
+                  <div class="has-text-primary-dark">Kayaks and Paddleboards, may switch between the two during your time</div>
+                  <ul class="has-text-weight-semibold">
+                    <li>1 hour: $30</li>
+                    <li>2 hours: $50</li>
+                    <li>1 day: $100</li>
+                  </ul>
+                  <div class="has-text-primary-dark pt-2">Beach Games</div>
+                  <ul class="has-text-weight-semibold">
+                    <li>1 hour: $15</li>
+                    <li>2 hours: $20</li>
+                    <li>1 day: $30</li>
+                  </ul>
+                </aside>
               </div>
             </section>
           </article>
         </section>
-        <!-- EQUIPMENT/PRICING -->
+        <!-- EQUIPMENT/PRICING 
         <section class="mb-6 abc-section" id="abc-equipment-pricing">
           <header class="columns is-mobile is-centered">
             <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
@@ -149,10 +199,10 @@
                     <li>7 days: $200</li>
                     <li>After 2pm: $25 that day</li>
                     <li>After 3pm: $15 that day</li>
-					<li class="mt-2 has-text-success-dark has-text-weight-normal">
-					  ONE chair, OR umbrella
-					</li>
-					<li>1 day: $25</li>
+                    <li class="mt-2 has-text-success-dark has-text-weight-normal">
+                      ONE chair, OR umbrella
+                    </li>
+                    <li>1 day: $25</li>
                   </ul>
                 </aside>
                 <aside class="column is-two-fifths has-text-left is-size-5 ">
@@ -172,6 +222,7 @@
             </section>
           </article>		  
         </section>
+        -->
         <!-- FEATURED PROPERTY -->
         <section class="pt-2 mb-6 abc-section" id="abc-featured-property">
           <div class="pt-3">
@@ -203,10 +254,10 @@
             <div class="mt-3 mb-4">
               <header class="columns is-mobile is-centered">
                 <div class="column is-10">
-                  <div class="has-text-primary-dark has-text-centered is-size-4">Gulf Shores</div>
+                  <div class="has-text-primary-dark has-text-centered is-size-3">Gulf Shores</div>
                 </div>
               </header>
-              <section class="abc-property-city-section is-size-5">
+              <section class="abc-property-city-section is-size-4">
                 <ul>
                   <li>
                     <a href="#">Whaler Condominiums</a>
@@ -228,10 +279,10 @@
             <div class="mt-3 mb-4">
               <header class="columns is-mobile is-centered">
                 <div class="column is-10">
-                  <div class="has-text-primary-dark has-text-centered is-size-4">Orange Beach</div>
+                  <div class="has-text-primary-dark has-text-centered is-size-3">Orange Beach</div>
                 </div>
               </header>
-              <section class="abc-property-city-section is-size-5">
+              <section class="abc-property-city-section is-size-4">
                 <ul>
                     <li>
                       <a href="#">Windward Pointe Condominiums</a>
@@ -286,20 +337,22 @@
           </div>
           <article class="columns is-mobile is-centered font-pangolin">
             <section class="column is-10">
-              <div class="has-text-primary-dark has-text-centered is-size-4">
-			    <a href="tel:2512334000">251-233-4000</a>
-			  </div>
-              <div class="has-text-primary-dark has-text-centered is-size-4 mb-1">albeachchairs@gmail.com</div>
-              <div class="mb-4 is-size-5">
-                Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
-                most professionally operated beach service for all guests, with customer service as priority one.                
+              <div class="has-text-primary-dark has-text-centered is-underlined is-size-2">
+                <a href="tel:2512334000">251-233-4000</a>
               </div>
-              <div class="is-size-5">
-                We provide superior customer service to the beautiful beaches of Orange Beach and Gulf Shores.
-                Your locally owned and operated, family business takes pride in helping to
-                create the most pleasurable and memorable vacation experience for our
-                guests by providing quality equipment for all your beach safety, comfort
-                and recreational requirements.                
+              <div class="has-text-primary-dark has-text-centered is-size-3 mb-1">albeachchairs@gmail.com</div>
+              <div class="is-size-4">
+                <div class="mb-4">
+                  Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
+                  most professionally operated beach service for all guests, with customer service as priority one.                
+                </div>
+                <div>
+                  We provide superior customer service to the beautiful beaches of Orange Beach and Gulf Shores.
+                  Your locally owned and operated, family business takes pride in helping to
+                  create the most pleasurable and memorable vacation experience for our
+                  guests by providing quality equipment for all your beach safety, comfort
+                  and recreational requirements.                
+                </div>
               </div>
             </section>
           </article>
