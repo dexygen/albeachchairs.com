@@ -158,7 +158,7 @@
                     <li>1 day: $25</li>
                   </ul>
                 </aside>
-                <aside class="column has-text-left is-size-5-mobile is-4-tablet">
+                <aside class="column has-text-left is-size-5-mobile is-5-tablet">
                   <div class="has-text-primary-dark">Kayaks and Paddleboards, may switch between the two during your time</div>
                   <ul class="has-text-weight-semibold">
                     <li>1 hour: $30</li>
