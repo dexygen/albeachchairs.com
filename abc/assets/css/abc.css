@@ -22,10 +22,6 @@ body#abc-viewport {
   top: 0;
 }
 
-.abc-menu-about-link {
-  margin-left: -1.25rem;
-}
-
 @media (max-width:768px) {
   .abc-menu-links {
     display: none;
@@ -44,6 +40,10 @@ body#abc-viewport {
 .abc-section {
   margin: 0;
   scroll-margin-top: 6.25rem;
+}
+
+ul.abc-delivery-list-items {
+  list-style: disc inside;
 }
 
 .abc-featured-property-label {

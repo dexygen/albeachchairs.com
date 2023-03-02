@@ -67,11 +67,11 @@
             <a class="column is-2" href="#abc-condo-service">Condo Service</a>
             <a class="column is-4" href="#abc-featured-property">Featured Property</a>
             <a class="column is-2" href="#abc-properties">Properties</a>
-            <a class="column is-2 abc-menu-about-link" href="#abc-about-contact">About/Contact</a>
+            <a class="column is-2" href="#abc-about-contact">About/Contact</a>
           </div>
         </nav>
         <!-- DELIVERY -->
-        <section class="pt-2 mb-6 abc-section" id="abc-delivery">
+        <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
               <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
@@ -85,18 +85,25 @@
                   <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
                 </div>
                 <div class="has-text-primary-dark is-size-3">Alabama Beach Chairs' Delivery Sets</div>
-                <ul class="is-size-4">
-                  <li>Two folding beach chairs with footrests</li>
-                  <li>One 7' beach umbrella</li>
-                  <li>Umbrellas securely fastened by one of our friendly attendants</li>
-                  <li>Setup by 9 am, Pick up at 5 pm</li>
-                  <li>Setup/Pickup $30 per day</li>
-                  <li class="has-text-weight-bold is-size-4 mt-4 font-kalam has-text-danger-dark">
-                    Setup/Pickup fees apply ONLY for Deliveries, NOT for
-                    <a class="is-underlined" href="#abc-properties">properties we serve</a> 
-                  </li>
-                </ul>
-                <div class="is-size-3 has-text-warning-dark mt-3">DELIVERY EQUIPMENT PRICING</div>
+                <div class="has-text-primary-dark is-size-4">
+                  2-person Chair Sets, with Umbrella
+                </div>
+                <div class="columns is-mobile is-centered">
+                  <section class="column has-text-left pb-0 is-size-5-mobile is-9-tablet is-7-desktop is-6-fullhd">
+                    <ul class="is-size-4 abc-delivery-list-items">
+                      <li>Two folding beach chairs with footrests</li>
+                      <li>One 7' beach umbrella</li>
+                      <li>Umbrellas securely fastened by one of our friendly attendants</li>
+                      <li>Setup by 9 am, Pick up at 5 pm</li>
+                      <li>Setup/Pickup $30 per day</li>
+                    </ul>
+                    <div class="has-text-weight-bold is-size-4 mt-2 font-kalam has-text-danger-dark">
+                      Setup/Pickup fees apply ONLY for Deliveries, NOT for
+                      <a class="is-underlined" href="#abc-properties">properties we serve</a> 
+                    </div>
+                  </section>
+                </div>
+                <div class="is-size-3 has-text-warning-dark">DELIVERY EQUIPMENT PRICING</div>
                 <section class="is-size-4">
                   <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
                   <ul class="has-text-weight-semibold">
