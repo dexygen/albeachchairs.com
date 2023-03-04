@@ -214,24 +214,34 @@
           </header>
           <article class="columns is-mobile is-centered font-pangolin">
             <div class="mt-3 mb-4">
+              <div class="is-size-5">Tap or Click underlined links for image</div>
               <header class="columns is-mobile is-centered">
                 <div class="column is-10">
                   <div class="has-text-primary-dark has-text-centered is-size-3">Gulf Shores</div>
                 </div>
               </header>
+              <!-- PROPERTY IMAGE MODAL -->
+              <div class="modal abc-property-img-modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                  <p>
+                    <!-- the image's src gets set on the mouseover event -->
+                    <img class="image abc-property-img" src="">
+                  </p>
+                </div>
+                <button class="abc-property-img-modal-close modal-close is-large" aria-label="close"></button>
+              </div>
+              <!-- END PROPERTY IMAGE MODAL -->
               <section class="abc-property-city-section is-size-4">
                 <ul>
-                  <li>
-                    <a href="#">Whaler Condominiums</a>
+                  <li data-abc-property-img-src="./assets/images/properties/whaler.png">
+                    <a href="#" class="is-underlined">Whaler Condominiums</a>
                     <div class="is-hidden columns is-mobile">
                       <img class="column is-8 is-offset-2" src="./assets/images/properties/whaler.png" />
                     </div>
                   </li>
-                  <li>
-                    <a href="#">Gulf House Condominiums</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/gulf-house.png" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/gulf-house.png">
+                    <a href="#" class="is-underlined">Gulf House Condominiums</a>
                   </li>
                 </ul>
               </section>
@@ -246,41 +256,23 @@
               </header>
               <section class="abc-property-city-section is-size-4">
                 <ul>
-                  <li>
-                    <a href="#">Windward Pointe Condominiums</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/windward.png" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/windward.png">
+                    <a href="#" class="is-underlined">Windward Pointe Condominiums</a>
                   </li>
-                  <li>
-                    <a href="#">Summer Salt East</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/summer-salt-east.png" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/summer-salt-east.png">
+                    <a href="#" class="is-underlined">Summer Salt East</a>
                   </li>
-                  <li>
-                    <a href="#">Seascape Condominiums</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/seascape.PNG" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/seascape.PNG">
+                    <a href="#" class="is-underlined">Seascape Condominiums</a>
                   </li>
-                  <li>
-                    <a href="#">Romar Beach Bed and Breakfast</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/romar-house.PNG" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/romar-house.PNG">
+                    <a href="#" class="is-underlined">Romar Beach Bed and Breakfast</a>
                   </li>
-                  <li>
-                    <a href="#">Phoenix VII</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/phoenix-vii-small.png" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/phoenix-vii-small.png">
+                    <a href="#" class="is-underlined">Phoenix VII</a>
                   </li>
-                  <li>
-                    <a href="#">Hammock Dunes</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/hammock-dunes.jpg" />
-                    </div>
+                  <li data-abc-property-img-src="./assets/images/properties/hammock-dunes.jpg">
+                    <a href="#" class="is-underlined">Hammock Dunes</a>
                   </li>
                 </ul>
               </section>
