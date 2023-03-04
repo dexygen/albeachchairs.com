@@ -32,7 +32,9 @@
           <div class="has-text-danger-dark is-size-3 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs has the equipment you need!
           </div>
-          <div class="has-text-success-dark is-size-3 mb-1 font-pangolin">CALL TO RESERVE YOUR PLACE ON THE BEACH</div>
+          <div class="has-text-success-dark is-size-3 mb-1 font-pangolin">
+            CONTACT US TO RESERVE YOUR PLACE ON THE BEACH
+          </div>
           <div class="mb-3 font-pangolin abc-header-links">
             <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
             <div class="has-text-danger-dark is-block is-size-3">
@@ -58,7 +60,7 @@
           <div class="pt-2 has-text-danger-dark is-size-4 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs
           </div>
-          <div class="mb-5 is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
+          <div class="mb-5 is-size-5 is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
             <!-- Hidden except on mobile, text gets toggled between Show and Hide -->
             <div>Show Menu</div>
           </div>
@@ -74,13 +76,13 @@
         <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
+              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
               DELIVERY
               </div>
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="has-text-success-dark is-size-3 font-pangolin">CALL FOR DELIVERY</div>
+                <div class="has-text-success-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
                 <div class="has-text-success-dark is-size-2 font-pangolin abc-phone">
                   <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
                 </div>
@@ -127,7 +129,7 @@
         <!-- CONDO SERVICE -->
         <section class="mb-6 mx- abc-section" id="abc-condo-service">
           <header class="columns is-mobile is-centered">
-            <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
+            <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
             CONDO SERVICE
             </div>
           </header>
@@ -188,7 +190,7 @@
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
               <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
-              Featured Property
+              FEATURED PROPERTY
               </div>
             </header>
             <div class="has-text-primary-dark is-size-2 abc-featured-property-label">Phoenix VII</div>
@@ -206,7 +208,7 @@
         <section class="pt-2 mb-4 abc-section" id="abc-properties">
           <div class="pt-3">
           <header class="columns is-mobile is-centered mb-2">
-            <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
+            <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
             PROPERTIES WE SERVE
             </div>
           </header>
@@ -244,44 +246,43 @@
               </header>
               <section class="abc-property-city-section is-size-4">
                 <ul>
-                    <li>
-                      <a href="#">Windward Pointe Condominiums</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/windward.png" />
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#">Summer Salt East</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/summer-salt-east.png" />
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#">Seascape Condominiums</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/seascape.PNG" />
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#">Romar Beach Bed and Breakfast</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/romar-house.PNG" />
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#">Phoenix VII</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/phoenix-vii-small.png" />
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#">Hammock Dunes</a>
-                      <div class="is-hidden columns is-mobile">
-                        <img class="column is-8 is-offset-2" src="./assets/images/properties/hammock-dunes.jpg" />
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                  <li>
+                    <a href="#">Windward Pointe Condominiums</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/windward.png" />
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">Summer Salt East</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/summer-salt-east.png" />
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">Seascape Condominiums</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/seascape.PNG" />
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">Romar Beach Bed and Breakfast</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/romar-house.PNG" />
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">Phoenix VII</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/phoenix-vii-small.png" />
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">Hammock Dunes</a>
+                    <div class="is-hidden columns is-mobile">
+                      <img class="column is-8 is-offset-2" src="./assets/images/properties/hammock-dunes.jpg" />
+                    </div>
+                  </li>
+                </ul>
               </section>
             </div>
           </article>
@@ -290,17 +291,17 @@
         <section class="pt-2 mb-6 abc-section abc-about-contact" id="abc-about-contact">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-5 has-background-danger-dark has-text-danger-light font-kalam">
+              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
                 ABOUT/CONTACT
               </div>
             </header>
           </div>
           <article class="columns is-mobile is-centered font-pangolin">
             <section class="column is-10">
-              <div class="has-text-primary-dark has-text-centered is-underlined is-size-2">
+              <div class="has-text-link has-text-centered is-underlined is-size-2">
                 <a href="tel:2512334000">251-233-4000</a>
               </div>
-              <div class="has-text-primary-dark has-text-centered is-size-3 mb-1">albeachchairs@gmail.com</div>
+              <div class="has-text-primary-dark has-text-centered is-size-4 mb-1">albeachchairs@gmail.com</div>
               <div class="is-size-4">
                 <div class="mb-4">
                   Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
