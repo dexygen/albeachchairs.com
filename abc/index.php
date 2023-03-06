@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/bulma.min.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/abc.css" type="text/css">
   </head>
-  <body id="abc-viewport">
+  <body id="abc-viewport"><html>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2LTCZ"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -223,25 +223,36 @@
               <!-- PROPERTY IMAGE MODAL -->
               <div class="modal abc-property-img-modal">
                 <div class="modal-background"></div>
-                <div class="modal-content">
-                  <p>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <!-- Title value gets passed in when property link is clicked -->
+                    <p class="modal-card-title abc-property-img-modal-title is-size-3-tablet has-text-link"></p>
+                    <button class="abc-property-img-modal-close modal-close is-large" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body columns">
+                    <p class="column">
                     <!-- the image's src gets set on the mouseover event -->
                     <img class="image abc-property-img" src="">
-                  </p>
+                    </p>
+                  </section>
+                  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
+                    <button class="button abc-property-img-modal-close pb-6 column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+                      CLOSE
+                    </button>
+                  </footer>
                 </div>
-                <button class="abc-property-img-modal-close modal-close is-large" aria-label="close"></button>
               </div>
               <!-- END PROPERTY IMAGE MODAL -->
               <section class="abc-property-city-section is-size-4">
                 <ul>
                   <li data-abc-property-img-src="./assets/images/properties/whaler.png">
-                    <a href="#" class="is-underlined">Whaler Condominiums</a>
+                    <a class="is-underlined">Whaler Condominiums</a>
                     <div class="is-hidden columns is-mobile">
                       <img class="column is-8 is-offset-2" src="./assets/images/properties/whaler.png" />
                     </div>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/gulf-house.png">
-                    <a href="#" class="is-underlined">Gulf House Condominiums</a>
+                    <a class="is-underlined">Gulf House Condominiums</a>
                   </li>
                 </ul>
               </section>
@@ -257,22 +268,22 @@
               <section class="abc-property-city-section is-size-4">
                 <ul>
                   <li data-abc-property-img-src="./assets/images/properties/windward.png">
-                    <a href="#" class="is-underlined">Windward Pointe Condominiums</a>
+                    <a class="is-underlined">Windward Pointe Condominiums</a>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/summer-salt-east.png">
-                    <a href="#" class="is-underlined">Summer Salt East</a>
+                    <a class="is-underlined">Summer Salt East</a>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/seascape.PNG">
-                    <a href="#" class="is-underlined">Seascape Condominiums</a>
+                    <a class="is-underlined">Seascape Condominiums</a>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/romar-house.PNG">
-                    <a href="#" class="is-underlined">Romar Beach Bed and Breakfast</a>
+                    <a class="is-underlined">Romar Beach Bed and Breakfast</a>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/phoenix-vii-small.png">
-                    <a href="#" class="is-underlined">Phoenix VII</a>
+                    <a class="is-underlined">Phoenix VII</a>
                   </li>
                   <li data-abc-property-img-src="./assets/images/properties/hammock-dunes.jpg">
-                    <a href="#" class="is-underlined">Hammock Dunes</a>
+                    <a class="is-underlined">Hammock Dunes</a>
                   </li>
                 </ul>
               </section>
@@ -312,9 +323,6 @@
         </section>
       </main>
     </div>
-
-    <!-- SCRIPTS BELOW HERE -->
-    <script src="./assets/js/abc-carousel.js"></script>
-    <script src="./assets/js/abc-toggle-menu-mobile.js"></script>
-    <script src="./assets/js/abc-property-pic-events.js"></script>
-</body></html>
+    <!-- DOM MANIPULATION FUNCTIONS INCLUDED AT BOTTOM AFTER DOM HAS LOADED -->
+    <script src="./assets/js/abc-dom.js"></script>
+  </body></html>
