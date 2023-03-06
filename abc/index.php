@@ -63,12 +63,12 @@
           <div class="mb-1 pb-1 is-size-5 is-hidden-tablet is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
             <div>Show Menu</div>
           </div>
-          <div class="columns abc-menu-links py-1 is-size-4-mobile is-hidden-mobile is-size-5-desktop has-text-weight-semibold">
-            <a class="column is-2 py-1" href="#abc-delivery">Delivery Service</a>
-            <a class="column is-2 py-1" href="#abc-condo-service">Condo Service</a>
-            <a class="column is-4 py-1" href="#abc-featured-property">Featured Property</a>
-            <a class="column is-2 py-1" href="#abc-properties">Properties</a>
-            <a class="column is-2 py-1" href="#abc-about-contact">About/Contact</a>
+          <div class="abc-menu-links is-flex is-justify-content-space-evenly pb-3 is-size-4-mobile is-hidden-mobile is-size-5-desktop has-text-weight-semibold">
+            <a href="#abc-delivery">Delivery Service</a>
+            <a id="abc-condo-service-link" href="#abc-condo-service">Condo Service</a>
+            <a id="abc-featured-property-link" href="#abc-featured-property">Featured Property</a>
+            <a href="#abc-properties">Properties</a>
+            <a href="#abc-about-contact">About/Contact</a>
           </div>
         </nav>
         <!-- DELIVERY -->
