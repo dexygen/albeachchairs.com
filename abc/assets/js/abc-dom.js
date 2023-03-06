@@ -30,8 +30,6 @@ const abcPropertyListItemsEls = document.querySelectorAll(".abc-property-city-se
     
     let propertyImgLinkEl = propertyListItemEl.querySelector("a");
     propertyImgModalTitleEl.innerHTML = propertyImgLinkEl.innerHTML;
-
-    console.log(JSON.stringify(getComputedStyle(propertyImgModalEl.querySelector(".modal-card-foot")), null, 2));
   });
 });
 
