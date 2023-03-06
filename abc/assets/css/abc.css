@@ -25,20 +25,8 @@ body#abc-viewport {
 }
 
 @media (max-width:768px) {
-  .abc-menu-links {
-    display: none;
-  }
   .abc-property-img-modal-footer {
     justify-content: center;
-  }
-}
-
-@media (min-width:769px) {
-  .abc-toggle-menu-mobile {
-    display: none;
-  }
-  .abc-menu-links {
-    display: flex !important;
   }
 }
 

@@ -19,21 +19,19 @@ setInterval(() => {
 /* PROPERTY IMAGES FUNCTIONALITY */
 const propertyImgModalEl = document.querySelector(".abc-property-img-modal");
 const propertyImgModalTitleEl = propertyImgModalEl.querySelector(".abc-property-img-modal-title");
-const abcPropertyImgModalCloseEls = propertyImgModalEl.querySelectorAll(".abc-property-img-modal-close");
-const abcPropertyListItemsEls = document.querySelectorAll(".abc-property-city-section li");
+const propertyImgModalCloseEls = propertyImgModalEl.querySelectorAll(".abc-property-img-modal-close");
 
-[...abcPropertyListItemsEls].forEach(propertyListItemEl => {
-  propertyListItemEl.addEventListener("click", () => {;
-    propertyImgModalEl.classList.add("is-active");
+const propertyListItemsEls = document.querySelectorAll(".abc-property-city-section li");
+[...propertyListItemsEls].forEach(propertyListItemEl => {
+  propertyListItemEl.addEventListener("click", () => {
     let propertyImgEl = propertyImgModalEl.querySelector(".abc-property-img");
     propertyImgEl.src = propertyListItemEl.dataset.abcPropertyImgSrc;
-    
-    let propertyImgLinkEl = propertyListItemEl.querySelector("a");
-    propertyImgModalTitleEl.innerHTML = propertyImgLinkEl.innerHTML;
+    propertyImgModalEl.classList.add("is-active");
+    propertyImgModalTitleEl.innerHTML = propertyListItemEl.querySelector("a").innerHTML;
   });
 });
 
-[...abcPropertyImgModalCloseEls].forEach(imageModalCloseEl => {
+[...propertyImgModalCloseEls].forEach(imageModalCloseEl => {
   imageModalCloseEl.addEventListener("click", () => {
     propertyImgModalEl.classList.remove("is-active");
   });
@@ -42,17 +40,17 @@ const abcPropertyListItemsEls = document.querySelectorAll(".abc-property-city-se
 
 /* MOBILE MENU FUNCTIONALITY */
 const toggleMenuMobile = document.querySelector(".abc-toggle-menu-mobile");
-const abcMenuLinks = document.querySelector(".abc-menu-links");
+const menuLinks = document.querySelector(".abc-menu-links");
 
 toggleMenuMobile.addEventListener("click", function(selection) {
   if (selection.target.innerHTML === "Show Menu") {
     selection.target.innerHTML = "Hide Menu";
-    abcMenuLinks.classList.remove("is-hidden");
-    abcMenuLinks.classList.add("is-block");
+    menuLinks.classList.remove("is-hidden-mobile");
+    menuLinks.classList.add("is-block");
   }
   else {
     selection.target.innerHTML = "Show Menu";
-    abcMenuLinks.classList.remove("is-block");
-    abcMenuLinks.classList.add("is-hidden");
+    menuLinks.classList.remove("is-block");
+    menuLinks.classList.add("is-hidden-mobile");
   }
 });

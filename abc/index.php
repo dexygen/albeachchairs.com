@@ -60,16 +60,15 @@
           <div class="pt-2 has-text-danger-dark is-size-4 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs
           </div>
-          <div class="mb-5 is-size-5 is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
-            <!-- Hidden except on mobile, text gets toggled between Show and Hide -->
+          <div class="mb-1 pb-1 is-size-5 is-hidden-tablet is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
             <div>Show Menu</div>
           </div>
-          <div class="columns abc-menu-links is-size-3-mobile">
-            <a class="column is-2" href="#abc-delivery">Delivery Service</a>
-            <a class="column is-2" href="#abc-condo-service">Condo Service</a>
-            <a class="column is-4" href="#abc-featured-property">Featured Property</a>
-            <a class="column is-2" href="#abc-properties">Properties</a>
-            <a class="column is-2" href="#abc-about-contact">About/Contact</a>
+          <div class="columns abc-menu-links py-1 is-size-4-mobile is-hidden-mobile is-size-5-desktop has-text-weight-semibold">
+            <a class="column is-2 py-1" href="#abc-delivery">Delivery Service</a>
+            <a class="column is-2 py-1" href="#abc-condo-service">Condo Service</a>
+            <a class="column is-4 py-1" href="#abc-featured-property">Featured Property</a>
+            <a class="column is-2 py-1" href="#abc-properties">Properties</a>
+            <a class="column is-2 py-1" href="#abc-about-contact">About/Contact</a>
           </div>
         </nav>
         <!-- DELIVERY -->
