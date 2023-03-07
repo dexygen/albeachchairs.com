@@ -86,7 +86,7 @@
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="has-text-warning-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
+                <div class="has-text-warning-dark is-size-3 font-pangolin my-1">CONTACT US FOR DELIVERY</div>
                 <div class="has-text-success-dark is-size-2 font-pangolin abc-phone">
                   <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
                 </div>
@@ -197,7 +197,7 @@
               FEATURED PROPERTY
               </div>
             </header>
-            <div class="has-text-primary-dark is-size-2 abc-featured-property-label">Phoenix VII</div>
+            <div class="has-text-primary-dark is-size-2 abc-featured-property-label font-pangolin">Phoenix VII</div>
             <div class="is-block pt-1"><img src="./assets/images/properties/phoenix-vii-small.png"></img></div>
             <article class="columns is-mobile is-centered font-pangolin mt-1">
                <section class="column is-10 is-size-4 has-text-left">
