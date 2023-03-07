@@ -52,7 +52,8 @@
           <div id="abc-carousel" class="mt-2 mb-5">
             <!-- 
               Appending small query string to each image url to force refresh 
-              especially after uploading and on mobile 
+              especially after uploading and on mobile, if these images are altered,
+              e.g. resized, the query string "h=180" should be changed
             -->
             <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
@@ -85,7 +86,7 @@
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="has-text-success-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
+                <div class="has-text-warning-dark is-size-3 font-pangolin">CONTACT US FOR DELIVERY</div>
                 <div class="has-text-success-dark is-size-2 font-pangolin abc-phone">
                   <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
                 </div>
