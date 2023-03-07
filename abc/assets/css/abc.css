@@ -24,18 +24,7 @@ body#abc-viewport {
   top: 0;
 }
 
-#abc-condo-service-link {
-  margin-left: -1.5rem;
-}
-
-#abc-featured-property-link {
-  margin-left: -1.5rem;
-}
-
 @media (max-width:768px) {
-  .abc-menu-links {
-    flex-direction: column;
-  }
   .abc-property-img-modal-footer {
     justify-content: center;
   }
