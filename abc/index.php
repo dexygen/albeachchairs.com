@@ -134,8 +134,8 @@
           </header>
           <div class="is-block pt-1"><img src="./assets/images/slideshow/lined-up-kit-chairs.jpg"></img></div>
           <article class="columns is-mobile is-centered font-pangolin">
-            <section class="column is-10  is-size-4">
-              <header class="column is-8 is-offset-2">
+            <section class="column is-10 is-size-4">
+              <header class="column is-8 is-offset-2 has-text-left-tablet">
                 Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, 
                 fun beach games, and a full rental inventory
               </header>
@@ -195,7 +195,7 @@
             <div class="has-text-primary-dark is-size-2 abc-featured-property-label">Phoenix VII</div>
             <div class="is-block pt-1"><img src="./assets/images/properties/phoenix-vii-small.png"></img></div>
             <article class="columns is-mobile is-centered font-pangolin mt-1">
-               <section class="column is-10  is-size-4">
+               <section class="column is-10 is-size-4 has-text-left">
                   Alabama Beach Chairs proudly serves Phoenix VII, directly on the white sandy shores 
                   of Orange Beach, Alabama, offering vacation rentals with great beach views 
                 from every unit.
@@ -305,7 +305,7 @@
                 <a href="tel:2512334000">251-233-4000</a>
               </div>
               <div class="has-text-primary-dark has-text-centered is-size-4 mb-1">albeachchairs@gmail.com</div>
-              <div class="is-size-4">
+              <div class="is-size-4 has-text-left">
                 <div class="mb-4">
                   Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
                   most professionally operated beach service for all guests, with customer service as priority one.                
