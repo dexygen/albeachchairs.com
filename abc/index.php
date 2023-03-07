@@ -197,7 +197,7 @@
               FEATURED PROPERTY
               </div>
             </header>
-            <div class="has-text-primary-dark is-size-2 abc-featured-property-label font-pangolin">Phoenix VII</div>
+            <div class="has-text-primary-dark is-size-2 abc-featured-property-label font-pangolin mt-1">Phoenix VII</div>
             <div class="is-block pt-1"><img src="./assets/images/properties/phoenix-vii-small.png"></img></div>
             <article class="columns is-mobile is-centered font-pangolin mt-1">
                <section class="column is-10 is-size-4 has-text-left">
