@@ -216,6 +216,30 @@
             PROPERTIES WE SERVE
             </div>
           </header>
+          <!-- PROPERTY IMAGE MODAL -->
+          <div class="modal abc-property-img-modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <!-- Title value gets passed in when property link is clicked -->
+                <p class="modal-card-title abc-property-img-modal-title is-size-3-tablet has-text-link"></p>
+                <button class="abc-property-img-modal-close modal-close is-large" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body columns">
+                <p class="column">
+                <!-- the image's src gets set on the mouseover event -->
+                <img class="image abc-property-img is-inline-block" src="">
+                </p>
+              </section>
+              <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
+                <!-- pb-6 class below doesn't seem correct but "works" -->
+                <button class="button abc-property-img-modal-close pb-6 column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+                  CLOSE
+                </button>
+              </footer>
+            </div>
+          </div>
+          <!-- END PROPERTY IMAGE MODAL -->
           <article class="columns is-mobile is-centered font-pangolin">
             <div class="mt-3 mb-4">
               <div class="is-size-5">Tap or Click underlined links for image</div>
@@ -224,30 +248,6 @@
                   <div class="has-text-primary-dark has-text-centered is-size-3">Gulf Shores</div>
                 </div>
               </header>
-              <!-- PROPERTY IMAGE MODAL -->
-              <div class="modal abc-property-img-modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <!-- Title value gets passed in when property link is clicked -->
-                    <p class="modal-card-title abc-property-img-modal-title is-size-3-tablet has-text-link"></p>
-                    <button class="abc-property-img-modal-close modal-close is-large" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body columns">
-                    <p class="column">
-                    <!-- the image's src gets set on the mouseover event -->
-                    <img class="image abc-property-img is-inline-block" src="">
-                    </p>
-                  </section>
-                  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-                    <!-- pb-6 class below doesn't seem correct but "works" -->
-                    <button class="button abc-property-img-modal-close pb-6 column is-narrow-mobile is-2 is-offset-5 is-link is-large">
-                      CLOSE
-                    </button>
-                  </footer>
-                </div>
-              </div>
-              <!-- END PROPERTY IMAGE MODAL -->
               <section class="abc-property-city-section is-size-4">
                 <ul>
                   <li data-abc-property-img-src="./assets/images/properties/whaler.png">
