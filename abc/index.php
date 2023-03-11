@@ -240,29 +240,33 @@
             </div>
           </div>
           <!-- END PROPERTY IMAGE MODAL -->
-          <article class="columns is-mobile is-centered font-pangolin">
-            <div class="mt-3 mb-4">
-              <div class="is-size-5">Tap or Click underlined links for image</div>
-              <header class="columns is-mobile is-centered">
-                <div class="column is-10">
-                  <div class="has-text-primary-dark has-text-centered is-size-3">Gulf Shores</div>
-                </div>
-              </header>
-              <section class="abc-property-city-section is-size-4">
-                <ul>
-                  <li data-abc-property-img-src="./assets/images/properties/whaler.png">
-                    <a class="is-underlined">Whaler Condominiums</a>
-                    <div class="is-hidden columns is-mobile">
-                      <img class="column is-8 is-offset-2" src="./assets/images/properties/whaler.png" />
+          <div class="is-size-5 font-pangolin">Tap or Click underlined links for image</div>
+          <?php
+            require_once("./abc-property-details.php");
+            foreach($abcPropertyDetailsByCity as $city => $propertyDetails) {
+          ?>
+            <article class="columns is-mobile is-centered font-pangolin">
+              <div class="mt-3 mb-4">
+                <header class="columns is-mobile is-centered">
+                  <div class="column is-10">
+                    <div class="has-text-primary-dark has-text-centered is-size-3">
+                      <?php echo $city; ?>
                     </div>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/gulf-house.png">
-                    <a class="is-underlined">Gulf House Condominiums</a>
-                  </li>
-                </ul>
-              </section>
-            </div>
-          </article>
+                  </div>
+                </header>
+                <section class="abc-property-city-section is-size-4">
+                  <ul>
+                  <?php foreach($propertyDetails as $details) { ?>
+                    <li data-abc-property-img-src="<?php echo $details["imgSrcPath"]; ?>">
+                      <a class="is-underlined"><?php echo $details["name"]; ?></a>
+                    </li>
+                  <?php } ?>
+                  </ul>
+                </section>
+              </div>
+            </article>       
+          <?php } ?>
+          <!--
           <article class="columns is-mobile is-centered font-pangolin">
             <div class="mt-3 mb-4">
               <header class="columns is-mobile is-centered">
@@ -293,7 +297,7 @@
                 </ul>
               </section>
             </div>
-          </article>
+          </article>-->
         </section>
         <!-- ABOUT/CONTACT -->
         <section class="pt-2 mb-6 abc-section abc-about-contact" id="abc-about-contact">
