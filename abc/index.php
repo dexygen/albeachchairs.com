@@ -266,38 +266,6 @@
               </div>
             </article>       
           <?php } ?>
-          <!--
-          <article class="columns is-mobile is-centered font-pangolin">
-            <div class="mt-3 mb-4">
-              <header class="columns is-mobile is-centered">
-                <div class="column is-10">
-                  <div class="has-text-primary-dark has-text-centered is-size-3">Orange Beach</div>
-                </div>
-              </header>
-              <section class="abc-property-city-section is-size-4">
-                <ul>
-                  <li data-abc-property-img-src="./assets/images/properties/windward.png">
-                    <a class="is-underlined">Windward Pointe Condominiums</a>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/summer-salt-east.png">
-                    <a class="is-underlined">Summer Salt East</a>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/seascape.PNG">
-                    <a class="is-underlined">Seascape Condominiums</a>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/romar-house.PNG">
-                    <a class="is-underlined">Romar Beach Bed and Breakfast</a>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/phoenix-vii-small.png">
-                    <a class="is-underlined">Phoenix VII</a>
-                  </li>
-                  <li data-abc-property-img-src="./assets/images/properties/hammock-dunes.jpg">
-                    <a class="is-underlined">Hammock Dunes</a>
-                  </li>
-                </ul>
-              </section>
-            </div>
-          </article>-->
         </section>
         <!-- ABOUT/CONTACT -->
         <section class="pt-2 mb-6 abc-section abc-about-contact" id="abc-about-contact">
