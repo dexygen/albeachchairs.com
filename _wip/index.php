@@ -37,6 +37,7 @@
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
             <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
+            <?php require_once("_inc_contact_component.php"); ?>
             <div class="has-text-danger-dark is-block is-size-3">
               <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
                 We deliver to YOUR location
@@ -53,7 +54,8 @@
             <!-- 
               Appending small query string to each image url to force refresh 
               especially after uploading and on mobile, if these images are altered,
-              e.g. resized, the query string "h=180" should be changed
+              e.g. resized, the query string "h=180" should be changed, e.g. perhaps
+              appending the date: "h=180-apr01-2023", or some such
             -->
             <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
@@ -242,7 +244,7 @@
           <!-- END PROPERTY IMAGE MODAL -->
           <div class="is-size-5 font-pangolin">Tap or Click underlined links for image</div>
           <?php
-            require_once("./_inc_property_details.php");
+            require_once("_inc_property_details.php");
             foreach($abcPropertyDetailsByCity as $city => $propertyDetails) {
           ?>
             <article class="columns is-mobile is-centered font-pangolin">
