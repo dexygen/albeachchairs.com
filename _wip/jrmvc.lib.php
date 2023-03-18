@@ -4,7 +4,7 @@
    * jrMvc (JackRabbitMvc -- formerly barebonesmvc-php) 
    * is a one-file MVC micro-framework for PHP 5+ (supports 7)
    * 
-   * Copyright (c) 2007-2021, George M. Jempty
+   * Copyright (c) 2007-2023, George M. Jempty
    *
    * "Perfection is attained not when there is nothing left to add,
    *  but when there is nothing left to take away."
@@ -45,8 +45,8 @@
            $mto->setModelValues(['Th'=>'Thursday', 'Fr'=>'Friday', 'Sa'=>'Saturday']);
 
            return $mto;                                     // 6) return MTO
-         }
-     }
+        }
+      }
 
      DemoController::sendResponse(new DemoController());    // 7) send response
    *
@@ -114,9 +114,13 @@
     }
     
     protected function unsetNonSessionGlobals() {
-      $session = $GLOBALS['_SESSION'];
+      if (array_key_exists('_SESSION', $GLOBALS)) {
+        $session = $GLOBALS['_SESSION'];
+      }
       unset($GLOBALS);
-      $GLOBALS['_SESSION'] = $session;      
+      if (isset($session)) {
+        $GLOBALS['_SESSION'] = $session;  
+      }    
     }
     
     protected function onNullTemplate() {}

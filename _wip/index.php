@@ -18,6 +18,12 @@
     </style>
     <link rel="stylesheet" href="./assets/css/bulma.min.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/abc.css" type="text/css">
+    <!-- load axios for AJAX since "fetch" won't be built in for IE<=11 users -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" 
+      integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer">
+    </script>
   </head>
   <body id="abc-viewport"><html>
     <!-- Google Tag Manager (noscript) -->

@@ -19,11 +19,27 @@ setInterval(() => {
 /* CONTACT MODAL FUNCTIONALITY */
 const contactButtonLink = document.querySelector(".abc-contact-form-link");
 const contactModal = document.querySelector(".abc-contact-modal");
+const modalEmailForm = document.querySelector(".abc-email-form");
+const modalSubmitButton = document.querySelector(".abc-contact-modal-submit");
+const modalEmailSuccessNotification = document.querySelector(".abc-email-success-notification");
 const modalCloseMechanisms = document.querySelectorAll(".abc-contact-modal-close");
 
 contactButtonLink.addEventListener("click", () => contactModal.classList.add("is-active"));
 [...modalCloseMechanisms].forEach(closeMechanism => {  
   closeMechanism.addEventListener("click", () => contactModal.classList.remove("is-active"));
+});
+
+modalSubmitButton.addEventListener("click", () => {
+  let payload = JSON.stringify(Object.fromEntries(new FormData(modalEmailForm)));
+  axios.post("./contact/send_email.php", payload)
+    .then(response => {
+        console.log(response.data);
+        modalEmailSuccessNotification.classList.remove("is-hidden");
+    })
+    .catch(err => {
+        // Handle errors
+        console.error(err);
+    });
 });
 
 

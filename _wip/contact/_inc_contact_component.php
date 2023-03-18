@@ -18,14 +18,19 @@ if (!$isPhone) :?>
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
+      <p class="modal-card-title">Email to albeachchairs@gmail.com</p>
       <button class="delete abc-contact-modal-close" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
-      <!-- Content ... -->
+      <form class="abc-email-form">
+        <label>Enter something:</label><input type="text" name="something" />
+      </form>
+      <div class="abc-email-success-notification is-hidden">
+        Your email was successfully sent
+      </div>
     </section>
     <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
+      <button class="button is-success abc-contact-modal-submit">Submit</button>
       <button class="button abc-contact-modal-close">Cancel</button>
     </footer>
   </div>
