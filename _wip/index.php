@@ -37,7 +37,7 @@
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
             <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
-            <?php require_once("_inc_contact_component.php"); ?>
+            <?php require_once("./contact/_inc_contact_component.php"); ?>
             <div class="has-text-danger-dark is-block is-size-3">
               <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
                 We deliver to YOUR location
