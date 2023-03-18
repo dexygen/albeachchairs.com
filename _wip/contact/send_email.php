@@ -14,7 +14,7 @@ class ContactEmailController extends AbstractJrMvcController {
 
         $to = "jemptymethod@gmail.com, albeachchairs@gmail.com";
         $subject = "Inquiry from albeachchairs.com";
-        $message = $something;
+        $message = "something $something";
         
         $mail_success = mail($to, $subject, $message);
 
