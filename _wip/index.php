@@ -258,9 +258,9 @@
                 </header>
                 <section class="abc-property-city-section is-size-4">
                   <ul>
-                  <?php foreach($propertyDetails as $details) { ?>
-                    <li data-abc-property-img-src="<?php echo $details["imgSrcPath"]; ?>">
-                      <a class="is-underlined"><?php echo $details["name"]; ?></a>
+                  <?php foreach($propertyDetails as $property) { ?>
+                    <li data-abc-property-img-src="<?php echo $property["imgSrcPath"]; ?>">
+                      <a class="is-underlined"><?php echo $property["name"]; ?></a>
                     </li>
                   <?php } ?>
                   </ul>
@@ -303,5 +303,5 @@
       </main>
     </div>
     <!-- DOM MANIPULATION FUNCTIONS INCLUDED AT BOTTOM AFTER DOM HAS LOADED -->
-    <script src="./assets/js/abc-dom.js"></script>
+    <script src="./abc-index.js"></script>
   </body></html>

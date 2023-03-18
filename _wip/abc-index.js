@@ -16,6 +16,17 @@ setInterval(() => {
 }, 4000);
 
 
+/* CONTACT MODAL FUNCTIONALITY */
+const contactButtonLink = document.querySelector(".abc-contact-form-link");
+const contactModal = document.querySelector(".abc-contact-modal");
+const modalCloseMechanisms = document.querySelectorAll(".abc-contact-modal-close");
+
+contactButtonLink.addEventListener("click", () => contactModal.classList.add("is-active"));
+[...modalCloseMechanisms].forEach(closeMechanism => {  
+  closeMechanism.addEventListener("click", () => contactModal.classList.remove("is-active"));
+});
+
+
 /* PROPERTY IMAGES FUNCTIONALITY */
 const propertyImgModalEl = document.querySelector(".abc-property-img-modal");
 const propertyImgModalTitleEl = propertyImgModalEl.querySelector(".abc-property-img-modal-title");
