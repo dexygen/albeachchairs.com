@@ -24,6 +24,7 @@
       crossorigin="anonymous" 
       referrerpolicy="no-referrer">
     </script>
+    <script src="https://kit.fontawesome.com/936996b1d1.js" crossorigin="anonymous"></script>
   </head>
   <body id="abc-viewport"><html>
     <!-- Google Tag Manager (noscript) -->

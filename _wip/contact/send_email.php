@@ -10,14 +10,14 @@ class ContactEmailController extends AbstractJrMvcController {
         };
 
         $payload = json_decode(file_get_contents('php://input'), true);
-        $something = $payload["something"];
+        $name = $payload["name"];
+        $email = $payload["email"];
 
         $to = "jemptymethod@gmail.com, albeachchairs@gmail.com";
-        $subject = "Inquiry from albeachchairs.com";
-        $message = "something $something";
-        
-        $mail_success = mail($to, $subject, $message);
+        $subject = "Inquiry from albeachchairs.com from $name";
+        $message = "Email: $email";
 
+        $mail_success = mail($to, $subject, $message);
         $mto->setModelValue("mail_success", $mail_success ? 1 : 0);
         return $mto;
     }

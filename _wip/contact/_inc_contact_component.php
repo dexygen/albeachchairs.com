@@ -15,23 +15,38 @@ if (!$isPhone) :?>
 
 <?php if (!isset($contact_modal_created)) :?>
 <div class="modal abc-contact-modal">
-  <div class="modal-background"></div>
+  <div class="modal-background has-background-warning-light"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Email to albeachchairs@gmail.com</p>
+      <p class="modal-card-title has-text-warning-dark is-size-3">Email to albeachchairs@gmail.com</p>
       <button class="delete abc-contact-modal-close" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
       <form class="abc-email-form">
-        <label>Enter something:</label><input type="text" name="something" />
+        <div class="field">
+          <label class="label is-size-5 has-text-primary-dark">Name</label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" name="name" placeholder="Your Name">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+        <label class="label is-size-5 has-text-primary-dark">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" name="email" placeholder="Email Address">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
       </form>
-      <div class="abc-email-success-notification is-hidden">
-        Your email was successfully sent
-      </div>
     </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success abc-contact-modal-submit">Submit</button>
-      <button class="button abc-contact-modal-close">Cancel</button>
+    <footer class="modal-card-foot is-justify-content-center">
+      <button class="button is-medium is-success abc-contact-modal-submit">Submit</button>
+      <button class="button is-medium">Reset</button>
+      <button class="button is-medium is-warning abc-contact-modal-close">Close</button>
     </footer>
   </div>
 </div>
