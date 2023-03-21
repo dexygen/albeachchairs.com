@@ -16,10 +16,10 @@ if (!$isPhone) :?>
 <?php if (!isset($contact_modal_created)) :?>
 <div class="modal abc-contact-modal">
   <div class="modal-background has-background-warning-light"></div>
+  <button class="modal-close is-large has-background-warning-dark abc-contact-modal-close" aria-label="close"></button>
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title has-text-warning-dark is-size-3">Email to albeachchairs@gmail.com</p>
-      <button class="delete abc-contact-modal-close" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
       <form class="abc-email-form">

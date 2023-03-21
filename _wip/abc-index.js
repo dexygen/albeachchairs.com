@@ -37,7 +37,8 @@ modalSubmitButton.addEventListener("click", () => {
     .catch(err => {
         // Handle errors
         console.error(err);
-    });
+    })
+    .finally(() => contactModal.classList.remove("is-active"));
 });
 
 

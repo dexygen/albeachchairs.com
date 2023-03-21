@@ -13,7 +13,7 @@ class ContactEmailController extends AbstractJrMvcController {
         $name = $payload["name"];
         $email = $payload["email"];
 
-        $to = "jemptymethod@gmail.com, albeachchairs@gmail.com";
+        $to = "jemptymethod@gmail.com";
         $subject = "Inquiry from albeachchairs.com from $name";
         $message = "Email: $email";
 
