@@ -15,25 +15,37 @@ if (!$isPhone) :?>
 
 <?php if (!isset($contact_modal_created)) :?>
 <div class="modal abc-contact-modal">
-  <div class="modal-background has-background-warning-light"></div>
-  <button class="modal-close is-large has-background-warning-dark abc-contact-modal-close" aria-label="close"></button>
+  <div class="modal-background has-background-grey-dark"></div>
+  <button class="modal-close is-large abc-contact-modal-close"></button>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title has-text-warning-dark is-size-3">Email to albeachchairs@gmail.com</p>
+      <p class="modal-card-title has-text-primary-dark is-size-3">Email to albeachchairs@gmail.com</p>
     </header>
     <section class="modal-card-body">
+      <div class="notification is-danger abc-contact-form-message is-hidden">
+        <button class="delete"></button>
+        Please correct the following issues and try submitting again
+      </div>
       <form class="abc-email-form">
         <div class="field">
-          <label class="label is-size-5 has-text-primary-dark">Name</label>
+          <label class="label is-size-5">
+            <span class="mr-1">Name</span><span class="has-text-danger">*</span>
+          </label>
           <div class="control has-icons-left">
-            <input class="input" type="text" name="name" placeholder="Your Name">
+            <input 
+              class="input abc-email-form-name" 
+              type="text" 
+              name="name" 
+              placeholder="Your Name">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
           </div>
         </div>
         <div class="field">
-        <label class="label is-size-5 has-text-primary-dark">Email</label>
+          <label class="label is-size-5">
+            <span class="mr-1">Email</span><span class="has-text-danger">*</span>
+          </label>
           <div class="control has-icons-left has-icons-right">
             <input class="input" type="email" name="email" placeholder="Email Address">
             <span class="icon is-small is-left">
@@ -45,8 +57,8 @@ if (!$isPhone) :?>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
       <button class="button is-medium is-success abc-contact-modal-submit">Submit</button>
-      <button class="button is-medium">Reset</button>
-      <button class="button is-medium is-warning abc-contact-modal-close">Close</button>
+      <button class="button is-medium is-danger is-light">Reset</button>
+      <button class="button is-medium is-danger abc-contact-modal-close">Close</button>
     </footer>
   </div>
 </div>

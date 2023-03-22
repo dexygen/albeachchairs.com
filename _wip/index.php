@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-	
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -18,13 +17,9 @@
     </style>
     <link rel="stylesheet" href="./assets/css/bulma.min.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/abc.css" type="text/css">
-    <!-- load axios for AJAX since "fetch" won't be built in for IE<=11 users -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" 
-      integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" 
-      crossorigin="anonymous" 
-      referrerpolicy="no-referrer">
     </script>
     <script src="https://kit.fontawesome.com/936996b1d1.js" crossorigin="anonymous"></script>
+
   </head>
   <body id="abc-viewport"><html>
     <!-- Google Tag Manager (noscript) -->
@@ -309,6 +304,7 @@
         </section>
       </main>
     </div>
-    <!-- DOM MANIPULATION FUNCTIONS INCLUDED AT BOTTOM AFTER DOM HAS LOADED -->
+    <!-- LOAD SCRIPTS AFTER DOM HAS LOADED OR BEFORE MODAL FORM LOADS -->
     <script src="./abc-index.js"></script>
+    <script src="./contact/abc-contact.js"></script>
   </body></html>
