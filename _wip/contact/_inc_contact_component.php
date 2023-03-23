@@ -8,7 +8,13 @@ if (!$isPhone) :?>
         251-233-4000
     </a>
     -->
-    <a class="button abc-contact-button abc-contact-form-link is-rounded is-link is-size-3 is-underlined mt-1">
+    <a class="button 
+              abc-contact-button
+              is-rounded 
+              is-link 
+              is-size-3 
+              is-underlined 
+              mt-1">
         Contact Form
     </a>
 <?php endif; ?>
@@ -26,7 +32,7 @@ if (!$isPhone) :?>
         <button class="delete"></button>
         Please correct the following issues and try submitting again
       </div>
-      <form class="abc-email-form">
+      <form class="abc-contact-form">
         <div class="field">
           <label class="label is-size-5">
             <span class="mr-1">Name</span><span class="has-text-danger">*</span>
@@ -56,7 +62,7 @@ if (!$isPhone) :?>
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
-      <button class="button is-medium is-success abc-contact-modal-submit">Submit</button>
+      <button class="button is-medium is-success abc-contact-form-submit">Submit</button>
       <button class="button is-medium is-danger is-light">Reset</button>
       <button class="button is-medium is-danger abc-contact-modal-close">Close</button>
     </footer>

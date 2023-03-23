@@ -1,33 +1,32 @@
-/* CONTACT MODAL FUNCTIONALITY */
-const contactButtonLink = document.querySelector(".abc-contact-form-link");
+{
+    const contactModal = document.querySelector(".abc-contact-modal");
+    const contactButton = document.querySelector(".abc-contact-button");
+    
+    {
+        let modalCloseButtons;
+        let contactFormEls;
 
-const contactModal = document.querySelector(".abc-contact-modal");
-const modalEmailForm = document.querySelector(".abc-email-form");
-const modalSubmitButton = document.querySelector(".abc-contact-modal-submit");
-const modalCloseMechanisms = document.querySelectorAll(".abc-contact-modal-close");
+        contactButton.addEventListener("click", () => {
+            contactModal.classList.add("is-active");
 
-contactButtonLink.addEventListener("click", () => contactModal.classList.add("is-active"));
-[...modalCloseMechanisms].forEach(closeMechanism => {  
-  closeMechanism.addEventListener("click", () => contactModal.classList.remove("is-active"));
-});
+            if (!modalCloseButtons) {
+                setTimeout(() => { // setTimeout waits until after modal renders
+                    modalCloseButtons = document.querySelectorAll(".abc-contact-modal-close");
 
-modalSubmitButton.addEventListener("click", () => {
-  // let formEntries = Object.fromEntries(new FormData(modalEmailForm)); 
-  // let payload = JSON.stringify(formEntries);
+                    // add event listeners only once upon initialization
+                    [...modalCloseButtons].forEach(closeButton => {  
+                        closeButton.addEventListener("click", () => {
+                            contactModal.classList.remove("is-active");
+                        });
+                    });
+                });
+            }
 
-  // implement formValidation but display the following for now
-  document.querySelector(".abc-contact-form-message").classList.remove("is-hidden");
-
-  /*
-   * Switch to fetch
-   *
-  axios.post("./contact/send_email.php", payload)
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(err => {
-        console.error(err);
-    })
-    .finally(() => contactModal.classList.remove("is-active"));
-  */
-});
+            if (!contactFormEls) {
+                setTimeout(() => {
+                    contactEls = document.querySelectorAll("*[class^='abc-contact-form-']");
+                })
+            }
+        });
+    }
+}
