@@ -34,8 +34,10 @@
           <div class="has-text-danger-dark is-size-3 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs has the equipment you need!
           </div>
-          <div class="has-text-success-dark is-size-3 mb-1 font-pangolin">
-            CONTACT US TO RESERVE YOUR PLACE ON THE BEACH
+          <div class="is-flex is-justify-content-center mb-3">
+            <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
+              CONTACT US TO RESERVE YOUR PLACE ON THE BEACH
+            </div>
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
             <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
@@ -45,7 +47,7 @@
                 We deliver to YOUR location
               </a>
             </div>
-            <div class="is-size-4 has-text-success-dark ">
+            <div class="is-size-4 has-text-primary-dark ">
               OR reserve at <a class="is-underlined" href="#abc-properties">properties we serve</a> 
               <div class="is-italic">
                 (NO delivery fees apply at <a class="is-underlined" href="#abc-properties">THESE condos)</a>
@@ -90,8 +92,12 @@
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="has-text-warning-dark is-size-3 font-pangolin my-1">CONTACT US FOR DELIVERY</div>
-                <div class="has-text-success-dark is-size-2 font-pangolin abc-phone">
+                <div class="is-flex is-justify-content-center mb-2">
+                  <div class="has-background-link has-text-warning is-size-3 font-pangolin px-2">
+                    CONTACT US FOR DELIVERY
+                  </div>
+                </div>
+                <div class="is-size-2 font-pangolin abc-phone">
                   <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
                 </div>
                 <div class="has-text-primary-dark is-size-3">Alabama Beach Chairs' Delivery Sets</div>
@@ -113,7 +119,11 @@
                     </div>
                   </section>
                 </div>
-                <div class="is-size-3 has-text-warning-dark">DELIVERY EQUIPMENT PRICING</div>
+                <div class="is-flex is-justify-content-center mb-2">
+                  <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
+                    DELIVERY EQUIPMENT PRICING
+                  </div>
+                </div>
                 <section class="is-size-4">
                   <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
                   <ul class="has-text-weight-semibold">
@@ -154,7 +164,11 @@
                   DO NOT APPLY&nbsp;<a class="is-underlined" href="#abc-properties">at properties we serve</a>  
                 </span>
               </div>
-              <div class="is-size-3 has-text-warning-dark mt-3">CONDO EQUIPMENT PRICING</div>
+              <div class="is-flex is-justify-content-center mb-2">
+                <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
+                  DELIVERY EQUIPMENT PRICING
+                </div>
+              </div>
               <div class="columns is-mobile is-centered">
                 <aside class="column has-text-left is-size-5-mobile is-3-tablet">
                   <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
@@ -253,8 +267,10 @@
               <div class="mt-3 mb-4">
                 <header class="columns is-mobile is-centered">
                   <div class="column is-10">
-                    <div class="has-text-primary-dark has-text-centered is-size-3">
-                      <?php echo $city; ?>
+                    <div class="is-flex is-justify-content-center my-1">
+                      <div class="has-background-primary-dark has-text-warning is-size-3 px-2">
+                        <?php echo $city; ?>
+                      </div>
                     </div>
                   </div>
                 </header>

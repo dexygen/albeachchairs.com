@@ -161,10 +161,10 @@
                 </span>
               </div>
               <div class="is-flex is-justify-content-center my-1">
-                  <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
-                    CONDO EQUIPMENT PRICING
-                  </div>
+                <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
+                  CONDO EQUIPMENT PRICING
                 </div>
+              </div>
               <div class="columns is-mobile is-centered">
                 <aside class="column has-text-left is-size-5-mobile is-3-tablet">
                   <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
