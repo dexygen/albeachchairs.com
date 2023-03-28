@@ -92,8 +92,8 @@
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="is-flex is-justify-content-center mb-2">
-                  <div class="has-background-link has-text-warning is-size-3 font-pangolin px-2">
+                <div class="is-flex is-justify-content-center my-3">
+                  <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
                     CONTACT US FOR DELIVERY
                   </div>
                 </div>

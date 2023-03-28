@@ -39,6 +39,10 @@ body#abc-viewport {
   list-style: disc outside;
 }
 
+.abc-contact-form-message-list-items {
+  list-style: disc inside;
+}
+
 .abc-featured-property-label {
   margin-top: -0.5rem;
 }
