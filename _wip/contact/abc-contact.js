@@ -32,11 +32,11 @@
                     let errorMessages = contactFormErrorMessages(contactForm);
                     if (errorMessages) {
                         formErrorMsgContainer.classList.remove("is-hidden");
-                        errorMessages.forEach((field) => {
-                            if (field === "name") {
+                        errorMessages.forEach((msg) => {
+                            if (msg === "name") {
                                 formErrorMsgOnName.classList.remove("is-hidden");
                             }
-                            if (field === "email") {
+                            if (msg === "email") {
                                 formErrorMsgOnEmail.classList.remove("is-hidden");
                             }
                         });

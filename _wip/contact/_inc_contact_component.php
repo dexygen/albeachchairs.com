@@ -25,7 +25,14 @@ if (!$isPhone) :?>
   <button class="modal-close is-large abc-modal-close"></button>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title has-text-primary-dark is-size-3">Email to albeachchairs@gmail.com</p>
+      <div class="
+            modal-card-title 
+            is-size-3 
+            has-background-primary-dark 
+            has-text-warning
+            py-3">
+        Send to albeachchairs@gmail.com
+      </div>
     </header>
     <section class="modal-card-body">
       <div class="notification is-danger abc-contact-form-msg-container is-hidden">
@@ -44,8 +51,9 @@ if (!$isPhone) :?>
       </div>
       <form class="abc-contact-form">
         <div class="field">
-          <label class="label is-size-5">
-            <span class="mr-1">Name</span><span class="has-text-danger">*</span>
+          <label class="label is-size-4">
+            <span class="mr-1 has-text-primary-dark">Name</span>
+            <span class="has-text-danger">*</span>
           </label>
           <div class="control has-icons-left">
             <input class="input" type="text" name="name" placeholder="Your Name">
@@ -55,8 +63,9 @@ if (!$isPhone) :?>
           </div>
         </div>
         <div class="field">
-          <label class="label is-size-5">
-            <span class="mr-1">Email</span><span class="has-text-danger">*</span>
+          <label class="label is-size-4">
+            <span class="mr-1 has-text-primary-dark">Email</span>
+            <span class="has-text-danger">*</span>
           </label>
           <div class="control has-icons-left has-icons-right">
             <input class="input" type="email" name="email" placeholder="Your Email">
@@ -65,13 +74,32 @@ if (!$isPhone) :?>
             </span>
           </div>
         </div>
+        <div class="field">
+          <label class="label abc-service-type-label is-size-5">
+            <span class="mr-1 has-text-primary-dark">Type of Service</span>
+          </label>
+          <div class="pt-1">
+            <div class="is-flex is-justify-content-center">
+              <div class="pt-1">
+                <span class="pr-1 is-size-5">Delivery</span>
+                <input type="checkbox">
+              </div>
+              <div class="pt-1 px-4 is-size-5">OR at</div>
+              <div class="select">
+                <select>
+                  <option>The condos we serve</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
-      <button class="button is-medium is-success abc-contact-form-submit">Submit</button>
-      <button class="button is-medium is-danger is-light">Reset</button>
-      <button class="button is-medium is-danger abc-modal-close">Close</button>
+      <button class="button is-medium is-outlined is-success abc-contact-form-submit">Submit</button>
+      <button class="button is-medium is-outlined is-warning is-inverted">Reset</button>
+      <button class="button is-medium is-outlined is-danger abc-modal-close">Close</button>
     </footer>
-  </div>
+  </div>-
 </div>
 <?php $contact_modal_created = true; endif; ?>

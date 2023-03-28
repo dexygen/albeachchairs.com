@@ -43,6 +43,10 @@ body#abc-viewport {
   list-style: disc inside;
 }
 
+.abc-service-type-label {
+  margin-bottom: 0 !important;
+}
+
 .abc-featured-property-label {
   margin-top: -0.5rem;
 }
