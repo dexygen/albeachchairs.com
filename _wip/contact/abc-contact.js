@@ -34,6 +34,9 @@
                             if (field === "name") {
                                 formErrorMsgOnName.classList.remove("is-hidden");
                             }
+                            if (field === "email") {
+                                formErrorMsgOnEmail.classList.remove("is-hidden");
+                            }
                         });
                     }
                 });
@@ -42,15 +45,22 @@
 
         function contactFormErrorMessages(contactForm) {
             let errorMessages;
-            const formData = new FormData(contactForm);
             
+            const formData = new FormData(contactForm);
+            const emailRegex = /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/;
+            // as to the above, standards-based, regex, see: https://stackoverflow.com/a/26989421/34806
+
             for (let [fieldName, val] of formData.entries()) {
               if (fieldName === "name" && val.trim().length < 2) {
                 errorMessages = errorMessages || [];
                 errorMessages.push(fieldName);
               }
+              if (fieldName === "email" && !emailRegex.test(val.trim())) {
+                errorMessages = errorMessages || [];
+                errorMessages.push(fieldName);
+              }
             }
-            
+
             return errorMessages;
         }
     });
