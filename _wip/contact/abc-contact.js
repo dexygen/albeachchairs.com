@@ -27,6 +27,8 @@
                 const formErrorMsgOnEmail = document.querySelector(".abc-contact-form-error-email");               
 
                 formSubmitButton.addEventListener("click", () => {
+                    resetFormErrorMessages(formErrorMsgContainer);
+                    
                     let errorMessages = contactFormErrorMessages(contactForm);
                     if (errorMessages) {
                         formErrorMsgContainer.classList.remove("is-hidden");
@@ -62,6 +64,12 @@
             }
 
             return errorMessages;
+        }
+
+        function resetFormErrorMessages(container) {
+            container.classList.add("is-hidden");
+            const errorMsgs = container.querySelectorAll("[class^='abc-contact-form-error-']");
+            errorMsgs.forEach((errorMsgEl) => { errorMsgEl.classList.add("is-hidden") });
         }
     });
 }
