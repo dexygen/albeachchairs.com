@@ -22,9 +22,25 @@
                 const contactForm = document.querySelector(".abc-contact-form");
                 const formSubmitButton = document.querySelector(".abc-contact-form-submit");
                 
-                const formErrorMsgContainer = document.querySelector(".abc-contact-form-msg-container");
-                const formErrorMsgOnName = document.querySelector(".abc-contact-form-error-name");
-                const formErrorMsgOnEmail = document.querySelector(".abc-contact-form-error-email");               
+                const formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
+                const formErrorMsgOnName = contactModal.querySelector(".abc-contact-form-error-name");
+                const formErrorMsgOnEmail = contactModal.querySelector(".abc-contact-form-error-email");
+
+                const formFieldDelivery = contactForm.querySelector(".abc-contact-form-field-delivery");
+                const formFieldProperty = contactForm.querySelector(".abc-contact-form-field-property");
+                
+                // BEGIN: Only allow Delivery checkbox OR property selection menu, to have a value
+                formFieldDelivery.addEventListener("click", () => {
+                    if (formFieldDelivery.checked) {
+                        formFieldProperty.value = 0;
+                    }
+                });
+                formFieldProperty.addEventListener("change", () => {
+                    if (formFieldProperty.value) {
+                        formFieldDelivery.checked = false;
+                    }
+                })
+                // END
 
                 formSubmitButton.addEventListener("click", () => {
                     resetFormErrorMessages(formErrorMsgContainer);
@@ -43,8 +59,6 @@
                     }
                     else {
                         let payload = JSON.stringify(Object.fromEntries(new FormData(contactForm)));
-                        console.log(payload);
-                        
                         axios.post("./contact/send_email.php", payload)
                             .then(response => {
                                 console.log(response.data);

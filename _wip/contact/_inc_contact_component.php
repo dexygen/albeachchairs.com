@@ -82,11 +82,11 @@ if (!$isPhone) :?>
             <div class="is-flex is-justify-content-center">
               <div class="pt-1">
                 <span class="pr-1 is-size-5">Delivery</span>
-                <input type="checkbox" name="delivery">
+                <input type="checkbox" class="abc-contact-form-field-delivery" name="delivery">
               </div>
               <div class="pt-1 px-5 is-size-5">OR at</div>
               <div class="select">
-                <select name="property">
+                <select class="abc-contact-form-field-property" name="property">
                 <?php
                   require_once("_inc_property_details.php");
                   array_unshift($abcPropertyNamesAll, "The condos we serve");     
