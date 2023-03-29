@@ -43,6 +43,8 @@
                     }
                     else {
                         let payload = JSON.stringify(Object.fromEntries(new FormData(contactForm)));
+                        console.log(payload);
+                        
                         axios.post("./contact/send_email.php", payload)
                             .then(response => {
                                 console.log(response.data);

@@ -82,7 +82,7 @@ if (!$isPhone) :?>
             <div class="is-flex is-justify-content-center">
               <div class="pt-1">
                 <span class="pr-1 is-size-5">Delivery</span>
-                <input type="checkbox">
+                <input type="checkbox" name="delivery">
               </div>
               <div class="pt-1 px-5 is-size-5">OR at</div>
               <div class="select">
@@ -91,7 +91,6 @@ if (!$isPhone) :?>
                   require_once("_inc_property_details.php");
                   array_unshift($abcPropertyNamesAll, "The condos we serve");     
                   foreach($abcPropertyNamesAll as $optValue => $optLabel) {   
-                    #echo $optValue;         
                 ?>
                   <option value="<?php echo trim($optValue); ?>">
                   <?php echo $optLabel; ?>
