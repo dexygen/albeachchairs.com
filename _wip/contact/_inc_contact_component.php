@@ -117,15 +117,16 @@ if (!$isPhone) :?>
           <div class="is-flex is-justify-content-center">
             <div class="mr-2">
               <span class="is-size-5">Starting:</span>
-              <input type="date" class="is-size-6" />
+              <input type="date" class="is-size-6 abc-contact-form-field-start-date" name="startDate" />
             </div>
             <div class="is-size-5 ml-2">
               <span>Duration:</span>
               <input 
-                class="is-size-6 abc-contact-form-input-number" 
+                class="is-size-6 abc-contact-form-field-duration" 
                 type="number" 
                 maxlength="99" 
-                value="1" />
+                value="1" 
+                name="duration" />
             </div>
           </div>
         </div>

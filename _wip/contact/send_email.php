@@ -9,25 +9,34 @@ class ContactEmailController extends AbstractJrMvcController {
         $name = $payload["name"];
         $email = $payload["email"];
         $property = $payload["property"];
+        $startDate = $payload["startDate"];
+        $duration = $payload["duration"];
 
         if (array_key_exists("delivery", $payload)) {
             $serviceType = "DELIVERY";
         }
-        else {
+        elseif ($property) {
+            # only reach this is $property is not zero, the "placeholder"
             # $abcPropertyNamesAll had value unshifted onto front 
             # for properties select menu, so subtract 1 for correct index
             $serviceType = $abcPropertyNamesAll[$property - 1];
         }
+        else {
+            $serviceType = "Neither indicated";
+        }
 
-        $to = "albeachchairs@gmail.com, jemptymethod@gmail.com";
+        $to = "jemptymethod@gmail.com";
         $subject = "Inquiry from albeachchairs.com from $name";
         
         $messageLines = Array(
             "Email: $email",
-            "Service: $serviceType"
+            "Service: $serviceType",
+            "Start Date: $startDate",
+            "Duration: $duration"
         );
 
         $message = join("\n", $messageLines);
+        # echo $message; exit;
         $mail_success = mail($to, $subject, $message);
 
         $mto = new class(JrMvcMTO::NULL_TPL) extends JrMvcMTO {
