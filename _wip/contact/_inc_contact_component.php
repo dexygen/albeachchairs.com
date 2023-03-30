@@ -19,7 +19,9 @@ if (!$isPhone) :?>
     </a>
 <?php endif; ?>
 
-<?php if (!isset($contact_modal_created)) :?>
+<?php if (!isset($contact_modal_created)) :
+  $contact_modal_created = true;  
+?>
 <div class="modal abc-contact-modal">
   <div class="modal-background has-background-grey-dark"></div>
   <button class="modal-close is-large abc-modal-close"></button>
@@ -27,11 +29,15 @@ if (!$isPhone) :?>
     <header class="modal-card-head">
       <div class="
             modal-card-title 
-            is-size-3 
+            is-size-3-tablet
+            is-size-4-mobile-only 
             has-background-primary-dark 
             has-text-warning
-            py-3">
-        Send to albeachchairs@gmail.com
+            py-3
+            is-flex
+            is-flex-direction-column">
+        <div class="mb-1">Submit inquiry to</div>
+        <div>albeachchairs@gmail.com</div>
       </div>
     </header>
     <section class="modal-card-body">
@@ -74,12 +80,15 @@ if (!$isPhone) :?>
             </span>
           </div>
         </div>
+        <div class="is-size-4 is-italic">
+          Please help us with as much information as possible
+        </div>
         <div class="field">
-          <label class="label abc-service-type-label is-size-5">
+          <label class="label abc-service-type-label is-size-4">
             <span class="mr-1 has-text-primary-dark">Type of Service</span>
           </label>
           <div class="pt-1">
-            <div class="is-flex is-justify-content-center">
+            <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
               <div class="pt-1">
                 <span class="pr-1 is-size-5">Delivery</span>
                 <input type="checkbox" class="abc-contact-form-field-delivery" name="delivery">
@@ -101,6 +110,25 @@ if (!$isPhone) :?>
             </div>
           </div>
         </div>
+        <div class="field">
+          <label class="label is-size-4">
+            <span class="mr-1 has-text-primary-dark">When and for how long (estimate OK)</span>
+          </label>
+          <div class="is-flex is-justify-content-center">
+            <div class="mr-2">
+              <span class="is-size-5">Starting:</span>
+              <input type="date" class="is-size-6" />
+            </div>
+            <div class="is-size-5 ml-2">
+              <span>Duration:</span>
+              <input 
+                class="is-size-6 abc-contact-form-input-number" 
+                type="number" 
+                maxlength="99" 
+                value="1" />
+            </div>
+          </div>
+        </div>
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
@@ -110,4 +138,4 @@ if (!$isPhone) :?>
     </footer>
   </div>-
 </div>
-<?php $contact_modal_created = true; endif; ?>
+<?php endif; ?>

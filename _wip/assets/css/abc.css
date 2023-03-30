@@ -51,6 +51,10 @@ body#abc-viewport {
   margin-top: -0.5rem;
 }
 
+.abc-contact-form-input-number {
+  width: 3rem;
+}
+
 .abc-property-city-section {
   margin-top: -1.5rem 
 }
