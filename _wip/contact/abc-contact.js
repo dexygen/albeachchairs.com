@@ -6,6 +6,8 @@
     let contactForm;
     let formMessagesCloseButton;
     let formSubmitButton;
+    let formSubmitSuccessMsg;
+    let formSubmitSuccessMsgCloseButton;
     
     let formErrorMsgContainer;
     let formErrorMsgOnName;
@@ -41,6 +43,8 @@
                 formSubmitButton = document.querySelector(".abc-contact-form-submit");
                 formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
                 formMessagesCloseButton = contactModal.querySelector(".abc-contact-form-messages-close-button");
+                formSubmitSuccessMsg = contactModal.querySelector(".abc-contact-form-success-msg");
+                formSubmitSuccessMsgCloseButton = contactModal.querySelector(".abc-contact-form-success-msg-close-button");
                 
                 /*
                   because of the naming convention, the following can eventually 
@@ -75,6 +79,11 @@
                     resetFormErrorMessages(formErrorMsgContainer);
                 });
 
+                formSubmitSuccessMsgCloseButton.addEventListener("click", () => {
+                    formSubmitSuccessMsg.classList.add("is-hidden");
+                    contactModal.classList.remove("is-active");
+                });
+
                 formSubmitButton.addEventListener("click", () => {
                     resetFormErrorMessages(formErrorMsgContainer);
                     let errorMessages = contactFormErrorMessages(contactForm);
@@ -105,9 +114,24 @@
 
                         axios.post("./contact/send_email.php", payload)
                             .then(response => {
-                                console.log(response.data);
+                                if (response.status === 200) {
+                                    formSubmitSuccessMsg.classList.remove("is-hidden");
+                                    setTimeout(() => {
+                                        formSubmitSuccessMsg.classList.add("is-hidden");
+                                        contactModal.classList.remove("is-active");                                        
+                                    }, 6000); 
+                                }
+                                else {
+                                    handlePostResponseErrors(response.status);
+                                }
                             })
-                            .catch(err => { /* Handle errors */ });              
+                            .catch(err => { 
+                                handlePostResponseErrors(err);
+                            });              
+                    }
+
+                    function handlePostResponseErrors() {
+                        console.log("handlePostResponseErrors(): NEEDS IMPLEMENTATION")
                     }
                 });
             }

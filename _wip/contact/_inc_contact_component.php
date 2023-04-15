@@ -41,6 +41,12 @@ if (!$isPhone) :?>
       </div>
     </header>
     <section class="modal-card-body">
+    <div class="notification is-info abc-contact-form-success-msg is-hidden">
+        <button class="delete abc-contact-form-success-msg-close-button"></button>
+        <div class="is-size-4 mb-2">
+          Your information has been successfully submitted.  Someone will be contacting you shortly
+        </div>
+      </div>
       <div class="notification is-danger abc-contact-form-msg-container is-hidden">
         <button class="delete abc-contact-form-messages-close-button"></button>
         <div class="is-size-4 mb-2">

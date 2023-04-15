@@ -26,7 +26,7 @@ class ContactEmailController extends AbstractJrMvcController {
             $serviceType = "Neither indicated";
         }
 
-        $to = "jemptymethod@gmail.com, albeachchairs@gmail.com";
+        $to = "jemptymethod@gmail.com";
         $subject = "Inquiry from albeachchairs.com from $name";
         
         $messageLines = Array(
