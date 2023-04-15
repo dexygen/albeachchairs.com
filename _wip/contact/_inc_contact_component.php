@@ -42,7 +42,7 @@ if (!$isPhone) :?>
     </header>
     <section class="modal-card-body">
       <div class="notification is-danger abc-contact-form-msg-container is-hidden">
-        <button class="delete"></button>
+        <button class="delete abc-contact-form-messages-close-button"></button>
         <div class="is-size-4 mb-2">
           Please correct the following issues and submit again
         </div>

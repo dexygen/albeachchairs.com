@@ -4,6 +4,7 @@
 
     // BEGIN: declarations outside of contactButton/addEventListener/setTimeout
     let contactForm;
+    let formMessagesCloseButton;
     let formSubmitButton;
     
     let formErrorMsgContainer;
@@ -39,6 +40,7 @@
                 contactForm = document.querySelector(".abc-contact-form");
                 formSubmitButton = document.querySelector(".abc-contact-form-submit");
                 formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
+                formMessagesCloseButton = contactModal.querySelector(".abc-contact-form-messages-close-button");
                 
                 /*
                   because of the naming convention, the following can eventually 
@@ -68,6 +70,10 @@
                     }
                 })
                 // END
+
+                formMessagesCloseButton.addEventListener("click", () => {
+                    resetFormErrorMessages(formErrorMsgContainer);
+                });
 
                 formSubmitButton.addEventListener("click", () => {
                     resetFormErrorMessages(formErrorMsgContainer);

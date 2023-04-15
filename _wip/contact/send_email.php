@@ -4,13 +4,14 @@ require_once('../jrmvc.lib.php');
 class ContactEmailController extends AbstractJrMvcController {  
     function applyInputToModel() {
         require_once('../_inc_property_details.php');
-
         $payload = json_decode(file_get_contents('php://input'), true);
+        
         $name = $payload["name"];
         $email = $payload["email"];
         $property = $payload["property"];
         $startDate = $payload["startDate"];
         $duration = $payload["duration"];
+        $other = $payload["other"];
 
         if (array_key_exists("delivery", $payload)) {
             $serviceType = "DELIVERY";
@@ -25,18 +26,18 @@ class ContactEmailController extends AbstractJrMvcController {
             $serviceType = "Neither indicated";
         }
 
-        $to = "jemptymethod@gmail.com";
+        $to = "jemptymethod@gmail.com, albeachchairs@gmail.com";
         $subject = "Inquiry from albeachchairs.com from $name";
         
         $messageLines = Array(
             "Email: $email",
             "Service: $serviceType",
             "Start Date: $startDate",
-            "Duration: $duration"
+            "Duration: $duration",
+            "Other: $other"
         );
 
         $message = join("\n", $messageLines);
-        # echo $message; exit;
         $mail_success = mail($to, $subject, $message);
 
         $mto = new class(JrMvcMTO::NULL_TPL) extends JrMvcMTO {
