@@ -16,7 +16,7 @@ class ContactEmailController extends AbstractJrMvcController {
             $serviceType = "DELIVERY";
         }
         elseif ($property) {
-            # only reach this is $property is not zero, the "placeholder"
+            # only reach this if $property is not zero, the "placeholder"
             # $abcPropertyNamesAll had value unshifted onto front 
             # for properties select menu, so subtract 1 for correct index
             $serviceType = $abcPropertyNamesAll[$property - 1];

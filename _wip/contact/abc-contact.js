@@ -9,6 +9,8 @@
     let formErrorMsgContainer;
     let formErrorMsgOnName;
     let formErrorMsgOnEmail;
+    let formErrorMsgOnStartDate;
+    let formErrorMsgOnDuration;
 
     let formFieldDelivery;
     let formFieldProperty;
@@ -39,10 +41,11 @@
                 formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
                 formErrorMsgOnName = contactModal.querySelector(".abc-contact-form-error-name");
                 formErrorMsgOnEmail = contactModal.querySelector(".abc-contact-form-error-email");
+                formErrorMsgOnStartDate = contactModal.querySelector(".abc-contact-form-error-start-date");
+                formErrorMsgOnDuration = contactModal.querySelector(".abc-contact-form-error-duration");
 
                 formFieldDelivery = contactForm.querySelector(".abc-contact-form-field-delivery");
                 formFieldProperty = contactForm.querySelector(".abc-contact-form-field-property");
-                // abc-contact-form-field-start-date
                 formFieldStartDate = contactForm.querySelector(".abc-contact-form-field-start-date");
                 formFieldDuration = contactForm.querySelector(".abc-contact-form-field-duration");
                 
@@ -59,24 +62,10 @@
                 })
                 // END
 
-                /* 
-                  BEGIN: Initialize start date to following day; 
-                  see: https://stackoverflow.com/a/54341296/34806
-                */
-                const nextDay = (function() {
-                    const nextDay = new Date();
-                    nextDay.setDate(nextDay.getDate() + 1);
-                    const month = (nextDay.getMonth() + 1).toString().padStart(2, '0');
-                    const day = nextDay.getDate().toString().padStart(2, '0');
-                    return `${nextDay.getFullYear()}-${month}-${day}`;
-                })();
-                formFieldStartDate.value = nextDay;
-                // END
-
                 formSubmitButton.addEventListener("click", () => {
                     resetFormErrorMessages(formErrorMsgContainer);
-                    
                     let errorMessages = contactFormErrorMessages(contactForm);
+
                     if (errorMessages) {
                         formErrorMsgContainer.classList.remove("is-hidden");
                         errorMessages.forEach((msg) => {
@@ -85,6 +74,12 @@
                             }
                             if (msg === "email") {
                                 formErrorMsgOnEmail.classList.remove("is-hidden");
+                            }
+                            if (msg === "startDate") {
+                                formErrorMsgOnStartDate.classList.remove("is-hidden");
+                            }
+                            if (msg === "duration") {
+                                formErrorMsgOnDuration.classList.remove("is-hidden");
                             }
                         });
                     }
@@ -118,6 +113,22 @@
                 errorMessages = errorMessages || [];
                 errorMessages.push(fieldName);
               }
+              if (fieldName === "startDate" && val !== "") {
+                const today = new Date();
+                today.setHours(0,0,0,0); // sets to first millisecond of today's date
+                if (new Date(val) < today) {
+                  errorMessages = errorMessages || [];
+                  errorMessages.push(fieldName);          
+                }
+              }
+              if (fieldName === "duration" && val <= -1) {
+                errorMessages = errorMessages || [];
+                errorMessages.push(fieldName);
+              }
+            }
+
+            if (!errorMessages) { // check for any information besides just name and email
+                // console.log(JSON.stringify(Array.from(formData.entries())));
             }
 
             return errorMessages;

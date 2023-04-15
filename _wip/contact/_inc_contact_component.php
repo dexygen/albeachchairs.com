@@ -48,10 +48,16 @@ if (!$isPhone) :?>
         </div>
         <ul class="is-size-5 abc-contact-form-message-list-items">
           <li class="abc-contact-form-error-name is-hidden">
-            Name is required and must be at least 2 characters in length
+            Name is required and must be at least 2 characters longs
           </li>
           <li class="abc-contact-form-error-email is-hidden">
             Email is required and must be properly formatted
+          </li>
+          <li class="abc-contact-form-error-start-date is-hidden">
+            Start date cannot be in the past
+          </li>
+          <li class="abc-contact-form-error-duration is-hidden">
+            Duration cannot be a negative number
           </li>
         </ul>
       </div>
@@ -80,7 +86,7 @@ if (!$isPhone) :?>
             </span>
           </div>
         </div>
-        <div class="is-size-4 is-italic">
+        <div class="is-size-4 is-italic mt-4 mb-1">
           Please help us with as much information as possible
         </div>
         <div class="field">
@@ -112,7 +118,7 @@ if (!$isPhone) :?>
         </div>
         <div class="field">
           <label class="label is-size-4">
-            <span class="mr-1 has-text-primary-dark">When and for how long (estimate OK)</span>
+            <span class="mr-1 has-text-primary-dark">When and for how long (an estimate is OK)</span>
           </label>
           <div class="is-flex is-justify-content-center">
             <div class="mr-2">
@@ -125,10 +131,15 @@ if (!$isPhone) :?>
                 class="is-size-6 abc-contact-form-field-duration" 
                 type="number" 
                 maxlength="99" 
-                value="1" 
                 name="duration" />
             </div>
           </div>
+          <div class="field mt-4">
+            <label class="label is-size-4">
+              <span class="mr-1 has-text-primary-dark">Anything else? (for instance, delivery location)</span>
+            </label>
+          </div>
+          <textarea class="textarea" placeholder="Additional information" name="other"></textarea>
         </div>
       </form>
     </section>
