@@ -59,6 +59,9 @@ if (!$isPhone) :?>
           <li class="abc-contact-form-error-duration is-hidden">
             Duration cannot be a negative number
           </li>
+          <li class="abc-contact-form-error-insufficient-info is-hidden">
+            More information than just name and email is required
+          </li>
         </ul>
       </div>
       <form class="abc-contact-form">
@@ -105,7 +108,10 @@ if (!$isPhone) :?>
                 <?php
                   require_once("_inc_property_details.php");
                   array_unshift($abcPropertyNamesAll, "The condos we serve");     
-                  foreach($abcPropertyNamesAll as $optValue => $optLabel) {   
+                  foreach($abcPropertyNamesAll as $optValue => $optLabel) {
+                    if ($optValue == 0) {
+                      $optValue = ""; # otherwise comes through as "0" which is NOT "falsy"
+                    }   
                 ?>
                   <option value="<?php echo trim($optValue); ?>">
                   <?php echo $optLabel; ?>

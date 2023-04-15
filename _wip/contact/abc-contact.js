@@ -19,6 +19,7 @@
     // END    
 
     let eventListenersInitialized;
+    const INSUFFICIENT_INFO = "insufficientInfo";
 
     contactButton.addEventListener("click", () => {
         setTimeout(() => { // waits for modal and its contents to render
@@ -37,13 +38,19 @@
 
                 contactForm = document.querySelector(".abc-contact-form");
                 formSubmitButton = document.querySelector(".abc-contact-form-submit");
-                
                 formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
+                
+                /*
+                  because of the naming convention, the following can eventually 
+                  be selected with querySelectorAll and the results put into an object
+                */
                 formErrorMsgOnName = contactModal.querySelector(".abc-contact-form-error-name");
                 formErrorMsgOnEmail = contactModal.querySelector(".abc-contact-form-error-email");
                 formErrorMsgOnStartDate = contactModal.querySelector(".abc-contact-form-error-start-date");
                 formErrorMsgOnDuration = contactModal.querySelector(".abc-contact-form-error-duration");
+                formErrorMsgOnInsufficientInfo = contactModal.querySelector(".abc-contact-form-error-insufficient-info");
 
+                // same comment from above applies
                 formFieldDelivery = contactForm.querySelector(".abc-contact-form-field-delivery");
                 formFieldProperty = contactForm.querySelector(".abc-contact-form-field-property");
                 formFieldStartDate = contactForm.querySelector(".abc-contact-form-field-start-date");
@@ -52,7 +59,7 @@
                 // BEGIN: Only allow Delivery checkbox OR property selection menu, to have a value
                 formFieldDelivery.addEventListener("click", () => {
                     if (formFieldDelivery.checked) {
-                        formFieldProperty.value = 0;
+                        formFieldProperty.value = "";
                     }
                 });
                 formFieldProperty.addEventListener("change", () => {
@@ -80,6 +87,9 @@
                             }
                             if (msg === "duration") {
                                 formErrorMsgOnDuration.classList.remove("is-hidden");
+                            }
+                            if (msg === INSUFFICIENT_INFO) {
+                                formErrorMsgOnInsufficientInfo.classList.remove("is-hidden");
                             }
                         });
                     }
@@ -127,8 +137,15 @@
               }
             }
 
-            if (!errorMessages) { // check for any information besides just name and email
-                // console.log(JSON.stringify(Array.from(formData.entries())));
+            if (!errorMessages) { // check for any information besides just name and email     
+                const formEntriesArray = Array.from(formData.entries());
+                const hasSomeAdditionalInfo = formEntriesArray.filter(keyValPair => 
+                  keyValPair[0] !== "name" && keyValPair[0] !== "email"    
+                ).some(keyValPair => keyValPair[1].trim());
+                if (!hasSomeAdditionalInfo) {
+                    errorMessages = errorMessages || [];
+                    errorMessages.push(INSUFFICIENT_INFO);
+                }
             }
 
             return errorMessages;
