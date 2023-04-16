@@ -157,7 +157,7 @@ if (!$isPhone) :?>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
       <button class="button is-medium is-outlined is-success abc-contact-form-submit">Submit</button>
-      <button class="button is-medium is-outlined is-warning is-inverted">Reset</button>
+      <button class="button is-medium is-outlined is-warning is-inverted abc-contact-form-reset">Reset</button>
       <button class="button is-medium is-outlined is-danger abc-modal-close">Close</button>
     </footer>
   </div>-

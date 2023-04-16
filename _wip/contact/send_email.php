@@ -27,7 +27,7 @@ class ContactEmailController extends AbstractJrMvcController {
         }
 
         $to = "jemptymethod@gmail.com";
-        $subject = "Inquiry from albeachchairs.com from $name";
+        $subject = "Inquiry from albeachchairs.com from: $name";
         
         $messageLines = Array(
             "Email: $email",

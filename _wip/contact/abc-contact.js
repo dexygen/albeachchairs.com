@@ -6,6 +6,7 @@
     let contactForm;
     let formMessagesCloseButton;
     let formSubmitButton;
+    let formResetButton;
     let formSubmitSuccessMsg;
     let formSubmitSuccessMsgCloseButton;
     
@@ -36,11 +37,13 @@
                 [...modalCloseButtons].forEach(closeButton => {  
                     closeButton.addEventListener("click", () => {
                         contactModal.classList.remove("is-active");
+                        contactForm.reset();
                     });
                 });
 
                 contactForm = document.querySelector(".abc-contact-form");
                 formSubmitButton = document.querySelector(".abc-contact-form-submit");
+                formResetButton = document.querySelector(".abc-contact-form-reset");
                 formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
                 formMessagesCloseButton = contactModal.querySelector(".abc-contact-form-messages-close-button");
                 formSubmitSuccessMsg = contactModal.querySelector(".abc-contact-form-success-msg");
@@ -82,7 +85,10 @@
                 formSubmitSuccessMsgCloseButton.addEventListener("click", () => {
                     formSubmitSuccessMsg.classList.add("is-hidden");
                     contactModal.classList.remove("is-active");
+                    contactForm.reset();
                 });
+
+                formResetButton.addEventListener("click", () => contactForm.reset());
 
                 formSubmitButton.addEventListener("click", () => {
                     resetFormErrorMessages(formErrorMsgContainer);
@@ -114,12 +120,13 @@
 
                         axios.post("./contact/send_email.php", payload)
                             .then(response => {
-                                if (response.status === 200) {
+                                if (response.status === 200 && response.data.mail_success) {
                                     formSubmitSuccessMsg.classList.remove("is-hidden");
                                     setTimeout(() => {
                                         formSubmitSuccessMsg.classList.add("is-hidden");
-                                        contactModal.classList.remove("is-active");                                        
-                                    }, 6000); 
+                                        contactModal.classList.remove("is-active");   
+                                        contactForm.reset();                                     
+                                    }, 6000);
                                 }
                                 else {
                                     handlePostResponseErrors(response.status);
