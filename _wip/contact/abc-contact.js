@@ -96,6 +96,8 @@
 
                     if (errorMessages) {
                         formErrorMsgContainer.classList.remove("is-hidden");
+                        formErrorMsgContainer.scrollIntoView();
+                        
                         errorMessages.forEach((msg) => {
                             if (msg === "name") {
                                 formErrorMsgOnName.classList.remove("is-hidden");
@@ -122,6 +124,8 @@
                             .then(response => {
                                 if (response.status === 200 && response.data.mail_success) {
                                     formSubmitSuccessMsg.classList.remove("is-hidden");
+                                    formSubmitSuccessMsg.scrollIntoView();
+
                                     setTimeout(() => {
                                         formSubmitSuccessMsg.classList.add("is-hidden");
                                         contactModal.classList.remove("is-active");   
