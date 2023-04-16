@@ -1,23 +1,24 @@
 <?php
 $ua = $_SERVER['HTTP_USER_AGENT'];
 $isPhone = stripos($ua, 'Android') || stripos($ua, 'iPhone');
-if (!$isPhone) :?>
-    <div class="is-size-5 font-pangolin">Tap a contact method below</div>
-    <!--
-    <a class="button abc-contact-button is-rounded is-link is-size-2 is-underlined" href="tel:2512334000">
-        251-233-4000
+
+if ($isPhone) :?>
+  <div class="is-size-5 font-pangolin pt-1 mb-1">Tap a contact method below</div>
+  <div>
+    <a href="tel:2512334000" class="button is-rounded is-link is-size-3 is-underlined mb-2">
+      251-233-4000
     </a>
-    -->
-    <a class="button 
-              abc-contact-button
-              is-rounded 
-              is-link 
-              is-size-3 
-              is-underlined 
-              mt-1">
-        Contact Form
-    </a>
+  </div>
+<?php else :?>
+  <div class="is-size-5 font-pangolin pt-1">Call or click to fill out form</div>
+  <div class="is-size-2 has-text-link">251-233-4000</div>  
 <?php endif; ?>
+
+<div>
+  <a class="button abc-contact-button is-rounded is-link is-size-3 is-underlined">
+    <div class="mx-2">Contact Form</div>
+  </a>
+</div>
 
 <?php if (!isset($contact_modal_created)) :
   $contact_modal_created = true;  

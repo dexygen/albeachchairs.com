@@ -40,10 +40,9 @@
             </div>
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
-            <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
             <?php require_once("./contact/_inc_contact_component.php"); ?>
             <div class="has-text-danger-dark is-block is-size-3">
-              <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
+              <a class="has-text-danger-dark is-underlined mt-3" href="#abc-delivery">
                 We deliver to YOUR location
               </a>
             </div>
@@ -59,7 +58,7 @@
               Appending small query string to each image url to force refresh 
               especially after uploading and on mobile, if these images are altered,
               e.g. resized, the query string "h=180" should be changed, e.g. perhaps
-              appending the date: "h=180-apr01-2023", or some such
+              appending the date: "h=180-apr01-2023", or some such, or do programmatically
             -->
             <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
@@ -86,7 +85,7 @@
         <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+              <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
               DELIVERY
               </div>
             </header>
@@ -147,7 +146,7 @@
         <!-- CONDO SERVICE -->
         <section class="mb-6 mx- abc-section" id="abc-condo-service">
           <header class="columns is-mobile is-centered">
-            <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+            <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
             CONDO SERVICE
             </div>
           </header>
@@ -211,7 +210,7 @@
         <section class="pt-2 mb-6 abc-section" id="abc-featured-property">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+              <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
               FEATURED PROPERTY
               </div>
             </header>
@@ -227,10 +226,10 @@
           </div>
         </section>
         <!-- PROPERTIES -->
-        <section class="pt-2 mb-4 abc-section" id="abc-properties">
+        <section class="pt-2 mb-6 abc-section" id="abc-properties">
           <div class="pt-3">
           <header class="columns is-mobile is-centered mb-2">
-            <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+            <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
             PROPERTIES WE SERVE
             </div>
           </header>
@@ -288,10 +287,10 @@
           <?php } ?>
         </section>
         <!-- ABOUT/CONTACT -->
-        <section class="pt-2 mb-6 abc-section abc-about-contact" id="abc-about-contact">
+        <section class="pt-2 abc-section abc-about-contact" id="abc-about-contact">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-4 has-background-danger-dark has-text-danger-light font-kalam">
+              <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
                 ABOUT/CONTACT
               </div>
             </header>
