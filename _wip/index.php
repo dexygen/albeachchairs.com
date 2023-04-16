@@ -40,9 +40,12 @@
             </div>
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
-            <?php require_once("./contact/_inc_contact_component.php"); ?>
-            <div class="has-text-danger-dark is-block is-size-3">
-              <a class="has-text-danger-dark is-underlined mt-3" href="#abc-delivery">
+            <?php
+              $contact_modal_created = false; 
+              require("./contact/_inc_contact_component.php"); 
+            ?>
+            <div class="has-text-danger-dark is-block is-size-3 mt-3">
+              <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
                 We deliver to YOUR location
               </a>
             </div>
@@ -96,10 +99,8 @@
                     CONTACT US FOR DELIVERY
                   </div>
                 </div>
-                <div class="is-size-2 font-pangolin abc-phone">
-                  <a class="is-size-2 is-underlined" href="tel:2512334000">251-233-4000</a>
-                </div>
-                <div class="has-text-primary-dark is-size-3">Alabama Beach Chairs' Delivery Sets</div>
+                <?php require("./contact/_inc_contact_component.php"); ?>
+                <div class="has-text-primary-dark is-size-3 mt-4">Alabama Beach Chairs' Delivery Sets</div>
                 <div class="has-text-primary-dark is-size-4">
                   2-person Chair Sets, with Umbrella
                 </div>
@@ -165,7 +166,7 @@
               </div>
               <div class="is-flex is-justify-content-center mb-2">
                 <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
-                  DELIVERY EQUIPMENT PRICING
+                  CONDO EQUIPMENT PRICING
                 </div>
               </div>
               <div class="columns is-mobile is-centered">
@@ -297,11 +298,8 @@
           </div>
           <article class="columns is-mobile is-centered font-pangolin">
             <section class="column is-10">
-              <div class="has-text-link has-text-centered is-underlined is-size-2">
-                <a href="tel:2512334000">251-233-4000</a>
-              </div>
-              <div class="has-text-primary-dark has-text-centered is-size-4 mb-1">albeachchairs@gmail.com</div>
-              <div class="is-size-4 has-text-left">
+              <?php require("./contact/_inc_contact_component.php"); ?>
+              <div class="is-size-4 has-text-left mt-4">
                 <div class="mb-4">
                   Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
                   most professionally operated beach service for all guests, with customer service as priority one.                

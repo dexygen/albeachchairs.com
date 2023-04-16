@@ -20,7 +20,7 @@ if ($isPhone) :?>
   </a>
 </div>
 
-<?php if (!isset($contact_modal_created)) :
+<?php global $contact_modal_created; if (!$contact_modal_created) :
   $contact_modal_created = true;  
 ?>
 <div class="modal abc-contact-modal">
