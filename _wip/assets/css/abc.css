@@ -2,8 +2,6 @@ body#abc-viewport {
   background:
     url(../images/abc-background.jpg) repeat-x center top,
     url(../images/abc-background-bottom.jpg) repeat;
-    
-  overflow-x: hidden; /* addresses slight horizontal scroll issue on mobile */
 }
 
 .font-kalam {
