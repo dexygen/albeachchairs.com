@@ -236,7 +236,7 @@
           </header>
           <!-- PROPERTY IMAGE MODAL -->
           <div class="modal abc-property-img-modal">
-            <div class="modal-background"></div>
+            <div class="modal-background has-background-grey-dark"></div>
             <div class="modal-card">
               <header class="modal-card-head">
                 <!-- Title value gets passed in when property link is clicked -->
