@@ -8,7 +8,9 @@
     let formSubmitButton;
     let formResetButton;
     let formSubmitSuccessMsg;
-    let formSubmitSuccessMsgCloseButton;
+    let formSubmitSuccessCloseButton;
+    let formPostResponseErrorMsg;
+    let formPostResponseErrorCloseButton;
     
     let formErrorMsgContainer;
     let formErrorMsgOnName;
@@ -39,17 +41,21 @@
                         closeButton.addEventListener("click", () => {
                             contactModal.classList.remove("is-active");
                             contactForm.reset();
+                            hideNotifications();
                         });
                     });
     
                     contactForm = document.querySelector(".abc-contact-form");
                     formSubmitButton = document.querySelector(".abc-contact-form-submit");
                     formResetButton = document.querySelector(".abc-contact-form-reset");
-                    formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-msg-container");
+
+                    formErrorMsgContainer = contactModal.querySelector(".abc-contact-form-error-msg-container");
                     formMessagesCloseButton = contactModal.querySelector(".abc-contact-form-messages-close-button");
                     formSubmitSuccessMsg = contactModal.querySelector(".abc-contact-form-success-msg");
-                    formSubmitSuccessMsgCloseButton = contactModal.querySelector(".abc-contact-form-success-msg-close-button");
-                    
+                    formSubmitSuccessCloseButton = contactModal.querySelector(".abc-contact-form-success-msg-close-button");
+                    formPostResponseErrorMsg = contactModal.querySelector(".abc-contact-form-post-response-msg");
+                    formPostResponseErrorCloseButton = contactModal.querySelector(".abc-contact-form-post-response-close-button");
+
                     /*
                       because of the naming convention, the following can eventually 
                       be selected with querySelectorAll and the results put into an object
@@ -80,19 +86,24 @@
                     // END
     
                     formMessagesCloseButton.addEventListener("click", () => {
-                        resetFormErrorMessages(formErrorMsgContainer);
+                        resetFormErrorMessages();
                     });
     
-                    formSubmitSuccessMsgCloseButton.addEventListener("click", () => {
+                    formSubmitSuccessCloseButton.addEventListener("click", () => {
                         formSubmitSuccessMsg.classList.add("is-hidden");
                         contactModal.classList.remove("is-active");
                         contactForm.reset();
+                    });
+
+                    formPostResponseErrorCloseButton.addEventListener("click", () => {
+                        formPostResponseErrorMsg.classList.add("is-hidden");
                     });
     
                     formResetButton.addEventListener("click", () => contactForm.reset());
     
                     formSubmitButton.addEventListener("click", () => {
-                        resetFormErrorMessages(formErrorMsgContainer);
+                        hideNotifications();
+                        resetFormErrorMessages();
                         let errorMessages = contactFormErrorMessages(contactForm);
     
                         if (errorMessages) {
@@ -143,7 +154,8 @@
                         }
     
                         function handlePostResponseErrors() {
-                            console.log("handlePostResponseErrors(): NEEDS IMPLEMENTATION")
+                            formPostResponseErrorMsg.classList.remove("is-hidden");
+                            formPostResponseErrorMsg.scrollIntoView();
                         }
                     });
                 }
@@ -193,10 +205,15 @@
                 return errorMessages;
             }
     
-            function resetFormErrorMessages(container) {
-                container.classList.add("is-hidden");
-                const errorMsgs = container.querySelectorAll("[class^='abc-contact-form-error-']");
+            function resetFormErrorMessages() {
+                formErrorMsgContainer.classList.add("is-hidden");
+                const errorMsgs = formErrorMsgContainer.querySelectorAll("[class^='abc-contact-form-error-']");
                 errorMsgs.forEach((errorMsgEl) => { errorMsgEl.classList.add("is-hidden") });
+            }
+
+            function hideNotifications() {
+                formSubmitSuccessMsg.classList.add("is-hidden");
+                formPostResponseErrorMsg.classList.add("is-hidden");
             }
         });        
     });

@@ -42,16 +42,23 @@ if ($isPhone) :?>
       </div>
     </header>
     <section class="modal-card-body">
-    <div class="notification is-info abc-contact-form-success-msg is-hidden">
+      <div class="notification is-info abc-contact-form-success-msg is-hidden">
         <button class="delete abc-contact-form-success-msg-close-button"></button>
         <div class="is-size-4 mb-2">
-          Your information has been successfully submitted.  Someone will be contacting you shortly
+          Your information has been successfully submitted.  Someone will be contacting you shortly.
         </div>
       </div>
-      <div class="notification is-danger abc-contact-form-msg-container is-hidden">
+      <div class="notification is-danger abc-contact-form-post-response-msg is-hidden">
+        <button class="delete abc-contact-form-post-response-close-button"></button>
+        <div class="is-size-4 mb-2">
+          There was a problem submitting your information.  You can try again,
+          or call us at 251-233-4000.
+        </div>
+      </div>
+      <div class="notification is-danger abc-contact-form-error-msg-container is-hidden">
         <button class="delete abc-contact-form-messages-close-button"></button>
         <div class="is-size-4 mb-2">
-          Please correct the following issues and submit again
+          Please correct the following issues and submit again:
         </div>
         <ul class="is-size-5 abc-contact-form-message-list-items">
           <li class="abc-contact-form-error-name is-hidden">
