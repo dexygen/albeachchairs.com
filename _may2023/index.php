@@ -44,16 +44,18 @@
               $contact_modal_created = false; 
               require("./contact/_inc_contact_component.php"); 
             ?>
-            <div class="has-text-danger-dark is-block is-size-3 mt-3">
-              <a class="has-text-danger-dark is-underlined" href="#abc-delivery">
+            <div class="is-block is-size-3 mt-3">
+              <a class="has-text-danger-dark has-text-weight-semibold font-kalam" href="#abc-delivery">
                 We deliver to YOUR location
               </a>
             </div>
-            <div class="is-size-4 has-text-primary-dark ">
-              OR reserve at <a class="is-underlined" href="#abc-properties">properties we serve</a> 
-              <div class="is-italic">
-                (NO delivery fees apply at <a class="is-underlined" href="#abc-properties">THESE condos)</a>
-              </span>
+            <div>(Sorry we do not deliver to Fort Morgan)</div>
+            <div class="is-size-4 has-text-primary-dark">
+              OR if you're staying at
+              <div><a class="is-underlined has-text-primary-dark" href="#abc-properties">Properties we serve</a></div> 
+              <div>
+                Then no delivery fees apply 
+              </div>
             </div>
           </div>
           <div id="abc-carousel" class="mt-2 mb-5">
@@ -63,7 +65,8 @@
               e.g. resized, the query string "h=180" should be changed, e.g. perhaps
               appending the date: "h=180-apr01-2023", or some such, or do programmatically
             -->
-            <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
+            <div class="is-block"><img src="./assets/images/slideshow/flag-at-beach.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/sunrise.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/beachside.jpg?h=180"></img></div>
