@@ -16,6 +16,18 @@ body#abc-viewport {
   margin-top: -0.875rem;
 }
 
+.abc-text-orange {
+  color: #ed7e37;
+}
+
+.abc-background-seafoam {
+  background-color: #CCFFE5;
+}
+
+.abc-contact-button:hover {
+  color: #00947e;
+}
+
 .abc-menu {
   position: -webkit-sticky;
   position: sticky;
