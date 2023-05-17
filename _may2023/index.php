@@ -52,9 +52,9 @@
             <div>(Sorry we do not deliver to Fort Morgan)</div>
             <div class="is-size-4 has-text-primary-dark">
               OR if you're staying at
-              <div><a class="is-underlined has-text-primary-dark" href="#abc-properties">Properties we serve</a></div> 
+              <div><a class="is-underlined has-text-primary-dark" href="#abc-properties">Properties we serve</a></div>
               <div>
-                Then no delivery fees apply 
+                (No delivery fees apply) 
               </div>
             </div>
           </div>
@@ -76,15 +76,28 @@
           <div class="pt-2 has-text-danger-dark is-size-4 has-text-weight-semibold font-kalam">
             Alabama Beach Chairs
           </div>
-          <div class="mb-1 pb-1 is-size-5 is-hidden-tablet is-underlined has-text-primary-dark has-text-weight-bold abc-toggle-menu-mobile">
+          <div class="mb-1 
+                      pb-1 
+                      is-size-5 
+                      is-hidden-tablet 
+                      is-underlined 
+                      has-text-danger-dark
+                      has-text-weight-bold 
+                      abc-toggle-menu-mobile">
             <div>Show Menu</div>
           </div>
-          <div class="columns abc-menu-links py-2 is-size-4-mobile is-hidden-mobile is-size-4-desktop has-text-weight-semibold">
-            <a class="column is-one-fifth py-1" href="#abc-delivery">Delivery Service</a>
-            <a class="column is-one-fifth py-1" href="#abc-condo-service">Condo Service</a>
-            <a class="column is-one-fifth py-1" href="#abc-featured-property">Featured Property</a>
-            <a class="column is-one-fifth py-1" href="#abc-properties">Properties</a>
-            <a class="column is-one-fifth py-1" href="#abc-about-contact">About/Contact</a>
+          <div class="columns 
+                      abc-menu-links 
+                      py-2 
+                      is-size-4-mobile 
+                      is-hidden-mobile 
+                      is-size-4-desktop 
+                      has-text-weight-semibold">
+            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-delivery">Delivery Service</a>
+            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-condo-service">Condo Service</a>
+            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-featured-property">Featured Property</a>
+            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-properties">Properties</a>
+            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-about-contact">About/Contact</a>
           </div>
         </nav>
         <!-- DELIVERY -->
@@ -103,6 +116,7 @@
                   </div>
                 </div>
                 <?php require("./contact/_inc_contact_component.php"); ?>
+                <div class="mt-2">(Sorry we do not deliver to Fort Morgan)</div>
                 <div class="has-text-primary-dark is-size-3 mt-4">Alabama Beach Chairs' Delivery Sets</div>
                 <div class="has-text-primary-dark is-size-4">
                   2-person Chair Sets, with Umbrella
