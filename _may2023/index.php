@@ -243,8 +243,8 @@
             <div class="is-block pt-1"><img src="./assets/images/properties/phoenix-vii-small.png"></img></div>
             <article class="columns is-mobile is-centered font-pangolin mt-1">
                <section class="column is-10 is-size-4 has-text-left">
-                  Alabama Beach Chairs proudly serves Phoenix VII, directly on the white sandy shores 
-                  of Orange Beach, Alabama, offering vacation rentals with great beach views 
+                Alabama Beach Chairs proudly serves Phoenix VII, directly on the white sandy shores 
+                of Orange Beach, Alabama, offering vacation rentals with great beach views 
                 from every unit.
               </section>
             </article>
@@ -302,7 +302,11 @@
                   <ul>
                   <?php foreach($propertyDetails as $property) { ?>
                     <li data-abc-property-img-src="<?php echo $property["imgSrcPath"]; ?>">
-                      <a class="is-underlined"><?php echo $property["name"]; ?></a>
+                      <a class="is-underlined
+                                abc-text-orange
+                                has-text-weight-semibold">
+                        <?php echo $property["name"]; ?>
+                      </a>
                     </li>
                   <?php } ?>
                   </ul>
