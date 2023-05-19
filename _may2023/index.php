@@ -45,11 +45,13 @@
               require("./contact/_inc_contact_component.php"); 
             ?>
             <div class="is-block is-size-3 mt-3">
-              <a class="has-text-danger-dark has-text-weight-semibold font-kalam" href="#abc-delivery">
+              <a href="#abc-delivery"  class="has-text-danger-dark 
+                                              has-text-weight-semibold 
+                                              font-kalam
+                                              is-underlined">
                 We deliver to YOUR location
               </a>
             </div>
-            <div>(Sorry we do not deliver to Fort Morgan)</div>
             <div class="is-size-4 has-text-primary-dark">
               OR if you're staying at
               <div><a class="is-underlined has-text-primary-dark" href="#abc-properties">Properties we serve</a></div>
@@ -119,20 +121,25 @@
                 <div class="mt-2">(Sorry we do not deliver to Fort Morgan)</div>
                 <div class="has-text-primary-dark is-size-3 mt-4">Alabama Beach Chairs' Delivery Sets</div>
                 <div class="has-text-primary-dark is-size-4">
-                  2-person Chair Sets, with Umbrella
+                  (2-person Chair Sets with Umbrella)
                 </div>
                 <div class="columns is-mobile is-centered">
                   <section class="column has-text-left pb-0 is-size-5-mobile is-9-tablet is-7-desktop is-6-fullhd">
                     <ul class="is-size-4 abc-delivery-list-items">
                       <li>Two folding beach chairs with footrests</li>
                       <li>One 7' beach umbrella</li>
-                      <li>Umbrellas securely fastened by one of our friendly attendants</li>
-                      <li>Setup by 9 am, Pick up at 5 pm</li>
+                      <li>Umbrellas secured by one of our friendly attendants</li>
+                      <li>Setup by 9 am, Pick up after 5 pm</li>
+                      <li>Minimum 2 sets for delivery</li>
                       <li>Setup/Pickup $30 per day</li>
+                      <li>(No extra delivery fee for more sets)</li>
+                      <li class="is-italic">Sorry we do not deliver to Fort Morgan</li>
                     </ul>
                     <div class="has-text-weight-bold is-size-4 mt-2 font-kalam has-text-danger-dark">
                       Setup/Pickup fees apply ONLY for Deliveries, NOT for
-                      <a class="is-underlined" href="#abc-properties">properties we serve</a> 
+                      <a class="is-underlined has-text-danger-dark" href="#abc-properties">
+                        properties we serve
+                      </a> 
                     </div>
                   </section>
                 </div>
@@ -152,9 +159,9 @@
                     <li>6 days: $150</li>
                     <li>7 days: $170</li>
                     <li class="mt-2 has-text-primary-dark has-text-weight-normal">
-                      ONE chair, OR umbrella
+                      EXTRA chair(s), OR umbrella(s)
                     </li>
-                    <li>1 day: $20</li>
+                    <li>$15 each, per day</li>
                   </ul>
                 </section>
               </div>
