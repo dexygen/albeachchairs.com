@@ -8,7 +8,7 @@ if ($isPhone) :?>
     <a href="tel:2512334000" class="button 
                                     abc-contact-button 
                                     is-rounded 
-                                    abc-background-seafoam 
+                                    abc-background-success-tint 
                                     abc-text-orange 
                                     is-size-3 
                                     is-underlined
@@ -25,8 +25,9 @@ if ($isPhone) :?>
   <a class="button 
             abc-contact-button 
             is-rounded 
-            abc-background-seafoam 
-            abc-text-orange 
+            abc-background-success-tint 
+            abc-text-orange
+            has-text-weight-semibold
             is-size-3 
             is-underlined">
     <div class="mx-2">Contact Form</div>

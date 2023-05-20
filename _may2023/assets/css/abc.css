@@ -20,12 +20,8 @@ body#abc-viewport {
   color: #ed7e37;
 }
 
-.abc-text-seafoam {
-  color: #CCFFE5;
-}
-
-.abc-background-seafoam {
-  background-color: #CCFFE5;
+.abc-background-success-tint {
+  background-color: #91ddbb;
 }
 
 .abc-contact-button:hover {

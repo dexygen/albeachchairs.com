@@ -118,11 +118,14 @@
                   </div>
                 </div>
                 <?php require("./contact/_inc_contact_component.php"); ?>
-                <div class="mt-2">(Sorry we do not deliver to Fort Morgan)</div>
                 <div class="has-text-primary-dark is-size-3 mt-4">Alabama Beach Chairs' Delivery Sets</div>
                 <div class="has-text-primary-dark is-size-4">
                   (2-person Chair Sets with Umbrella)
                 </div>
+                <div class="has-text-danger-dark has-text-weight-semibold is-size-4">
+                  Minimum two sets for delivery
+                </div>
+                <div class="mb-2">Sorry we do not deliver to Fort Morgan</div>
                 <div class="columns is-mobile is-centered">
                   <section class="column has-text-left pb-0 is-size-5-mobile is-9-tablet is-7-desktop is-6-fullhd">
                     <ul class="is-size-4 abc-delivery-list-items">
@@ -130,10 +133,8 @@
                       <li>One 7' beach umbrella</li>
                       <li>Umbrellas secured by one of our friendly attendants</li>
                       <li>Setup by 9 am, Pick up after 5 pm</li>
-                      <li>Minimum 2 sets for delivery</li>
                       <li>Setup/Pickup $30 per day</li>
-                      <li>(No extra delivery fee for more sets)</li>
-                      <li class="is-italic">Sorry we do not deliver to Fort Morgan</li>
+                      <li>No extra delivery fee for more sets</li>
                     </ul>
                     <div class="has-text-weight-bold is-size-4 mt-2 font-kalam has-text-danger-dark">
                       Setup/Pickup fees apply ONLY for Deliveries, NOT for
@@ -159,7 +160,7 @@
                     <li>6 days: $150</li>
                     <li>7 days: $170</li>
                     <li class="mt-2 has-text-primary-dark has-text-weight-normal">
-                      EXTRA chair(s), OR umbrella(s)
+                      Extra chair, OR umbrella
                     </li>
                     <li>$15 each, per day</li>
                   </ul>
