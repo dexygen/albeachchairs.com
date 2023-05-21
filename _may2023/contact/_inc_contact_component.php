@@ -81,6 +81,9 @@ if ($isPhone) :?>
           <li class="abc-contact-form-error-email is-hidden">
             Email is required and must be properly formatted
           </li>
+          <li class="abc-contact-form-error-delivery is-hidden">
+            If "Delivery" is checked an address and city must be provided
+          </li>
           <li class="abc-contact-form-error-start-date is-hidden">
             Start date cannot be in the past
           </li>
@@ -117,9 +120,6 @@ if ($isPhone) :?>
             </span>
           </div>
         </div>
-        <div class="is-size-4 is-italic mt-4 mb-1">
-          Please help us with as much information as possible
-        </div>
         <div class="field">
           <label class="label abc-service-type-label is-size-4">
             <span class="mr-1 has-text-primary-dark">Type of Service</span>
@@ -130,7 +130,7 @@ if ($isPhone) :?>
                 <span class="pr-1 is-size-5">Delivery</span>
                 <input type="checkbox" class="abc-contact-form-field-delivery" name="delivery">
               </div>
-              <div class="pt-1 px-5 is-size-5">OR at</div>
+              <div class="pt-1 px-5 is-size-5 abc-form-service-conjunction">OR at</div>
               <div class="select">
                 <select class="abc-contact-form-field-property" name="property">
                 <?php
@@ -148,11 +148,57 @@ if ($isPhone) :?>
                 </select>
               </div>
             </div>
+            <div class="mt-2 is-hidden abc-contact-form-delivery-required-fields">
+              <div class="field">
+                <label class="label is-size-4">
+                  <span class="mr-1 has-text-primary-dark">Delivery Street Address</span>
+                  <span class="has-text-danger">*</span>
+                </label>
+                <div class="control has-icons-left has-icons-right abc-featured-property-label">
+                  <input 
+                    class="input" 
+                    type="text" 
+                    class="abc-contact-form-field-delivery-addr" 
+                    name="deliveryAddr" 
+                    placeholder="Your Beach Home Address">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-road"></i>
+                  </span>
+                </div>
+              </div>
+              <div>
+                <label class="label is-size-4">
+                  <span class="mr-1 has-text-primary-dark">Delivery City</span>
+                  <span class="has-text-danger">*</span>
+                </label>
+                <div class="mb-3 abc-featured-property-label">Sorry we do not deliver to Fort Morgan</div>
+                <div class="field abc-featured-property-label">
+                  <div class="control">
+                    <label class="radio is-size-5">
+                      <input 
+                        type="radio" 
+                        name="deliveryCity"
+                        value="Orange Beach"
+                        class="abc-contact-form-field-delivery-city">
+                      Orange Beach
+                    </label>
+                    <label class="radio is-size-5">
+                      <input 
+                        type="radio" 
+                        name="deliveryCity"
+                        value="Gulf Shores"
+                        class="abc-contact-form-field-delivery-city">
+                      Gulf Shores
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="field">
           <label class="label is-size-4">
-            <span class="mr-1 has-text-primary-dark">When and for how long (an estimate is OK)</span>
+            <span class="mr-1 has-text-primary-dark">When and for how long</span>
           </label>
           <div class="is-flex is-justify-content-center">
             <div class="mr-2">
@@ -170,7 +216,7 @@ if ($isPhone) :?>
           </div>
           <div class="field mt-4">
             <label class="label is-size-4">
-              <span class="mr-1 has-text-primary-dark">Anything else? (for instance, delivery location)</span>
+              <span class="mr-1 has-text-primary-dark">Anything else? Special requests?</span>
             </label>
           </div>
           <textarea class="textarea" placeholder="Additional information" name="other"></textarea>

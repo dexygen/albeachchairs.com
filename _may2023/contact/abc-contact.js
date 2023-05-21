@@ -19,6 +19,8 @@
     let formErrorMsgOnDuration;
 
     let formFieldDelivery;
+    let formFieldDeliveryAddr;
+    let formFieldDeliveryCity;
     let formFieldProperty;
     let formFieldStartDate;
     let formFieldDuration;
@@ -62,20 +64,29 @@
                     */
                     formErrorMsgOnName = contactModal.querySelector(".abc-contact-form-error-name");
                     formErrorMsgOnEmail = contactModal.querySelector(".abc-contact-form-error-email");
+                    formErrorMsgOnDelivery = contactModal.querySelector(".abc-contact-form-error-delivery");
                     formErrorMsgOnStartDate = contactModal.querySelector(".abc-contact-form-error-start-date");
                     formErrorMsgOnDuration = contactModal.querySelector(".abc-contact-form-error-duration");
                     formErrorMsgOnInsufficientInfo = contactModal.querySelector(".abc-contact-form-error-insufficient-info");
     
                     // same comment from above applies
                     formFieldDelivery = contactForm.querySelector(".abc-contact-form-field-delivery");
+                    formFieldDeliveryAddr = contactForm.querySelector(".abc-contact-form-field-delivery-addr");
+                    formFieldDeliveryCity = contactForm.querySelector(".abc-contact-form-field-delivery-city");
                     formFieldProperty = contactForm.querySelector(".abc-contact-form-field-property");
                     formFieldStartDate = contactForm.querySelector(".abc-contact-form-field-start-date");
                     formFieldDuration = contactForm.querySelector(".abc-contact-form-field-duration");
-                    
+
+                    formFieldDeliveryRequiredFields = contactForm.querySelector(".abc-contact-form-delivery-required-fields")
+
                     // BEGIN: Only allow Delivery checkbox OR property selection menu, to have a value
                     formFieldDelivery.addEventListener("click", () => {
                         if (formFieldDelivery.checked) {
                             formFieldProperty.value = "";
+                            formFieldDeliveryRequiredFields.classList.remove("is-hidden");
+                        }
+                        else {
+                            formFieldDeliveryRequiredFields.classList.add("is-hidden");
                         }
                     });
                     formFieldProperty.addEventListener("change", () => {
@@ -116,6 +127,9 @@
                                 }
                                 if (msg === "email") {
                                     formErrorMsgOnEmail.classList.remove("is-hidden");
+                                }
+                                if (msg === "deliveryAddr" || msg === "deliveryCity") {
+                                    formErrorMsgOnDelivery.classList.remove("is-hidden");
                                 }
                                 if (msg === "startDate") {
                                     formErrorMsgOnStartDate.classList.remove("is-hidden");
@@ -163,11 +177,22 @@
     
             function contactFormErrorMessages(contactForm) {
                 let errorMessages;
-                
                 const formData = new FormData(contactForm);
+
                 const emailRegex = /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/;
                 // as to the above, standards-based, regex, see: https://stackoverflow.com/a/26989421/34806
-    
+
+                if (formFieldDelivery.checked) {
+                  if (!formData.get("deliveryAddr").trim()) {
+                    errorMessages = errorMessages || [];
+                    errorMessages.push("deliveryAddr");
+                  }
+                  if (!formData.get("deliveryCity")) {
+                    errorMessages = errorMessages || [];
+                    errorMessages.push("deliveryCity");
+                  }
+                }
+
                 for (let [fieldName, val] of formData.entries()) {
                   if (fieldName === "name" && val.trim().length < 2) {
                     errorMessages = errorMessages || [];
@@ -201,7 +226,7 @@
                         errorMessages.push(INSUFFICIENT_INFO);
                     }
                 }
-    
+
                 return errorMessages;
             }
     
