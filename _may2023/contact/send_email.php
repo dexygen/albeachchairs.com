@@ -15,6 +15,8 @@ class ContactEmailController extends AbstractJrMvcController {
 
         if (array_key_exists("delivery", $payload)) {
             $serviceType = "DELIVERY";
+            $deliveryAddr = $payload["deliveryAddr"];
+            $deliveryCity = $payload["deliveryCity"];
         }
         elseif ($property) {
             # only reach this if $property is not zero, the "placeholder"
@@ -36,6 +38,10 @@ class ContactEmailController extends AbstractJrMvcController {
             "Duration: $duration",
             "Other: $other"
         );
+
+        if ($serviceType == "DELIVERY") {
+            array_splice($messageLines, 2, 0, array("Address: $deliveryAddr", "City: $deliveryCity"));
+        }
 
         $message = join("\n", $messageLines);
         $mail_success = mail($to, $subject, $message);
