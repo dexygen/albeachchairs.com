@@ -183,11 +183,10 @@
                 Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, 
                 fun beach games, and a full rental inventory
               </header>
-              <div>
-                <span class="has-text-info-dark">Delivery fees</span> 
-                <span class="is-italic has-text-primary-dark">
-                  DO NOT APPLY&nbsp;<a class="is-underlined" href="#abc-properties">at properties we serve</a>  
-                </span>
+              <div class="has-text-danger-dark mb-5">Delivery fees DO NOT APPLY&nbsp;
+                <a class="is-underlined has-text-danger-dark href="#abc-properties">
+                  at properties we serve
+                </a>  
               </div>
               <div class="is-flex is-justify-content-center mb-2">
                 <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
