@@ -1,9 +1,7 @@
 body#abc-viewport {
   background:
-    url(../images/abc-background.jpg) repeat-x center top,
-    url(../images/abc-background-bottom.jpg) repeat;
-    
-  overflow-x: hidden; /* addresses slight horizontal scroll issue on mobile */
+    url(../images/abc-white-sand-bg.jpg) repeat-x center top,
+    url(../images/abc-white-sand-bg-bottom.jpg) repeat;
 }
 
 .font-kalam {
@@ -18,10 +16,23 @@ body#abc-viewport {
   margin-top: -0.875rem;
 }
 
+.abc-text-orange {
+  color: #ed7e37;
+}
+
+.abc-background-success-tint {
+  background-color: #91ddbb;
+}
+
+.abc-contact-button:hover {
+  color: #00947e;
+}
+
 .abc-menu {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 @media (max-width:768px) {
@@ -39,8 +50,20 @@ body#abc-viewport {
   list-style: disc outside;
 }
 
+.abc-contact-form-message-list-items {
+  list-style: disc inside;
+}
+
+.abc-service-type-label {
+  margin-bottom: 0 !important;
+}
+
 .abc-featured-property-label {
   margin-top: -0.5rem;
+}
+
+.abc-contact-form-field-duration {
+  width: 3rem;
 }
 
 .abc-property-city-section {
