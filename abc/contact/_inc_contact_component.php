@@ -171,7 +171,9 @@ if ($isPhone) :?>
                   <span class="mr-1 has-text-primary-dark">Delivery City</span>
                   <span class="has-text-danger">*</span>
                 </label>
-                <div class="mb-3 abc-featured-property-label">Sorry we do not deliver to Fort Morgan</div>
+                <div class="mb-3 abc-featured-property-label is-italic">
+                  Sorry, we do not deliver to Fort Morgan
+                </div>
                 <div class="field abc-featured-property-label">
                   <div class="control">
                     <label class="radio is-size-5">

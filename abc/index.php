@@ -52,10 +52,13 @@
                 We deliver to YOUR location
               </a>
             </div>
-            <div class="is-size-4 has-text-primary-dark">
-              OR if you're staying at
-              <div><a class="is-underlined has-text-primary-dark" href="#abc-properties">Properties we serve</a></div>
-              <div>
+            <div>
+              <div class="is-size-4 has-text-primary-dark">OR if you're staying at</div>
+              <div><a class="is-size-4 is-underlined has-text-primary-dark" href="#abc-properties">
+                Properties we serve
+              </a></div>
+              <div>Click or tap underlined link above for list</div>
+              <div class="is-size-4 has-text-primary-dark">
                 (No delivery fees apply) 
               </div>
             </div>
@@ -125,7 +128,7 @@
                 <div class="has-text-danger-dark has-text-weight-semibold is-size-4">
                   Minimum two sets for delivery
                 </div>
-                <div class="mb-2">Sorry we do not deliver to Fort Morgan</div>
+                <div class="mb-2">Sorry, we do not deliver to Fort Morgan</div>
                 <div class="columns is-mobile is-centered">
                   <section class="column has-text-left pb-0 is-size-5-mobile is-9-tablet is-7-desktop is-6-fullhd">
                     <ul class="is-size-4 abc-delivery-list-items">
@@ -183,10 +186,12 @@
                 Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, 
                 fun beach games, and a full rental inventory
               </header>
-              <div class="has-text-danger-dark mb-5">Delivery fees DO NOT APPLY&nbsp;
+              <div class="mb-5">
+                <div class="has-text-danger-dark">Delivery fees DO NOT APPLY&nbsp;</div>
                 <a class="is-underlined has-text-danger-dark href="#abc-properties">
                   at properties we serve
-                </a>  
+                </a>
+                <div class="is-italic is-size-6">Click or tap underlined link above for list</div>
               </div>
               <div class="is-flex is-justify-content-center mb-2">
                 <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
