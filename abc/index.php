@@ -109,17 +109,14 @@
         <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
-              <div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
-              DELIVERY
+              <div class="is-flex is-justify-content-center my-3">
+                <div class="has-background-danger-dark has-text-danger-light font-kalam is-size-3 p-3">
+                  CONTACT US FOR DELIVERY
+                </div>
               </div>
             </header>
             <article class="columns is-mobile is-centered font-pangolin">
               <div class="column is-10 has-text-centered">
-                <div class="is-flex is-justify-content-center my-3">
-                  <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
-                    CONTACT US FOR DELIVERY
-                  </div>
-                </div>
                 <?php require("./contact/_inc_contact_component.php"); ?>
                 <div class="has-text-primary-dark is-size-3 mt-4">Alabama Beach Chairs' Delivery Sets</div>
                 <div class="has-text-primary-dark is-size-4">
