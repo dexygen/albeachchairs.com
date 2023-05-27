@@ -3,6 +3,8 @@
   enablePropertyImages();
   enableMobileMenu();
 
+  const abcAnchorLinks = document.querySelectorAll("a[href^='#']");
+
   function enableCarousel() {
     const carouselRoot = document.getElementById("abc-carousel");
     const carouselImgDivs = [...carouselRoot.querySelectorAll("div")];
@@ -48,14 +50,26 @@
     const toggleMenuMobile = document.querySelector(".abc-toggle-menu-mobile");
     const menuLinks = document.querySelector(".abc-menu-links");
     
-    toggleMenuMobile.addEventListener("click", function(selection) {
-      if (selection.target.innerHTML === "Show Menu") {
-        selection.target.innerHTML = "Hide Menu";
+    toggleMenuMobile.addEventListener("click", function(toggle) {
+      if (toggle.target.innerHTML === "Show Menu") {
+        toggle.target.innerHTML = "Hide Menu";
         menuLinks.classList.remove("is-hidden-mobile");
         menuLinks.classList.add("is-block");
       }
       else {
-        selection.target.innerHTML = "Show Menu";
+        toggleHidden(toggle);
+      }
+
+      // menu needs to be hidden whenever anchors are clicked
+      const abcAnchorLinks = ;
+      [...abcAnchorLinks].forEach(anchorLink => {
+        anchorLink.addEventListener("click", () => {
+          toggleHidden(toggle);         
+        });
+      })
+
+      function toggleHidden(toggle) {
+        toggle.target.innerHTML = "Show Menu";
         menuLinks.classList.remove("is-block");
         menuLinks.classList.add("is-hidden-mobile");
       }
