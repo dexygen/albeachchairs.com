@@ -108,8 +108,8 @@
         <!-- DELIVERY -->
         <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
-            <header class="columns is-mobile is-centered mb-2">
-              <div class="is-flex is-justify-content-center my-3">
+            <header class="columns is-mobile is-centered">
+              <div class="is-flex is-justify-content-center mt-3">
                 <div class="has-background-danger-dark has-text-danger-light font-kalam is-size-3 p-3">
                   CONTACT US FOR DELIVERY
                 </div>

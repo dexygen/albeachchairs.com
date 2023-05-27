@@ -15,6 +15,8 @@
     let formErrorMsgContainer;
     let formErrorMsgOnName;
     let formErrorMsgOnEmail;
+    let formErrorMsgOnDelivery;
+    let formErrorMsgOnNumberSets;
     let formErrorMsgOnStartDate;
     let formErrorMsgOnDuration;
 
@@ -22,6 +24,7 @@
     let formFieldDeliveryAddr;
     let formFieldDeliveryCity;
     let formFieldProperty;
+    let formFieldNumberSets;
     let formFieldStartDate;
     let formFieldDuration;
     // END    
@@ -66,6 +69,7 @@
                     formErrorMsgOnName = contactModal.querySelector(".abc-contact-form-error-name");
                     formErrorMsgOnEmail = contactModal.querySelector(".abc-contact-form-error-email");
                     formErrorMsgOnDelivery = contactModal.querySelector(".abc-contact-form-error-delivery");
+                    formErrorMsgOnNumberSets = contactModal.querySelector(".abc-contact-form-error-number-sets");
                     formErrorMsgOnStartDate = contactModal.querySelector(".abc-contact-form-error-start-date");
                     formErrorMsgOnDuration = contactModal.querySelector(".abc-contact-form-error-duration");
                     formErrorMsgOnInsufficientInfo = contactModal.querySelector(".abc-contact-form-error-insufficient-info");
@@ -75,6 +79,7 @@
                     formFieldDeliveryAddr = contactForm.querySelector(".abc-contact-form-field-delivery-addr");
                     formFieldDeliveryCity = contactForm.querySelector(".abc-contact-form-field-delivery-city");
                     formFieldProperty = contactForm.querySelector(".abc-contact-form-field-property");
+                    formFieldNumberSets = contactForm.querySelector(".abc-contact-form-field-number-sets");
                     formFieldStartDate = contactForm.querySelector(".abc-contact-form-field-start-date");
                     formFieldDuration = contactForm.querySelector(".abc-contact-form-field-duration");
 
@@ -131,6 +136,9 @@
                                 }
                                 if (msg === "deliveryAddr" || msg === "deliveryCity") {
                                     formErrorMsgOnDelivery.classList.remove("is-hidden");
+                                }
+                                if (msg === "numberSets") {
+                                    formErrorMsgOnNumberSets.classList.remove("is-hidden");
                                 }
                                 if (msg === "startDate") {
                                     formErrorMsgOnStartDate.classList.remove("is-hidden");
@@ -195,6 +203,8 @@
                 }
 
                 for (let [fieldName, val] of formData.entries()) {
+                  console.log(fieldName);
+
                   if (fieldName === "name" && val.trim().length < 2) {
                     errorMessages = errorMessages || [];
                     errorMessages.push(fieldName);
@@ -202,6 +212,12 @@
                   if (fieldName === "email" && !emailRegex.test(val.trim())) {
                     errorMessages = errorMessages || [];
                     errorMessages.push(fieldName);
+                  }
+                  if (fieldName === "numberSets" && val <= -1) {
+                    if (formFieldDelivery.checked || formFieldProperty.value !== "") {
+                      errorMessages = errorMessages || [];
+                      errorMessages.push(fieldName);
+                    }
                   }
                   if (fieldName === "startDate" && val !== "") {
                     const today = new Date();
@@ -227,6 +243,9 @@
                         errorMessages.push(INSUFFICIENT_INFO);
                     }
                 }
+
+                errorMessages = errorMessages || [];
+                errorMessages.push("numberSets");
 
                 return errorMessages;
             }

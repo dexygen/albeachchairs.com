@@ -84,6 +84,9 @@ if ($isPhone) :?>
           <li class="abc-contact-form-error-delivery is-hidden">
             If "Delivery" is checked an address and city must be provided
           </li>
+          <li class="abc-contact-form-error-number-sets is-hidden">
+            Please provide the number of sets (chair + umbrella) needed
+          </li>
           <li class="abc-contact-form-error-start-date is-hidden">
             Start date cannot be in the past
           </li>
