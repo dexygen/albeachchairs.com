@@ -203,8 +203,6 @@
                 }
 
                 for (let [fieldName, val] of formData.entries()) {
-                  console.log(fieldName);
-
                   if (fieldName === "name" && val.trim().length < 2) {
                     errorMessages = errorMessages || [];
                     errorMessages.push(fieldName);
@@ -213,7 +211,7 @@
                     errorMessages = errorMessages || [];
                     errorMessages.push(fieldName);
                   }
-                  if (fieldName === "numberSets" && val <= -1) {
+                  if (fieldName === "numberSets" && val === "" || val <= 0) {
                     if (formFieldDelivery.checked || formFieldProperty.value !== "") {
                       errorMessages = errorMessages || [];
                       errorMessages.push(fieldName);
@@ -227,9 +225,11 @@
                       errorMessages.push(fieldName);          
                     }
                   }
-                  if (fieldName === "duration" && val <= -1) {
-                    errorMessages = errorMessages || [];
-                    errorMessages.push(fieldName);
+                  if (fieldName === "duration") {
+                    if (val <= 0) {
+                        errorMessages = errorMessages || [];
+                        errorMessages.push(fieldName);
+                    }
                   }
                 }
     
@@ -243,9 +243,6 @@
                         errorMessages.push(INSUFFICIENT_INFO);
                     }
                 }
-
-                errorMessages = errorMessages || [];
-                errorMessages.push("numberSets");
 
                 return errorMessages;
             }

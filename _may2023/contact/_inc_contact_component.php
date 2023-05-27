@@ -91,7 +91,7 @@ if ($isPhone) :?>
             Start date cannot be in the past
           </li>
           <li class="abc-contact-form-error-duration is-hidden">
-            Duration cannot be a negative number
+            Duration shouldn't be less than one and should be provided with start date
           </li>
           <li class="abc-contact-form-error-insufficient-info is-hidden">
             More information than just name and email is required
