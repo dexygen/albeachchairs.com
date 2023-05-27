@@ -58,6 +58,10 @@ body#abc-viewport {
   margin-bottom: 0 !important;
 }
 
+.abc-contact-form-field-number-sets {
+  width: 3rem;
+}
+
 .abc-featured-property-label {
   margin-top: -0.5rem;
 }

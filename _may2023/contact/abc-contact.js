@@ -41,6 +41,7 @@
                     const modalCloseButtons = document.querySelectorAll(".abc-modal-close");
                     [...modalCloseButtons].forEach(closeButton => {  
                         closeButton.addEventListener("click", () => {
+                            formFieldDeliveryRequiredFields.classList.add("is-hidden");
                             contactModal.classList.remove("is-active");
                             contactForm.reset();
                             hideNotifications();

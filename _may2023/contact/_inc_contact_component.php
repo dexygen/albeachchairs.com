@@ -148,6 +148,14 @@ if ($isPhone) :?>
                 </select>
               </div>
             </div>
+            <div class="mt-3">
+                <span class="is-size-5 mr-1">How many sets (chair + umbrella)?:</span>
+                <input 
+                  class="is-size-6 abc-contact-form-field-number-sets ml-4" 
+                  type="number" 
+                  maxlength="99" 
+                  name="numberSets" />
+            </div>
             <div class="mt-2 is-hidden abc-contact-form-delivery-required-fields">
               <div class="field">
                 <label class="label is-size-4">
