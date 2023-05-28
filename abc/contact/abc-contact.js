@@ -18,6 +18,7 @@
     let formErrorMsgOnStartDate;
     let formErrorMsgOnDuration;
 
+    let formFieldPhone;
     let formFieldDelivery;
     let formFieldDeliveryAddr;
     let formFieldDeliveryCity;
@@ -58,6 +59,13 @@
                     formPostResponseErrorMsg = contactModal.querySelector(".abc-contact-form-post-response-msg");
                     formPostResponseErrorCloseButton = contactModal.querySelector(".abc-contact-form-post-response-close-button");
 
+                    formFieldPhone = contactForm.querySelector(".abc-contact-form-phone-input");
+                    formFieldPhone.addEventListener('input', function (e) {
+                        const input = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+                        e.target.value = !input[2] ? input[1] : 
+                            '(' + input[1] + ') ' + input[2] + (input[3] ? '-' + input[3] : '');
+                    });
+
                     /*
                       because of the naming convention, the following can eventually 
                       be selected with querySelectorAll and the results put into an object
@@ -68,7 +76,7 @@
                     formErrorMsgOnStartDate = contactModal.querySelector(".abc-contact-form-error-start-date");
                     formErrorMsgOnDuration = contactModal.querySelector(".abc-contact-form-error-duration");
                     formErrorMsgOnInsufficientInfo = contactModal.querySelector(".abc-contact-form-error-insufficient-info");
-    
+
                     // same comment from above applies
                     formFieldDelivery = contactForm.querySelector(".abc-contact-form-field-delivery");
                     formFieldDeliveryAddr = contactForm.querySelector(".abc-contact-form-field-delivery-addr");

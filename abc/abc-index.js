@@ -61,7 +61,7 @@
       }
 
       // menu needs to be hidden whenever anchors are clicked
-      const abcAnchorLinks = ;
+      const abcAnchorLinks = document.querySelectorAll("a[href^='#']");
       [...abcAnchorLinks].forEach(anchorLink => {
         anchorLink.addEventListener("click", () => {
           toggleHidden(toggle);         

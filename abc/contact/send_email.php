@@ -8,6 +8,7 @@ class ContactEmailController extends AbstractJrMvcController {
         
         $name = $payload["name"];
         $email = $payload["email"];
+        $phone = $payload["phone"];
         $property = $payload["property"];
         $startDate = $payload["startDate"];
         $duration = $payload["duration"];
@@ -32,7 +33,9 @@ class ContactEmailController extends AbstractJrMvcController {
         $subject = "Inquiry from albeachchairs.com from: $name";
         
         $messageLines = Array(
+            "Name: $name",
             "Email: $email",
+            "Phone: $phone",
             "Service: $serviceType",
             "Start Date: $startDate",
             "Duration: $duration",

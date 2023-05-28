@@ -121,6 +121,17 @@ if ($isPhone) :?>
           </div>
         </div>
         <div class="field">
+          <label class="label is-size-4">
+            <span class="mr-1 has-text-primary-dark">Phone</span>
+          </label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input abc-contact-form-phone-input" type="text" name="phone">
+            <span class="icon is-small is-left">
+            <i class="fas fa-phone"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
           <label class="label abc-service-type-label is-size-4">
             <span class="mr-1 has-text-primary-dark">Type of Service</span>
           </label>
@@ -218,7 +229,9 @@ if ($isPhone) :?>
           </div>
           <div class="field mt-4">
             <label class="label is-size-4">
-              <span class="mr-1 has-text-primary-dark">Anything else? Special requests?</span>
+              <span class="mr-1 has-text-primary-dark">
+                Anything else? PLEASE SPECIFY NUMBER OF SETS (chair + umbrella) BELOW
+              </span>
             </label>
           </div>
           <textarea class="textarea" placeholder="Additional information" name="other"></textarea>
