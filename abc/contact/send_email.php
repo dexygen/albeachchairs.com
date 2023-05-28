@@ -7,6 +7,7 @@ class ContactEmailController extends AbstractJrMvcController {
         $payload = json_decode(file_get_contents('php://input'), true);
         
         $name = $payload["name"];
+        $lastName = $payload["lastName"];
         $email = $payload["email"];
         $phone = $payload["phone"];
         $property = $payload["property"];
@@ -34,6 +35,7 @@ class ContactEmailController extends AbstractJrMvcController {
         
         $messageLines = Array(
             "Name: $name",
+            "Last Name: $lastName",
             "Email: $email",
             "Phone: $phone",
             "Service: $serviceType",

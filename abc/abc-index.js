@@ -66,7 +66,7 @@
         anchorLink.addEventListener("click", () => {
           toggleHidden(toggle);         
         });
-      })
+      });
 
       function toggleHidden(toggle) {
         toggle.target.innerHTML = "Show Menu";

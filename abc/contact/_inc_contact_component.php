@@ -110,6 +110,17 @@ if ($isPhone) :?>
         </div>
         <div class="field">
           <label class="label is-size-4">
+            <span class="mr-1 has-text-primary-dark">Last Name (if different, on card you plan to use)</span>
+          </label>
+          <div class="control has-icons-left">
+            <input class="input" type="text" name="lastName" placeholder="Card Last Name">
+            <span class="icon is-small is-left">
+              <i class="fas fa-file-signature"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-size-4">
             <span class="mr-1 has-text-primary-dark">Email</span>
             <span class="has-text-danger">*</span>
           </label>
@@ -230,7 +241,7 @@ if ($isPhone) :?>
           <div class="field mt-4">
             <label class="label is-size-4">
               <span class="mr-1 has-text-primary-dark">
-                Anything else? PLEASE SPECIFY NUMBER OF SETS (chair + umbrella) BELOW
+                Anything else? PLEASE SPECIFY NUMBER OF SETS (2 chairs + 1 umbrella) BELOW
               </span>
             </label>
           </div>
