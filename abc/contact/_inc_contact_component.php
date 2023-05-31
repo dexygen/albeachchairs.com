@@ -230,7 +230,7 @@ if ($isPhone) :?>
               <input type="date" class="is-size-6 abc-contact-form-field-start-date" name="startDate" />
             </div>
             <div class="is-size-5 ml-2">
-              <span>Duration:</span>
+              <span>How many days:</span>
               <input 
                 class="is-size-6 abc-contact-form-field-duration" 
                 type="number" 
