@@ -243,6 +243,9 @@ if ($isPhone) :?>
               <span class="mr-1 has-text-primary-dark">
                 Anything else? PLEASE SPECIFY NUMBER OF SETS (2 chairs + 1 umbrella) BELOW
               </span>
+              <div class="mr-1 has-text-danger-dark is-italic">
+                Minimum TWO SETS for DELIVERY
+              </div>
             </label>
           </div>
           <textarea class="textarea" placeholder="Additional information" name="other"></textarea>

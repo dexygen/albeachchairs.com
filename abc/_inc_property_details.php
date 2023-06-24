@@ -7,7 +7,7 @@
             ),
             array(
                 "name" => "Windward Pointe Condiminiums", 
-                "imgSrcPath" => "./assets/images/properties/summer-salt-east.png"
+                "imgSrcPath" => "./assets/images/properties/windward.jpg"
             ),
             array(
                 "name" => "Seascape Condiminiums", 
@@ -23,7 +23,7 @@
             ),
             array(
                 "name" => "Summer Salt East", 
-                "imgSrcPath" => "./assets/images/properties/gulf-house.png"
+                "imgSrcPath" => "./assets/images/properties/summer-salt-east.png"
             )
         ),
         "Gulf Shores" => array(
