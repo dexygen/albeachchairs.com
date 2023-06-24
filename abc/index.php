@@ -72,9 +72,10 @@
             -->
             <div class="is-block"><img src="./assets/images/slideshow/flag-at-beach.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
-            <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/sunrise.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/beachside.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/surf-sunrise.jpg?h=180"></img></div>
           </div>
         </header>
         <nav class="has-background-warning mb-5 mx-3 abc-menu">
