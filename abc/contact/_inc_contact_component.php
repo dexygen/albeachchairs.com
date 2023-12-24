@@ -17,7 +17,7 @@ if ($isPhone) :?>
     </a>
   </div>
 <?php else :?>
-  <div class="is-size-5 font-pangolin pt-1">Call or click to fill out form</div>
+  <div class="is-size-5 font-pangolin pt-1">Call, or click to fill out reservation form</div>
   <div class="is-size-2 has-text-primary-dark has-text-weight-semibold">251-233-4000</div>  
 <?php endif; ?>
 
@@ -30,7 +30,7 @@ if ($isPhone) :?>
             has-text-weight-semibold
             is-size-3 
             is-underlined">
-    <div class="mx-2">Contact Form</div>
+    <div class="mx-2">Reservation Form</div>
   </a>
 </div>
 

@@ -36,7 +36,7 @@
           </div>
           <div class="is-flex is-justify-content-center mb-3">
             <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
-              CONTACT US TO RESERVE YOUR PLACE ON THE BEACH
+              RESERVE YOUR PLACE ON THE BEACH NOW!
             </div>
           </div>
           <div class="mb-3 font-pangolin abc-header-links">
@@ -44,6 +44,7 @@
               $contact_modal_created = false; 
               require("./contact/_inc_contact_component.php"); 
             ?>
+            <!--
             <div class="is-block is-size-3 mt-3">
               <a href="#abc-delivery"  class="has-text-danger-dark 
                                               has-text-weight-semibold 
@@ -62,6 +63,7 @@
                 (No delivery fees apply) 
               </div>
             </div>
+            -->
           </div>
           <div id="abc-carousel" class="mt-2 mb-5">
             <!-- 
@@ -99,14 +101,14 @@
                       is-hidden-mobile 
                       is-size-4-desktop 
                       has-text-weight-semibold">
-            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-delivery">Delivery Service</a>
-            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-condo-service">Condo Service</a>
-            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-featured-property">Featured Property</a>
-            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-properties">Properties</a>
-            <a class="column is-one-fifth py-1 has-text-primary-dark" href="#abc-about-contact">About/Contact</a>
+            <a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-condo-service">Condo Service</a>
+            <a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-featured-property">Featured Property</a>
+            <a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-properties">Properties</a>
+            <a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-about-contact">About/Contact</a>
           </div>
         </nav>
         <!-- DELIVERY -->
+        <!--
         <section class="pt-2 mb-6 mt-5 abc-section" id="abc-delivery">
           <div class="pt-3">
             <header class="columns is-mobile is-centered mb-2">
@@ -170,6 +172,7 @@
             </article>
           </div>
         </section>
+        -->
         <!-- CONDO SERVICE -->
         <section class="mb-6 mx- abc-section" id="abc-condo-service">
           <header class="columns is-mobile is-centered">
@@ -184,6 +187,7 @@
                 Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, 
                 fun beach games, and a full rental inventory
               </header>
+              <!--
               <div class="mb-5">
                 <div class="has-text-danger-dark">Delivery fees DO NOT APPLY&nbsp;</div>
                 <a class="is-underlined has-text-danger-dark href="#abc-properties">
@@ -191,6 +195,7 @@
                 </a>
                 <div class="is-italic is-size-6">Click or tap underlined link above for list</div>
               </div>
+              -->
               <div class="is-flex is-justify-content-center mb-2">
                 <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2">
                   CONDO EQUIPMENT PRICING
