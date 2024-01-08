@@ -1,0 +1,33 @@
+body#abc-viewport {
+  background:
+    url(images/abc-white-sand-bg.jpg) repeat-x center top,
+    url(images/abc-white-sand-bg-bottom.jpg) repeat;
+}
+
+.font-kalam {
+  font-family: Kalam, san-serif;
+}
+
+.font-pangolin {
+  font-family: Pangolin, serif;
+}
+
+.abc-equipment-needs-callout {
+  line-height: 1.1;
+}
+
+.abc-reserve-now-callout, .abc-menu-link > div {
+  line-height: 1.2
+}
+
+.abc-text-orange {
+  color: #ed7e37;
+}
+
+.abc-background-success-tint {
+  background-color: #91ddbb;
+}
+
+.abc-contact-button:hover {
+  color: #cc0f35;
+}

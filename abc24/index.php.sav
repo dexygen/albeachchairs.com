@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NC2LTCZ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabama Beach Chairs, providing beach equipment to Orange Beach and Gulf Shores</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Pangolin&display=swap');
+    </style>
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/abc.css" type="text/css">
+  </head>
+  <body id="abc-viewport"><html>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2LTCZ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="columns is-mobile">
+      <main class="column mx-3 has-text-centered">
+        <header>
+          <div class="has-text-warning is-size-4 font-kalam">Headed to Orange Beach or Gulf Shores?</div>
+          <img class="logo" src="./assets/images/abc-logo.png"></img>
+          <div class="has-text-danger-dark is-size-3 has-text-weight-semibold font-kalam abc-mobile-line-height">
+            Alabama Beach Chairs has the equipment you need!
+          </div>
+          <div class="is-flex is-justify-content-center mb-3">
+            <div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin px-2 abc-mobile-line-height">
+              RESERVE YOUR PLACE ON THE BEACH NOW!
+            </div>
+          </div>
+        </header>	  
+		<div class="mb-3 font-pangolin abc-header-links">
+		<?php
+		  $contact_modal_created = false; 
+		  require("./contact/_inc_contact_component.php"); 
+		?>
+	    </div>
+		
+        <nav class="has-background-warning mb-5 mx-3 abc-menu">
+          <div class="pt-2 has-text-danger-dark is-size-4 has-text-weight-semibold font-kalam">
+            Alabama Beach Chairs
+          </div>
+          <div class="mb-1 
+                      pb-1 
+                      is-size-5 
+                      is-underlined 
+                      has-text-danger-dark
+                      has-text-weight-bold 
+                      abc-toggle-menu-mobile">
+          </div>
+          <div class="columns 
+                      abc-menu-links 
+                      py-2 
+                      is-size-4-mobile 
+                      is-hidden-mobile 
+                      is-size-4-desktop 
+                      has-text-weight-semibold">
+            <a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-condo-service">Condo Service (at properties we serve)</a>
+			<a class="column is-one-fourth py-1 has-text-primary-dark" href="#abc-condo-service">Delivery Service (to your beach home)</a>
+          </div>
+        </nav>
+        <section class="pt-2 abc-section abc-about-contact" id="abc-about-contact">
+			<div class="pt-3">
+				<header class="columns is-mobile is-centered mb-2">
+					<div class="column is-narrow is-size-3 has-background-danger-dark has-text-danger-light font-kalam">
+					ABOUT
+					</div>
+				</header>
+			</div>
+          <article class="columns is-mobile is-centered font-pangolin">
+            <section class="column is-10">
+              <div class="is-size-4 has-text-left mt-4">
+                <div class="mb-4">
+                  Alabama Beach Chairs' proprietor has over three decades experience in the on-site, beach rental industry, which ensures the safest,
+                  most professionally operated beach service for all guests, with customer service as priority one.                
+                </div>
+                <div>
+                  We provide superior customer service to the beautiful beaches of Orange Beach and Gulf Shores.
+                  Your locally owned and operated, family business takes pride in helping to
+                  create the most pleasurable and memorable vacation experience for our
+                  guests by providing quality equipment for all your beach safety, comfort
+                  and recreational requirements.                
+                </div>
+              </div>
+            </section>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body></html>
