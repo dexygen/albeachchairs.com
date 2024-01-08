@@ -12,12 +12,12 @@ body#abc-viewport {
   font-family: Pangolin, serif;
 }
 
-.abc-equipment-needs-callout {
+.abc-line-height-1_1 {
   line-height: 1.1;
 }
 
-.abc-reserve-now-callout, .abc-menu-link > div {
-  line-height: 1.2
+.abc-line-height-1_2 {
+  line-height: 1.2;
 }
 
 .abc-text-orange {
@@ -28,6 +28,17 @@ body#abc-viewport {
   background-color: #91ddbb;
 }
 
-.abc-contact-button:hover {
-  color: #cc0f35;
+.abc-need-delivery-button {
+  padding: 2.875rem !important;
+  font-size: 1.875rem;
+}
+
+.abc-staying-condo-button {
+  padding: 0 !important;
+  font-size: 1.875rem;
+}
+
+.abc-need-delivery-button:hover, .abc-need-delivery-button:active, 
+.abc-staying-condo-button:hover, .abc-staying-condo-button:active {
+	color: #00947e;
 }

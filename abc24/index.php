@@ -30,66 +30,62 @@
 	<header>
 	  <div class="has-text-warning is-size-4 font-kalam">Headed to Orange Beach or Gulf Shores?</div>
 	  <img class="logo" src="./assets/images/abc-logo.png"></img>
-	  <div class="has-text-danger-dark is-size-3 has-text-weight-semibold font-kalam abc-equipment-needs-callout">
+	  <div class="has-text-danger-dark is-size-3 mb-1 has-text-weight-semibold font-kalam abc-line-height-1_1">
 		Alabama Beach Chairs has the equipment you need!
+	  </div>
+	  <div class="columns is-centered is-mobile">
+		<div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin my-2 px-5 abc-line-height-1_2">
+		  RESERVE YOUR PLACE ON THE BEACH NOW!
+		</div>
 	  </div>
 	</header>
 	
 	<main>
-		<div class="font-pangolin abc-header-links">
-		    <div class="is-size-5 font-pangolin pt-1 mb-1">Ready? Click or Tap below</div>
+		<div class="font-pangolin">
+			<div class="is-size-4 font-pangolin pt-1">Click or tap a choice below</div>
 			<div>
-			  <a style="padding: 0.8125rem" class="button 
+			  <a class="button 
 						is-rounded 
-						abc-background-success-tint 
-						has-text-success-dark
-						has-text-weight-semibold
-						is-size-3 
-						is-underlined">
-				<div class="mx-2 abc-reserve-now-callout">RESERVE YOUR PLACE<br />ON THE BEACH NOW!</div>
-			  </a>
-			</div>
-			<div class="is-size-5 font-pangolin pt-1 mb-1">Need more info?  Click/tap a choice below</div>
-			<div class="mb-2">
-			  <a style="padding: 1.1875rem" class="button 
-						is-rounded 
+						abc-need-delivery-button
 						abc-background-success-tint 
 						abc-text-orange
 						has-text-weight-semibold
-						is-size-3 
 						is-underlined">
-				<div class="mx-2 abc-reserve-now-callout">CONDO SERVICE<br />At a property we serve</div>
+				<div class="mx-2 abc-line-height-1_2">I NEED DELIVERY<br />To my rental home</div>
 			  </a>
 			</div>
-			<div>
-			  <a style="padding: 2.1875rem" class="button 
-						is-rounded 
+			<div class="mt-2">
+			  <a class="button 
+						is-rounded
+						abc-staying-condo-button
 						abc-background-success-tint 
 						abc-text-orange
 						has-text-weight-semibold
-						is-size-3 
 						is-underlined">
-				<div class="mx-2 abc-reserve-now-callout">DELIVERY SERVICE<br />To your beach home</div>
+				<div class="mx-2">I'M STAYING AT A CONDO</div>
 			  </a>
 			</div>
+			<div class="is-size-4 font-pangolin">** Click or tap below for</div>
+			<div class="is-size-3 has-text-primary-dark has-text-weight-semibold is-underlined abc-line-height-1_2">Condos We Serve</div>
 			<?php
 			$ua = $_SERVER['HTTP_USER_AGENT'];
 			$isPhone = stripos($ua, 'Android') || stripos($ua, 'iPhone');
 
 			if ($isPhone) :?>
-			  <div class="is-size-5 font-pangolin pt-1">Click or tap to speak with us</div>
+			  <div class="is-size-4 font-pangolin pt-1">Click or tap below to speak with us</div>
 			  <div>
-				<a href="tel:2512334000" class="is-size-2 has-text-primary-dark has-text-weight-semibold is-underlined">
+				<a href="tel:2512334000" class="is-size-2 abc-text-orange has-text-weight-semibold is-underlined abc-line-height-1_2">
 				  251-233-4000
 				</a>
 			  </div>
 			<?php else :?>
-			  <div class="is-size-5 font-pangolin pt-1">Call to speak with us</div>
-			  <div class="is-size-2 has-text-primary-dark has-text-weight-semibold">251-233-4000</div>  
+			  <div class="is-size-4 font-pangolin pt-1">Call to speak with us</div>
+			  <div class="is-size-2 abc-text-orange has-text-weight-semibold abc-line-height-1_2">251-233-4000</div>  
 			<?php endif; ?>
         </div>
-        <section class="mt-5">
-		  <header class="has-text-danger-dark is-size-3 has-text-weight-semibold font-kalam abc-equipment-needs-callout">
+		<div class="is-size-2 mt-4">* * *</div>
+        <section>
+		  <header class="has-text-danger-dark is-size-2 has-text-weight-semibold font-kalam abc-line-height-1_1">
 			ABOUT US
 		  </header>
           <article class="columns is-mobile is-centered font-pangolin">

@@ -48,13 +48,14 @@
 			  <div class="is-size-5 font-pangolin">Click/Tap a choice below</div>
 			  <div class="columns 
 						  py-2  
-						  has-text-weight-semibold">
+						  has-text-weight-semibold
+						  abc-header-link">
 				<a class="column 
 						  is-one-quarter 
 						  is-offset-one-quarter 
 						  py-1 
 						  has-text-primary-dark 
-						  abc-menu-link">
+						  abc-header-link">
 				  <div class="is-size-3 is-underlined">Condo Service</div>
 				  <div class="is-size-5">at properties we serve</div>
 				</a>
