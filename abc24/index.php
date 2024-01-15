@@ -21,11 +21,11 @@
 		referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/abc.css" type="text/css">
   </head>
-
   <body id="abc-viewport" class="has-text-centered px-1"><html>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2LTCZ"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php require("./index.content.php"); ?>	
-  </body></html>
+  </body>
+</html>

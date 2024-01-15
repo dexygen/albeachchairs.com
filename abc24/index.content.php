@@ -1,4 +1,4 @@
-<?php include_once("./globals.def.php"); ?>
+<?php require_once("./globals.def.php"); ?>
 
 <header>
   <div class="has-text-warning is-size-4 font-kalam">Headed to Orange Beach or Gulf Shores?</div>
@@ -38,7 +38,13 @@
 	  </a>
 	</div>
 	<div class="is-size-4 font-pangolin">** Click or tap below for</div>
-	<div class="is-size-3 has-text-primary-dark has-text-weight-semibold is-underlined abc-line-height-1_2">Condos We Serve</div>
+	<div class="is-size-3 
+				has-text-primary-dark 
+				has-text-weight-semibold 
+				is-underlined 
+				abc-line-height-1_2
+				abc-condos-link">Condos We Serve
+	</div>
 	<?php	  
 	  if ($isPhone) :?>
 	<div class="is-size-4 font-pangolin pt-1">Click or tap below to speak with us</div>
@@ -81,3 +87,38 @@
 	</article>
   </section>
 </main>
+
+<!-- CONDOS LIST MODAL -->
+<div class="modal abc-condos-list-modal">
+	<div class="modal-background has-background-info"></div>
+	<div class="modal-card">
+	  <header class="modal-card-head">
+		<button class="abc-condos-list-close modal-close is-large " aria-label="close"></button>
+		  <div class="modal-card-title 
+				is-size-3 
+				has-text-info-dark
+				py-3
+				has-text-weight-semibold 
+				font-kalam">
+			<div class="mb-1">CONDOS WE SERVE</div>
+		  </div>
+	  </header>
+	  <section class="modal-card-body columns">
+		<section class="abc-property-city-section is-size-5">
+		  <ul>
+		  <?php foreach($abcPropertyNamesAll as $propertyName) { ?>
+			<li><?php echo $propertyName; ?></li>
+		  <?php } ?>
+		  </ul>
+		</section>
+	  </section>
+	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
+		<!-- pb-6 class below doesn't seem correct but "works" -->
+		<button class="button abc-condos-list-close pb-6 column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		  CLOSE
+		</button>
+	  </footer>
+	</div>
+</div>
+
+<script src="index.content.js"></script>
