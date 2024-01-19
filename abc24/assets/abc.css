@@ -33,12 +33,17 @@ body#abc-viewport {
   font-size: 1.875rem;
 }
 
+.abc-order-delivery-button {
+  font-size: 1.875rem;
+}
+
 .abc-staying-condo-button {
   padding: 0 !important;
   font-size: 1.875rem;
 }
 
-.abc-need-delivery-button:hover, .abc-need-delivery-button:active, 
+.abc-need-delivery-button:hover, .abc-need-delivery-button:active,
+.abc-order-delivery-button:hover, .abc-order-delivery-button:active, 
 .abc-staying-condo-button:hover, .abc-staying-condo-button:active {
 	color: #00947e;
 }
