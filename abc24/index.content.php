@@ -14,7 +14,8 @@
 </header>
 <main>
   <div class="font-pangolin">
-	<div class="is-size-4 font-pangolin pt-1">Click or tap a choice below</div>
+    <div class="is-size-4 font-pangolin pt-2 abc-line-height-1_2">For pricing, and to order</div>
+	<div class="is-size-4 font-kalam has-text-primary-dark has-text-weight-semibold">Click or tap a choice below</div>
 	<div>
 	  <a class="button 
 		is-rounded 
@@ -103,18 +104,20 @@
 			<div class="mb-1">CONDOS WE SERVE</div>
 		  </div>
 	  </header>
-	  <section class="modal-card-body columns">
-		<section class="abc-property-city-section is-size-5">
-		  <ul>
-		  <?php foreach($abcPropertyNamesAll as $propertyName) { ?>
-			<li><?php echo $propertyName; ?></li>
+	  <section class="modal-card-body">
+		  <ul class="has-text-left">
+          <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
+		    <li class="is-size-4 has-text-weight-semibold"><?php echo $city; ?></li>
+			  <ul class="pb-3">
+				  <?php foreach($propertyDetail as $detail) { ?>
+					<li class="is-size-5"><?php echo $detail["name"]; ?></li>
+				  <?php } ?>
+			  </ul>
 		  <?php } ?>
 		  </ul>
-		</section>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-		<!-- pb-6 class below doesn't seem correct but "works" -->
-		<button class="button abc-condos-list-close pb-6 column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		<button class="button abc-condos-list-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
 		  CLOSE
 		</button>
 	  </footer>
