@@ -6,6 +6,10 @@
                 "imgSrcPath" => "./assets/images/properties/phoenix-vii-small.png"
             ),
             array(
+                "name" => "Shoalwater", 
+                "imgSrcPath" => "./assets/images/properties/shoalwater.jpg"
+            ),
+            array(
                 "name" => "Windward Pointe Condiminiums", 
                 "imgSrcPath" => "./assets/images/properties/windward.jpg"
             ),
