@@ -27,7 +27,7 @@
 		<div class="mx-2 abc-line-height-1_2">I NEED DELIVERY<br />To my rental home</div>
 	  </a>
 	</div>
-	<div class="mt-2">
+	<div class="mt-2 mb-1">
 	  <a class="button 
 		is-rounded
 		abc-staying-condo-button
@@ -38,7 +38,7 @@
 		<div class="mx-2">I'M STAYING AT A CONDO</div>
 	  </a>
 	</div>
-	<div class="is-size-4 font-pangolin">** Click or tap below for</div>
+	<div class="is-size-4 font-pangolin abc-line-height-1_2">** Click or tap below for</div>
 	<div class="is-size-3 
 				has-text-primary-dark 
 				has-text-weight-semibold 
@@ -124,4 +124,4 @@
 	</div>
 </div>
 
-<script src="index.content.js"></script>
+<script src="./content/index.content.js"></script>

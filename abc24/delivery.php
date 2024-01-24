@@ -26,6 +26,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2LTCZ"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <?php require("./delivery.content.php"); ?>
+    <?php require("./content/delivery.content.php"); ?>
   </body>
 </html>
