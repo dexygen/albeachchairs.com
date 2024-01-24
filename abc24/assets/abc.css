@@ -47,3 +47,7 @@ body#abc-viewport {
 .abc-staying-condo-button:hover, .abc-staying-condo-button:active {
 	color: #00947e;
 }
+
+.abc-delivery-list-items {
+  list-style: disc outside;
+}

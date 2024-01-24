@@ -20,7 +20,49 @@
 		<div class="mx-2 abc-line-height-1_2 pb-2">DELIVERY<br />To my rental home</div>
 	  </a>
 	</div>
-    <div class="mb-2 has-text-weight-semibold">Sorry, we do not deliver to Fort Morgan</div>
+	<div class="has-text-weight-semibold">Sorry, we do not deliver to Fort Morgan</div>
+	<div class="has-text-danger-dark has-text-weight-semibold is-size-4">
+	  Minimum two sets for delivery
+	</div>
+	<div class="is-size-4
+				font-kalam 
+				has-text-primary-dark 
+				has-text-weight-semibold">Click or tap a choice below</div>
+	<div class="tabs is-toggle is-toggle-rounded is-centered is-medium is-boxed mb-1">
+	  <ul class="font-pangolin has-text-weight-semibold">
+		<li class="is-active">
+		  <a>
+			<span>Delivery Sets</span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span>Delivery Pricing</span>
+		  </a>
+		</li>
+	  </ul>
+	</div>
+	<div class="is-underlined has-text-link mb-3">Or click or tap this link to return to home page</div>
+	<div class="font-pangolin has-text-primary-dark is-size-4 has-text-weight-semibold abc-line-height-1_2">
+	  2-person Chair Sets with Umbrella
+	</div>
+	<article class="columns is-mobile is-centered font-pangolin">
+	  <div class="column is-10 has-text-centered">
+		<div class="columns is-mobile is-centered">
+		  <section class="column has-text-left pb-0 is-size-5-mobile is-9-tablet is-7-desktop is-6-fullhd">
+			<ul class="is-size-5 abc-delivery-list-items">
+			  <li>Two folding beach chairs with footrests</li>
+			  <li>One 7' beach umbrella</li>
+			  <li>Umbrellas secured by one of our friendly attendants</li>
+			  <li>Setup by 9 am, Pick up after 5 pm</li>
+			  <li>Setup/Pickup $30 per day</li>
+			  <li>No extra delivery fee for more sets</li>
+			</ul>
+		  </section>
+		</div>
+	  </div>
+	</article>
+	<!--
 	<div class="is-flex is-justify-content-center">
 	  <div class="has-text-danger-dark is-size-3 font-kalam has-text-weight-semibold px-2 abc-line-height-1_1">
 		PRICING
@@ -45,4 +87,5 @@
 		<li>$15 each, per day</li>
 	  </ul>
 	</section>
+	-->
 </main>
