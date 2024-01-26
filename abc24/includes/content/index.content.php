@@ -1,4 +1,4 @@
-<?php require_once("./globals.def.php"); ?>
+<?php require_once("./includes/globals.def.php"); ?>
 
 <header>
   <div class="has-text-warning is-size-4 font-kalam">Headed to Orange Beach or Gulf Shores?</div>
@@ -124,4 +124,4 @@
 	</div>
 </div>
 
-<script src="./content/index.content.js"></script>
+<script src="./assets/scripts/index.content.js"></script>

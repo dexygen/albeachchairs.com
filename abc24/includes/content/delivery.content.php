@@ -1,4 +1,4 @@
-<?php require_once("./globals.def.php"); ?>
+<?php require_once("./includes/globals.def.php"); ?>
 
 <header>
   <div class="has-text- is-size-3 font-kalam has-text-warning">Alabama Beach Chairs</div>
@@ -97,4 +97,4 @@
 	</div>
 </main>
 
-<script src="./content/delivery.content.js"></script>
+<script src="./assets/scripts/delivery.content.js"></script>
