@@ -2,8 +2,10 @@ const abcReseverationFormLink = document.querySelector(".abc-reservation-form-li
 const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
 const abcReturnHomeLink = document.querySelector(".abc-return-home-link");
 
+// console.log(document.querySelectorAll(".abc-reservation-modal-close"));
+
 abcReseverationFormLink.addEventListener("click", () => {
-	// document.querySelector(".abc-reservation-modal").classList.add("is-active");
+	document.querySelector(".abc-reservation-modal").classList.add("is-active");
 });
 
 [...abcDeliveryTabs.querySelectorAll("li")].forEach(tab => {
