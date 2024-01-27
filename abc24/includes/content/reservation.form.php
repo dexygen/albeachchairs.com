@@ -1,6 +1,6 @@
 <div class="modal abc-reservation-modal">
   <div class="modal-background has-background-grey-light"></div>
-  <button class="modal-close is-large abc-modal-close"></button>
+  <button class="modal-close is-large abc-reservation-modal-close"></button>
   <div class="modal-card">
     <div class="has-background-primary-dark 
 	            p-3
@@ -107,7 +107,7 @@
     <footer class="modal-card-foot is-justify-content-center">
       <button class="button is-medium is-outlined is-success abc-contact-form-submit">Submit</button>
       <button class="button is-medium is-outlined is-warning is-inverted abc-contact-form-reset">Reset</button>
-      <button class="button is-medium is-outlined is-danger abc-modal-close">Close</button>
+      <button class="button is-medium is-outlined is-danger abc-reservation-modal-close">Close</button>
     </footer>
   </div>-
 </div>

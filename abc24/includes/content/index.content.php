@@ -20,9 +20,8 @@
 	  <a class="button 
 		is-rounded 
 		abc-need-delivery-button
-		abc-background-success-tint 
-		abc-text-orange
-		has-text-weight-semibold
+		has-background-info 
+		has-text-white
 		is-underlined">
 		<div class="mx-2 abc-line-height-1_2">I NEED DELIVERY<br />To my rental home</div>
 	  </a>
@@ -31,9 +30,8 @@
 	  <a class="button 
 		is-rounded
 		abc-staying-condo-button
-		abc-background-success-tint 
-		abc-text-orange
-		has-text-weight-semibold
+		has-background-info 
+		has-text-white
 		is-underlined">
 		<div class="mx-2">I'M STAYING AT A CONDO</div>
 	  </a>

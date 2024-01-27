@@ -1,13 +1,30 @@
 const abcReseverationFormLink = document.querySelector(".abc-reservation-form-link");
-const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
+const abcReservationModal = document.querySelector(".abc-reservation-modal");
+
+let modalCloseClickHandlersAdded;
+{	
+	abcReseverationFormLink.addEventListener("click", () => {
+		abcReservationModal.classList.add("is-active");
+		if (!modalCloseClickHandlersAdded) {
+			// ensure close button handlers set just once because below initialized above block scope
+			modalCloseClickHandlersAdded = true;
+			
+			const modalCloseButtons = document.querySelectorAll(".abc-reservation-modal-close");
+			[...modalCloseButtons].forEach(closeButton => {
+				closeButton.addEventListener("click", () => {
+					abcReservationModal.classList.remove("is-active");
+				});
+			});
+		}
+	});  
+}
+
 const abcReturnHomeLink = document.querySelector(".abc-return-home-link");
-
-// console.log(document.querySelectorAll(".abc-reservation-modal-close"));
-
-abcReseverationFormLink.addEventListener("click", () => {
-	document.querySelector(".abc-reservation-modal").classList.add("is-active");
+abcReturnHomeLink.addEventListener("click", () => {
+	document.location.href = "./home.php";
 });
 
+const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
 [...abcDeliveryTabs.querySelectorAll("li")].forEach(tab => {
 	tab.addEventListener("click", () => {
 		let activeTab = abcDeliveryTabs.querySelector("li.is-active");
@@ -25,8 +42,4 @@ abcReseverationFormLink.addEventListener("click", () => {
 		visibleInfoSection.classList.add("is-hidden");
 		hiddenInfoSection.classList.remove("is-hidden");
 	});
-});
-
-abcReturnHomeLink.addEventListener("click", () => {
-	document.location.href = "./home.php";
 });

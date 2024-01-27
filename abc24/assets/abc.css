@@ -42,12 +42,6 @@ body#abc-viewport {
   font-size: 1.875rem;
 }
 
-.abc-need-delivery-button:hover, .abc-need-delivery-button:active,
-.abc-order-delivery-button:hover, .abc-order-delivery-button:active, 
-.abc-staying-condo-button:hover, .abc-staying-condo-button:active {
-	color: #00947e;
-}
-
 .abc-delivery-list-items {
   list-style: disc outside;
 }
