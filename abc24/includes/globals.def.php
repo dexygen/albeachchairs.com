@@ -51,3 +51,6 @@
 		$abcPropertyDetailsByCity["Gulf Shores"]
 	);
 	$abcPropertyNamesAll = array_column($abcPropertiesAll, "name");
+	
+    const ABC_RESERVATION_TYPE_DELIVERY = "DELIVERY";
+	const ABC_RESERVATION_TYPE_CONDO = "CONDO";

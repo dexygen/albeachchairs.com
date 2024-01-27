@@ -17,7 +17,7 @@
 		abc-text-orange
 		has-text-weight-semibold
 		is-underlined">
-		<div class="mx-2 abc-line-height-1_2 pb-2">DELIVERY<br />To my rental home</div>
+		<div class="mx-2 abc-line-height-1_2 pb-2 abc-reservation-form-link">DELIVERY<br />To my rental home</div>
 	  </a>
 	</div>
 	<div class="has-text-weight-semibold">Sorry, we do not deliver to Fort Morgan</div>
@@ -96,5 +96,10 @@
 		</section>
 	</div>
 </main>
+
+<?php
+    $reservationType = ABC_RESERVATION_TYPE_DELIVERY; 
+	require_once("./includes/content/reservation.form.php"); 
+?>
 
 <script src="./assets/scripts/delivery.content.js"></script>

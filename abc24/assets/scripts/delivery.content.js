@@ -1,5 +1,10 @@
+const abcReseverationFormLink = document.querySelector(".abc-reservation-form-link");
 const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
 const abcReturnHomeLink = document.querySelector(".abc-return-home-link");
+
+abcReseverationFormLink.addEventListener("click", () => {
+	// document.querySelector(".abc-reservation-modal").classList.add("is-active");
+});
 
 [...abcDeliveryTabs.querySelectorAll("li")].forEach(tab => {
 	tab.addEventListener("click", () => {
