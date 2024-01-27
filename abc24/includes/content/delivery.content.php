@@ -70,11 +70,10 @@
 		<section class="abc-delivery-pricing is-hidden">
 			<div class="is-flex is-justify-content-center">
 			  <div class="has-text-danger-dark is-size-3 font-kalam has-text-weight-semibold px-2 abc-line-height-1_1">
-				PRICING
+				PRICING, per set
 			  </div>
 			</div>
 			<section class="is-size-4 has-text-weight-semibold mt-2">
-			  <div id="abc-chair-set-pricing" class="has-text-primary-dark abc-line-height-1_2">2-person Chair Sets, with Umbrella</div>
 			  <ul>
 				<li>1 day: $40</li>
 				<li>2 days: $70</li>
