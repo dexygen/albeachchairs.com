@@ -20,6 +20,9 @@
 		crossorigin="anonymous" 
 		referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/abc.css" type="text/css">
+	<!-- Create separate order form page for including the following? -->
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js" defer></script>
   </head>
   <body id="abc-viewport" class="has-text-centered px-1"><html>
     <!-- Google Tag Manager (noscript) -->

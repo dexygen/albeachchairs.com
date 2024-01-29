@@ -49,7 +49,7 @@
             <span class="mr-1 has-text-primary-dark">Phone</span>
           </label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input abc-contact-form-phone-input" type="text" name="phone">
+            <input class="input" type="text" name="phone" placeholder="Phone Number">
             <span class="icon is-small is-left">
             <i class="fas fa-phone"></i>
             </span>
@@ -57,14 +57,13 @@
         </div>
 		<?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 		  <div class="field">
-			<label class="label is-size-4">
+			<label class="label is-size-4 mb-0">
 			  <span class="mr-1 has-text-primary-dark">Delivery Street Address</span>
 			</label>
-			<div class="control has-icons-left has-icons-right abc-featured-property-label">
+			<div class="control has-icons-left has-icons-right">
 			  <input 
 				class="input" 
 				type="text" 
-				class="abc-contact-form-field-delivery-addr" 
 				name="deliveryAddr" 
 				placeholder="Your Beach Home Address">
 			  <span class="icon is-small is-left">
@@ -72,12 +71,11 @@
 			  </span>
 			</div>
 		  </div>
-		  <div>
-			<label class="label is-size-4">
+		  <div class="field">
+			<label class="label is-size-4 mb-0">
 			  <span class="mr-1 has-text-primary-dark">Delivery City</span>
-			  <span class="has-text-danger">*</span>
 			</label>
-			<div class="mb-3 abc-featured-property-label is-italic">
+			<div class="mb-1 is-italic">
 			  Sorry, we do not deliver to Fort Morgan
 			</div>
 			<div class="field abc-featured-property-label">
@@ -86,20 +84,26 @@
 				  <input 
 					type="radio" 
 					name="deliveryCity"
-					value="Orange Beach"
-					class="abc-contact-form-field-delivery-city">
+					value="Orange Beach">
 				  Orange Beach
 				</label>
 				<label class="radio is-size-5">
 				  <input 
 					type="radio" 
 					name="deliveryCity"
-					value="Gulf Shores"
-					class="abc-contact-form-field-delivery-city">
+					value="Gulf Shores">
 				  Gulf Shores
 				</label>
 			  </div>
 			</div>
+		  </div>
+		  <div class="field has-text-centered">
+			<label class="label is-size-4 mb-0">
+			  <span class="mr-1 has-text-primary-dark">Start and End Dates</span>
+			</label
+			<input id="calendar-input" type="text" placeholder="Choose date" readonly />
+			<div id="calendar-input-div"></div>
+			<div id="abc-reservation-calendar"></div>
 		  </div>
 		<?php endif; ?>
       </form>
@@ -111,3 +115,16 @@
     </footer>
   </div>-
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const calendar = new VanillaCalendar('#abc-reservation-calendar', {
+		settings: {
+			selection: {
+			  day: 'multiple-ranged',
+			}
+		}
+	});
+	calendar.init();
+});
+</script>
