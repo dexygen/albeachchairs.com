@@ -15,60 +15,46 @@
           <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Your First Name</span>
           </label>
-          <div class="control has-icons-left">
+          <div class="control">
             <input class="input" type="text" name="name" placeholder="First Name">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
           </div>
         </div>
         <div class="field">
           <label class="label is-size-4 mb-2 abc-line-height-1_1">
             <span class="mr-1 has-text-primary-dark">Last Name<br>as on Credit Card</span>
           </label>
-          <div class="control has-icons-left">
+          <div class="control">
             <input class="input" type="text" name="lastName" placeholder="Last Name">
-            <span class="icon is-small is-left">
-              <i class="fas fa-file-signature"></i>
-            </span>
           </div>
         </div>
         <div class="field">
           <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Email</span>
           </label>
-          <div class="control has-icons-left has-icons-right">
+          <div class="control">
             <input class="input" type="email" name="email" placeholder="Your Email">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
           </div>
         </div>
         <div class="field">
           <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Phone</span>
           </label>
-          <div class="control has-icons-left has-icons-right">
+          <div class="control">
             <input class="input" type="text" name="phone" placeholder="Phone Number">
-            <span class="icon is-small is-left">
-            <i class="fas fa-phone"></i>
-            </span>
           </div>
         </div>
+		
 		<?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 		  <div class="field">
 			<label class="label is-size-4 mb-0">
 			  <span class="mr-1 has-text-primary-dark">Delivery Street Address</span>
 			</label>
-			<div class="control has-icons-left has-icons-right">
+			<div class="control">
 			  <input 
 				class="input" 
 				type="text" 
 				name="deliveryAddr" 
 				placeholder="Your Beach Home Address">
-			  <span class="icon is-small is-left">
-				<i class="fas fa-road"></i>
-			  </span>
 			</div>
 		  </div>
 		  <div class="field">
@@ -103,10 +89,36 @@
 			</label>
 			<div id="calendar-input-div"></div>
 			<div class="is-flex is-justify-content-center">
-			  <div id="abc-reservation-calendar"></div>
+			  <div id="abc-reservation-calendar" class="pt-0"></div>
 			</div>
 		  </div>
-		<?php endif; ?>
+		<?php endif; #if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY) ?>
+		
+        <div class="field">
+          <label class="label is-size-4 mb-1 abc-line-height-1_1">
+            <span class="mr-1 has-text-primary-dark">Number of Sets <br>(1 set = 2 chairs + 1 umbrella)</span>
+          </label>
+		  <div class="mb-2 is-size-5">Tap or click for pricing</div>
+          <div class="control">
+            <input class="input" type="number" name="number_sets" placeholder="Sets you need">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-size-4 mb-1 mb-2">
+            <span class="mr-1 has-text-primary-dark">Number of Extra chairs</span>
+          </label>
+          <div class="control">
+            <input class="input" type="number" name="extra_chairs" placeholder="Extra chairs, if any">
+          </div>
+		</div>
+        <div class="field">
+          <label class="label is-size-4 mb-1 mb-2">
+            <span class="mr-1 has-text-primary-dark">Number of Extra Umbrellas</span>
+          </label>
+          <div class="control">
+            <input class="input" type="number" name="extra_umbrellas" placeholder="Extra umbrellas, if any">
+          </div>
+		</div>
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
@@ -114,7 +126,7 @@
       <button class="button is-medium is-outlined is-warning is-inverted abc-contact-form-reset">Reset</button>
       <button class="button is-medium is-outlined is-danger abc-reservation-modal-close">Close</button>
     </footer>
-  </div>-
+  </div>
 </div>
 
 <script>
@@ -134,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 		  actions: {
 			clickDay() {
-			  console.log(calendar.selectedDates);
+			  // console.log(calendar.selectedDates);
 			},
 		  },
 	});
