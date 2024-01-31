@@ -100,10 +100,11 @@
 		  <div class="field has-text-centered">
 			<label class="label is-size-4 mb-0">
 			  <span class="mr-1 has-text-primary-dark">Start and End Dates</span>
-			</label
-			<input id="calendar-input" type="text" placeholder="Choose date" readonly />
+			</label>
 			<div id="calendar-input-div"></div>
-			<div id="abc-reservation-calendar"></div>
+			<div class="is-flex is-justify-content-center">
+			  <div id="abc-reservation-calendar"></div>
+			</div>
 		  </div>
 		<?php endif; ?>
       </form>
@@ -119,11 +120,23 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 	const calendar = new VanillaCalendar('#abc-reservation-calendar', {
+		date: {
+			min: new Date().toISOString().substring(0, 10),
+			max: '2024-10-27',
+		},
 		settings: {
+			visibility: {
+				weekend: false,
+			},
 			selection: {
 			  day: 'multiple-ranged',
-			}
-		}
+			},
+		},
+		  actions: {
+			clickDay() {
+			  console.log(calendar.selectedDates);
+			},
+		  },
 	});
 	calendar.init();
 });
