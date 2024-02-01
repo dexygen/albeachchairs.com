@@ -99,7 +99,7 @@
           <label class="label is-size-4 mb-1 abc-line-height-1_1">
             <span class="mr-1 has-text-primary-dark">Number of Sets <br>(1 set = 2 chairs + 1 umbrella)</span>
           </label>
-		  <div class="is-size-5 abc-line-height-1_1">Tap or click for pricing</div>
+		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-delivery-pricing-link">Tap or click for pricing</div>
 		  <div class="mb-2 is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
           <div class="control">
             <input class="input" type="number" name="number_sets" placeholder="Sets you need">
@@ -139,27 +139,20 @@
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-	const calendar = new VanillaCalendar('#abc-reservation-calendar', {
-		date: {
-			min: new Date().toISOString().substring(0, 10),
-			max: '2024-10-27',
-		},
-		settings: {
-			visibility: {
-				weekend: false,
-			},
-			selection: {
-			  day: 'multiple-ranged',
-			},
-		},
-		  actions: {
-			clickDay() {
-			  // console.log(calendar.selectedDates);
-			},
-		  },
-	});
-	calendar.init();
-});
-</script>
+<!-- DELIVERY PRICING MODAL -->
+<div class="modal abc-delivery-pricing-modal">
+	<div class="modal-background has-background-info"></div>
+	<button class="modal-close is-large abc-pricing-modal-close"></button>
+	<div class="modal-card">
+	  <section class="modal-card-body">
+		<?php require("./includes/delivery.pricing.php"); ?>
+	  </section>
+	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
+		<button class="button abc-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		  CLOSE
+		</button>
+	  </footer>
+	</div>
+</div>
+
+<script src="./assets/scripts/delivery.reservation.js"></script>
