@@ -9,7 +9,8 @@
 				font-kalam 
 				abc-line-height-1_1">Alabama Beach Chairs<br>Delivery Reservation
 	</div>
-    <section class="modal-card-body">
+    <section class="modal-card-body pt-1">
+	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
       <form class="abc-contact-form font-pangolin">
         <div class="field">
           <label class="label is-size-4 mb-0">
@@ -98,13 +99,14 @@
           <label class="label is-size-4 mb-1 abc-line-height-1_1">
             <span class="mr-1 has-text-primary-dark">Number of Sets <br>(1 set = 2 chairs + 1 umbrella)</span>
           </label>
-		  <div class="mb-2 is-size-5">Tap or click for pricing</div>
+		  <div class="is-size-5 abc-line-height-1_1">Tap or click for pricing</div>
+		  <div class="mb-2 is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
           <div class="control">
             <input class="input" type="number" name="number_sets" placeholder="Sets you need">
           </div>
         </div>
         <div class="field">
-          <label class="label is-size-4 mb-1 mb-2">
+          <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Number of Extra chairs</span>
           </label>
           <div class="control">
@@ -112,13 +114,21 @@
           </div>
 		</div>
         <div class="field">
-          <label class="label is-size-4 mb-1 mb-2">
+          <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Number of Extra Umbrellas</span>
           </label>
           <div class="control">
             <input class="input" type="number" name="extra_umbrellas" placeholder="Extra umbrellas, if any">
           </div>
 		</div>
+          <div class="field mt-4">
+            <label class="label is-size-4 mb-0">
+              <span class="mr-1 has-text-primary-dark">
+                Other information/questions?
+              </span>
+            </label>
+			<textarea class="textarea"name="other"></textarea>
+          </div>
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
