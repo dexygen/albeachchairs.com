@@ -1,6 +1,6 @@
-<div class="modal abc-reservation-modal">
+<div class="modal abc-delivery-reservation-modal">
   <div class="modal-background has-background-grey-light"></div>
-  <button class="modal-close is-large abc-reservation-modal-close"></button>
+  <button class="modal-close is-large abc-delivery-reservation-modal-close"></button>
   <div class="modal-card">
     <div class="has-background-primary-dark 
 	            p-3
@@ -84,6 +84,8 @@
 			  </div>
 			</div>
 		  </div>
+		<?php endif; #if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY) ?>
+		
 		  <div class="field has-text-centered">
 			<label class="label is-size-4 mb-0">
 			  <span class="mr-1 has-text-primary-dark">Start and End Dates</span>
@@ -93,7 +95,6 @@
 			  <div id="abc-reservation-calendar" class="pt-0"></div>
 			</div>
 		  </div>
-		<?php endif; #if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY) ?>
 		
         <div class="field">
           <label class="label is-size-4 mb-1 abc-line-height-1_1">
@@ -134,7 +135,7 @@
     <footer class="modal-card-foot is-justify-content-center">
       <button class="button is-medium is-outlined is-success abc-contact-form-submit">Submit</button>
       <button class="button is-medium is-outlined is-warning is-inverted abc-contact-form-reset">Reset</button>
-      <button class="button is-medium is-outlined is-danger abc-reservation-modal-close">Close</button>
+      <button class="button is-medium is-outlined is-danger abc-delivery-reservation-modal-close">Close</button>
     </footer>
   </div>
 </div>
@@ -142,17 +143,15 @@
 <!-- DELIVERY PRICING MODAL -->
 <div class="modal abc-delivery-pricing-modal">
 	<div class="modal-background has-background-info"></div>
-	<button class="modal-close is-large abc-pricing-modal-close"></button>
+	<button class="modal-close is-large abc-delivery-pricing-modal-close"></button>
 	<div class="modal-card">
 	  <section class="modal-card-body">
 		<?php require("./includes/delivery.pricing.php"); ?>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-		<button class="button abc-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		<button class="button abc-delivery-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
 		  CLOSE
 		</button>
 	  </footer>
 	</div>
 </div>
-
-<script src="./assets/scripts/delivery.reservation.js"></script>

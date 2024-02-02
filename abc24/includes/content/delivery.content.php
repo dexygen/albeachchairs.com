@@ -17,7 +17,7 @@
 		abc-text-orange
 		has-text-weight-semibold
 		is-underlined">
-		<div class="pt-2 abc-line-height-1_1 pb-2 abc-reservation-form-link font-pangolin">DELIVERY<br />To my rental home</div>
+		<div class="pt-2 abc-line-height-1_1 pb-2 abc-delivery-reservation-link font-pangolin">DELIVERY<br />To my rental home</div>
 	  </a>
 	</div>
 	<div class="has-text-weight-semibold">Sorry, we do not deliver to Fort Morgan</div>
@@ -78,4 +78,6 @@
 	require_once("./includes/content/reservation.form.php"); 
 ?>
 
-<script src="./assets/scripts/delivery.content.js"></script>
+<script src="./assets/scripts/delivery.content.js">
+  // includes code for this PHP include AND reservation form include
+</script>

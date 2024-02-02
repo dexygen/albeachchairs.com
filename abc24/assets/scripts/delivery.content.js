@@ -1,45 +1,94 @@
-const abcReseverationFormLink = document.querySelector(".abc-reservation-form-link");
-const abcReservationModal = document.querySelector(".abc-reservation-modal");
+(() => {
+	setupDeliveryPage();
+	setupReservationForm();
+	
+	function setupDeliveryPage() {
+		setupDeliveryTabs();
+		
+		const abcReturnHomeLink = document.querySelector(".abc-return-home-link");
+		abcReturnHomeLink.addEventListener("click", () => {
+			document.location.href = "./home.php";
+		});
+		
+		function setupDeliveryTabs() {
+			const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
+			[...abcDeliveryTabs.querySelectorAll("li")].forEach(tab => {
+				tab.addEventListener("click", () => {
+					let activeTab = abcDeliveryTabs.querySelector("li.is-active");
+					let inactiveTab = abcDeliveryTabs.querySelector("li:not(.is-active)");
+					
+					activeTab.classList.remove("is-active");
+					activeTab.querySelector("a").classList.add("has-background-light");
+					
+					inactiveTab.classList.add("is-active");
+					inactiveTab.querySelector("a").classList.remove("has-background-light");
 
-let modalCloseClickHandlersAdded;
-{	
-	abcReseverationFormLink.addEventListener("click", () => {
-		abcReservationModal.classList.add("is-active");
-		if (!modalCloseClickHandlersAdded) {
-			// ensure close button handlers set just once because below initialized above block scope
-			modalCloseClickHandlersAdded = true;
-			
-			const modalCloseButtons = document.querySelectorAll(".abc-reservation-modal-close");
-			[...modalCloseButtons].forEach(closeButton => {
-				closeButton.addEventListener("click", () => {
-					abcReservationModal.classList.remove("is-active");
+					let visibleInfoSection = document.querySelector(".abc-delivery-info-sections > section:not(.is-hidden)");
+					let hiddenInfoSection = document.querySelector(".abc-delivery-info-sections > section.is-hidden")
+					
+					visibleInfoSection.classList.add("is-hidden");
+					hiddenInfoSection.classList.remove("is-hidden");
 				});
 			});
 		}
-	});  
-}
-
-const abcReturnHomeLink = document.querySelector(".abc-return-home-link");
-abcReturnHomeLink.addEventListener("click", () => {
-	document.location.href = "./home.php";
-});
-
-const abcDeliveryTabs = document.querySelector(".abc-delivery-tabs");
-[...abcDeliveryTabs.querySelectorAll("li")].forEach(tab => {
-	tab.addEventListener("click", () => {
-		let activeTab = abcDeliveryTabs.querySelector("li.is-active");
-		let inactiveTab = abcDeliveryTabs.querySelector("li:not(.is-active)");
+	}
+	
+	function setupReservationForm() {
+		/*
+		  Refactor following modal initialization code into setupModalsWithCloseButtons()
+		  USAGE:
+		  setupModalsWithCloseButtons("reservation");
+		  setupModalsWithCloseButtons("pricing");
+		*/
+		const deliveryReservationLink = document.querySelector(".abc-delivery-reservation-link");
+		const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
 		
-		activeTab.classList.remove("is-active");
-		activeTab.querySelector("a").classList.add("has-background-light");
+		deliveryReservationLink.addEventListener("click", () => {
+			deliveryReservationModal.classList.add("is-active");		
+		});
 		
-		inactiveTab.classList.add("is-active");
-		inactiveTab.querySelector("a").classList.remove("has-background-light");
+		const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
+		[...reservationModalCloseButtons].forEach(closeButton => {
+			closeButton.addEventListener("click", () => {
+				deliveryReservationModal.classList.remove("is-active");
+			});
+		});
 
-		let visibleInfoSection = document.querySelector(".abc-delivery-info-sections > section:not(.is-hidden)");
-		let hiddenInfoSection = document.querySelector(".abc-delivery-info-sections > section.is-hidden")
+		const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
+		const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
+
+		abcDeliveryPricingLink.addEventListener("click", () => {
+			abcDeliveryPricingModal.classList.add("is-active");
+        });
 		
-		visibleInfoSection.classList.add("is-hidden");
-		hiddenInfoSection.classList.remove("is-hidden");
-	});
-});
+		const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
+		[...pricingModalCloseButtons].forEach(closeButton => {
+			closeButton.addEventListener("click", () => {
+				abcDeliveryPricingModal.classList.remove("is-active");
+			});
+		});
+		
+		document.addEventListener('DOMContentLoaded', () => {
+			const calendar = new VanillaCalendar('#abc-reservation-calendar', {
+				date: {
+					min: new Date().toISOString().substring(0, 10),
+					max: '2024-10-27',
+				},
+				settings: {
+					visibility: {
+						weekend: false,
+					},
+					selection: {
+					  day: 'multiple-ranged',
+					},
+				},
+				  actions: {
+					clickDay() {
+					  // console.log(calendar.selectedDates);
+					},
+				  },
+			});
+			calendar.init();
+		});
+	}
+})();
