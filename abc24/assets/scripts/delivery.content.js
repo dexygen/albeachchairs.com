@@ -34,41 +34,13 @@
 	}
 	
 	function setupReservationForm() {
-		/*
-		  Refactor following modal initialization code into setupModalsWithCloseButtons()
-		  USAGE:
-		  setupModalsWithCloseButtons("reservation");
-		  setupModalsWithCloseButtons("pricing");
-		*/
-		const deliveryReservationLink = document.querySelector(".abc-delivery-reservation-link");
-		const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
-		
-		deliveryReservationLink.addEventListener("click", () => {
-			deliveryReservationModal.classList.add("is-active");		
-		});
-		
-		const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
-		[...reservationModalCloseButtons].forEach(closeButton => {
-			closeButton.addEventListener("click", () => {
-				deliveryReservationModal.classList.remove("is-active");
-			});
-		});
-
-		const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
-		const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
-
-		abcDeliveryPricingLink.addEventListener("click", () => {
-			abcDeliveryPricingModal.classList.add("is-active");
-        });
-		
-		const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
-		[...pricingModalCloseButtons].forEach(closeButton => {
-			closeButton.addEventListener("click", () => {
-				abcDeliveryPricingModal.classList.remove("is-active");
-			});
-		});
+		const deliveryReservationForm = document.querySelector(".abc-delivery-reservation-form");
+		setupModalWithPricingAndCloseButtons();
+		setupFormReset();
+		setupFormSubmit();
 		
 		document.addEventListener('DOMContentLoaded', () => {
+			const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
 			const calendar = new VanillaCalendar('#abc-reservation-calendar', {
 				date: {
 					min: new Date().toISOString().substring(0, 10),
@@ -84,11 +56,57 @@
 				},
 				  actions: {
 					clickDay() {
-					  // console.log(calendar.selectedDates);
+					    hiddenReservationDatesField.value = calendar.selectedDates;
 					},
 				  },
 			});
 			calendar.init();
 		});
+		
+		function setupModalWithPricingAndCloseButtons() {
+			const deliveryReservationLink = document.querySelector(".abc-delivery-reservation-link");
+			const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
+			
+			deliveryReservationLink.addEventListener("click", () => {
+				deliveryReservationModal.classList.add("is-active");		
+			});
+			
+			const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
+			[...reservationModalCloseButtons].forEach(closeButton => {
+				closeButton.addEventListener("click", () => {
+					deliveryReservationForm.reset();
+					deliveryReservationModal.classList.remove("is-active");
+				});
+			});
+
+			const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
+			const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
+
+			abcDeliveryPricingLink.addEventListener("click", () => {
+				abcDeliveryPricingModal.classList.add("is-active");
+			});
+			
+			const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
+			[...pricingModalCloseButtons].forEach(closeButton => {
+				closeButton.addEventListener("click", () => {
+					abcDeliveryPricingModal.classList.remove("is-active");
+				});
+			});			
+		}
+		
+		function setupFormReset() {
+			const formResetButton = document.querySelector(".abc-delivery-reservation-form-reset");
+			formResetButton.addEventListener("click", () => {
+				deliveryReservationForm.reset();
+			});
+		}
+		
+		function setupFormSubmit() {
+			const formSubmitButton = document.querySelector(".abc-delivery-reservation-form-submit");
+            formSubmitButton.addEventListener("click", () => {
+				const reservationData = JSON.stringify(Object.fromEntries(new FormData(deliveryReservationForm)));
+				console.log(reservationData);
+			});			
+		}
 	}
 })();

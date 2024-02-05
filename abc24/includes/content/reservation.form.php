@@ -11,7 +11,7 @@
 	</div>
     <section class="modal-card-body pt-1">
 	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
-      <form class="abc-contact-form font-pangolin">
+      <form class="abc-delivery-reservation-form font-pangolin">
         <div class="field">
           <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Your First Name</span>
@@ -95,6 +95,7 @@
 			  <div id="abc-reservation-calendar" class="pt-0"></div>
 			</div>
 		  </div>
+		  <input class="input" type="hidden" value="[]" name="reservationDates">
 		
         <div class="field">
           <label class="label is-size-4 mb-1 abc-line-height-1_1">
@@ -133,8 +134,8 @@
       </form>
     </section>
     <footer class="modal-card-foot is-justify-content-center">
-      <button class="button is-medium is-outlined is-success abc-contact-form-submit">Submit</button>
-      <button class="button is-medium is-outlined is-warning is-inverted abc-contact-form-reset">Reset</button>
+      <button class="button is-medium is-outlined is-success abc-delivery-reservation-form-submit">Submit</button>
+      <button class="button is-medium is-outlined is-warning is-inverted abc-delivery-reservation-form-reset">Reset</button>
       <button class="button is-medium is-outlined is-danger abc-delivery-reservation-modal-close">Close</button>
     </footer>
   </div>
