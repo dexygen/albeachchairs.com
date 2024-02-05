@@ -104,9 +104,16 @@
 		function setupFormSubmit() {
 			const formSubmitButton = document.querySelector(".abc-delivery-reservation-form-submit");
             formSubmitButton.addEventListener("click", () => {
-				const reservationData = JSON.stringify(Object.fromEntries(new FormData(deliveryReservationForm)));
-				console.log(reservationData);
-			});			
+				const formDataObj = Object.fromEntries(new FormData(deliveryReservationForm));
+				const reservationData = coerceReservationValues(formDataObj);
+			});
+			
+			function coerceReservationValues(formDataObj) {
+				formDataObj.deliveryCity = formDataObj.deliveryCity || "";
+				formDataObj.reservationDates = formDataObj.reservationDates === "[]" ? "" : formDataObj.reservationDates;
+				Object.keys(formDataObj).forEach(key => formDataObj[key] = formDataObj[key].trim());
+				return JSON.stringify(formDataObj);
+			}
 		}
 	}
 })();

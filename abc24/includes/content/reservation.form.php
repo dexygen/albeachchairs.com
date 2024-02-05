@@ -17,7 +17,7 @@
             <span class="mr-1 has-text-primary-dark">Your First Name</span>
           </label>
           <div class="control">
-            <input class="input" type="text" name="name" placeholder="First Name">
+            <input class="input" type="text" name="firstName" placeholder="First Name">
           </div>
         </div>
         <div class="field">
@@ -25,7 +25,7 @@
             <span class="mr-1 has-text-primary-dark">Last Name<br>as on Credit Card</span>
           </label>
           <div class="control">
-            <input class="input" type="text" name="lastName" placeholder="Last Name">
+            <input class="input" type="text" name="lastNameOnCard" placeholder="Last Name">
           </div>
         </div>
         <div class="field">
@@ -104,7 +104,7 @@
 		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-delivery-pricing-link">Tap or click for pricing</div>
 		  <div class="mb-2 is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
           <div class="control">
-            <input class="input" type="number" name="number_sets" placeholder="Sets you need">
+            <input class="input" type="number" name="numberOfSets" placeholder="Sets you need">
           </div>
         </div>
         <div class="field">
@@ -112,7 +112,7 @@
             <span class="mr-1 has-text-primary-dark">Number of Extra chairs</span>
           </label>
           <div class="control">
-            <input class="input" type="number" name="extra_chairs" placeholder="Extra chairs, if any">
+            <input class="input" type="number" name="extraChairs" placeholder="Extra chairs, if any">
           </div>
 		</div>
         <div class="field">
@@ -120,7 +120,7 @@
             <span class="mr-1 has-text-primary-dark">Number of Extra Umbrellas</span>
           </label>
           <div class="control">
-            <input class="input" type="number" name="extra_umbrellas" placeholder="Extra umbrellas, if any">
+            <input class="input" type="number" name="extraUmbrellas" placeholder="Extra umbrellas, if any">
           </div>
 		</div>
           <div class="field mt-4">
@@ -129,7 +129,7 @@
                 Other information/questions?
               </span>
             </label>
-			<textarea class="textarea"name="other"></textarea>
+			<textarea class="textarea"name="extraInformation"></textarea>
           </div>
       </form>
     </section>
