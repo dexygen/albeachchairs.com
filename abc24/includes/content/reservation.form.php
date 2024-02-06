@@ -94,12 +94,15 @@
 			<div class="is-flex is-justify-content-center">
 			  <div id="abc-reservation-calendar" class="pt-0"></div>
 			</div>
+			  <div class="control">
+				<input class="input" type="hidden" value="[]" name="reservationDates">
+			  </div>
 		  </div>
-		  <input class="input" type="hidden" value="[]" name="reservationDates">
 		
         <div class="field">
           <label class="label is-size-4 mb-1 abc-line-height-1_1">
-            <span class="mr-1 has-text-primary-dark">Number of Sets <br>(1 set = 2 chairs + 1 umbrella)</span>
+            <span class="has-text-primary-dark">Number of Sets</span>
+			<div class="has-text-primary-dark">(1 set = 2 chairs + 1 umbrella)</div>
           </label>
 		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-delivery-pricing-link">Tap or click for pricing</div>
 		  <div class="mb-2 is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
@@ -129,7 +132,7 @@
                 Other information/questions?
               </span>
             </label>
-			<textarea class="textarea"name="extraInformation"></textarea>
+			<textarea class="textarea "name="extraInformation"></textarea>
           </div>
       </form>
     </section>

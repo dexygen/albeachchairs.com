@@ -105,14 +105,45 @@
 			const formSubmitButton = document.querySelector(".abc-delivery-reservation-form-submit");
             formSubmitButton.addEventListener("click", () => {
 				const formDataObj = Object.fromEntries(new FormData(deliveryReservationForm));
-				const reservationData = coerceReservationValues(formDataObj);
+				const reservationData = coerceFormData(formDataObj);
+				// console.log(JSON.stringify(reservationData));
+				let validationErrors;
+				if (validationErrors = evaluateReservationData(reservationData), validationErrors) {
+					// display validation errors
+				}
+				else {
+					// submit PHP for sending email
+				}
 			});
 			
-			function coerceReservationValues(formDataObj) {
-				formDataObj.deliveryCity = formDataObj.deliveryCity || "";
-				formDataObj.reservationDates = formDataObj.reservationDates === "[]" ? "" : formDataObj.reservationDates;
-				Object.keys(formDataObj).forEach(key => formDataObj[key] = formDataObj[key].trim());
-				return JSON.stringify(formDataObj);
+			function coerceFormData(formDataObj) {
+				const coercedData = JSON.parse(JSON.stringify(formDataObj));
+				coercedData.deliveryCity = coercedData.deliveryCity || "";
+				coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates;
+				Object.keys(coercedData).forEach(key => coercedData[key] = coercedData[key].trim());
+				return coercedData;
+			}
+			
+			function evaluateReservationData() {
+				const formFields = document.querySelectorAll("div.field");
+			    const fieldLabels = reservationFieldLabels()
+				console.log("GOT HERE", fieldLabels);
+				
+				function reservationFieldLabels() {
+					const fieldLabels = [...formFields].reduce((labels, field) => {
+						let fieldLabelSpan;
+						let fieldLabelInput;
+						if (fieldLabelSpan = field.querySelector("label > span"), fieldLabelSpan) {
+							if (fieldLabelInput = field.querySelector("input"), fieldLabelInput) {
+								const labelName = fieldLabelInput.getAttribute("name");
+								const labelValue = fieldLabelSpan.innerText.replace("\n", " ");
+								labels[labelName] = labelValue;
+							}
+						}
+						return labels;
+					}, {});
+					return fieldLabels;
+				}
 			}
 		}
 	}
