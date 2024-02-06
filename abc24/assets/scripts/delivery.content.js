@@ -106,10 +106,19 @@
             formSubmitButton.addEventListener("click", () => {
 				const formDataObj = Object.fromEntries(new FormData(deliveryReservationForm));
 				const reservationData = coerceFormData(formDataObj);
-				// console.log(JSON.stringify(reservationData));
-				let validationErrors;
-				if (validationErrors = evaluateReservationData(reservationData), validationErrors) {
-					// display validation errors
+				let missingFields;
+				
+				if (missingFields = evaluateReservationData(reservationData), missingFields) {
+					const errorMessageContainer = document.querySelector(".abc-reservation-validation-errors");
+					const errorMessageListElement = errorMessageContainer.querySelector("ul");
+					
+					missingFields.forEach(fieldLabel => {
+						const li = document.createElement('li');
+						li.appendChild(document.createTextNode(fieldLabel));
+						errorMessageListElement.appendChild(li);						
+					});
+					
+					errorMessageContainer.classList.remove("is-hidden");
 				}
 				else {
 					// submit PHP for sending email
@@ -124,12 +133,20 @@
 				return coercedData;
 			}
 			
-			function evaluateReservationData() {
-				const formFields = document.querySelectorAll("div.field");
-			    const fieldLabels = reservationFieldLabels()
-				console.log("GOT HERE", fieldLabels);
+			function evaluateReservationData(reservationData) {
+			    const requiredFieldLabels = requiredReservationFields();
+				let missingFields = [];
 				
-				function reservationFieldLabels() {
+				for (const [fieldName, label] of requiredFieldLabels) {
+					if (!reservationData[fieldName]) {
+						missingFields.push(label);
+					}
+				}
+				
+				return missingFields.length ? missingFields : null;
+				
+				function requiredReservationFields() {
+					const formFields = document.querySelectorAll("div.field");
 					const fieldLabels = [...formFields].reduce((labels, field) => {
 						let fieldLabelSpan;
 						let fieldLabelInput;
@@ -137,11 +154,14 @@
 							if (fieldLabelInput = field.querySelector("input"), fieldLabelInput) {
 								const labelName = fieldLabelInput.getAttribute("name");
 								const labelValue = fieldLabelSpan.innerText.replace("\n", " ");
-								labels[labelName] = labelValue;
+								if (!labelName.startsWith("extra")) {
+								  labels.set(labelName, labelValue);
+								}
 							}
 						}
 						return labels;
-					}, {});
+					}, new Map());
+					
 					return fieldLabels;
 				}
 			}

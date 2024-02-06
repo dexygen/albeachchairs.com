@@ -11,6 +11,14 @@
 	</div>
     <section class="modal-card-body pt-1">
 	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
+	  <div class="notification is-danger abc-reservation-validation-errors p-1 mb-1 is-hidden">
+		<span class="has-text-weight-semibold">Please provide values for the following</span>
+		<ul><!-- Will be populated by Javascript code --></ul>
+	  </div>
+	  <!-- 
+		Form validation is dependent on the structure of this HTML, i.e. the fields and label/spans
+		It might be better to generate the HTML and some accompanying JSON from PHP
+	  -->
       <form class="abc-delivery-reservation-form font-pangolin">
         <div class="field">
           <label class="label is-size-4 mb-0">
@@ -37,8 +45,9 @@
           </div>
         </div>
         <div class="field">
-          <label class="label is-size-4 mb-0">
+          <label class="label is-size-4 mb-1 abc-line-height-1_1">
             <span class="mr-1 has-text-primary-dark">Phone</span>
+			<div class="is-size-5">Required for contact if email fails</div>
           </label>
           <div class="control">
             <input class="input" type="text" name="phone" placeholder="Phone Number">
