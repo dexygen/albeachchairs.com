@@ -106,7 +106,8 @@
 		
 		function clearNotifications() {
 			// perform when clicking CLOSE and RESET and before form validation after clicking SUBMIT
-			console.log("CLEAR NOTIFICATIONS");
+			errorMessageListElement.innerHTML = "";
+			errorMessageContainer.classList.add("is-hidden");
 		}
 		
 		function setupFormReset() {
@@ -122,12 +123,12 @@
             formSubmitButton.addEventListener("click", () => {
 				const formDataObj = Object.fromEntries(new FormData(deliveryReservationForm));
 				const reservationData = coerceFormData(formDataObj);
-				let fieldsMissingData;
+				let invalidFormData;
 				
 				clearNotifications();
 				
-				if (fieldsMissingData = evaluateReservationData(reservationData), fieldsMissingData) {
-					fieldsMissingData.forEach(fieldLabel => {
+				if (invalidFormData = evaluateReservationData(reservationData), invalidFormData) {
+					invalidFormData.forEach(fieldLabel => {
 						const li = document.createElement('li');
 						li.appendChild(document.createTextNode(fieldLabel));
 						errorMessageListElement.appendChild(li);						
@@ -151,15 +152,20 @@
 			
 			function evaluateReservationData(reservationData) {
 			    const requiredFieldLabels = requiredReservationFields();
-				let fieldsMissingData = [];
+				let invalidFormData = [];
 				
 				for (const [fieldName, label] of requiredFieldLabels) {
 					if (!reservationData[fieldName]) {
-						fieldsMissingData.push(label);
+						invalidFormData.push(label);
 					}
 				}
 				
-				return fieldsMissingData.length ? fieldsMissingData : null;
+				// Special cases, move into function if they become too numerous
+				if (reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
+					invalidFormData.unshift("At least 2 sets required for delivery");
+				}
+				
+				return invalidFormData.length ? invalidFormData : null;
 				
 				function requiredReservationFields() {
 					const formFields = document.querySelectorAll("div.field");
