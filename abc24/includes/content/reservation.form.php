@@ -15,6 +15,12 @@
 		<span class="has-text-weight-semibold is-underlined">Please provide values for the following</span>
 		<ul><!-- Will be populated by Javascript code --></ul>
 	  </div>
+	  <div class="notification is-primary abc-reservation-confirmation p-1 mb-1 has-text-weight-bold is-hidden">
+	    <button class="delete abc-delivery-reservation-modal-close"></button>
+		<div>Thanks for your delivery reservation!</div>
+		<div>Please watch for an email from:</div>
+		<div>albeachchairs@gmail.com</div>
+	  </div>
 	  <!-- 
 		Form validation is dependent on the structure of this HTML, i.e. the fields and label/spans
 		It might be better to generate the HTML and some accompanying JSON from PHP

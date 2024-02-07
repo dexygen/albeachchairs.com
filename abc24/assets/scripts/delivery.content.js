@@ -39,6 +39,7 @@
 		// elements needed by clearNotifications
 		const errorMessageContainer = document.querySelector(".abc-reservation-validation-errors");
 		const errorMessageListElement = errorMessageContainer.querySelector("ul");
+		const deliveryConfirmationNotification = document.querySelector(".abc-reservation-confirmation");
 		
 		setupModal();
 		setupFormReset();
@@ -106,8 +107,9 @@
 		
 		function clearNotifications() {
 			// perform when clicking CLOSE and RESET and before form validation after clicking SUBMIT
-			errorMessageListElement.innerHTML = "";
+			errorMessageListElement.innerHTML = ""; // remove errors
 			errorMessageContainer.classList.add("is-hidden");
+			deliveryConfirmationNotification.classList.add("is-hidden");
 		}
 		
 		function setupFormReset() {
@@ -138,6 +140,8 @@
 					errorMessageContainer.scrollIntoView({behavior: "smooth"});
 				}
 				else {
+					deliveryConfirmationNotification.classList.remove("is-hidden");
+					deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
 					// submit PHP for sending email
 				}
 			});
