@@ -35,7 +35,12 @@
 	
 	function setupReservationForm() {
 		const deliveryReservationForm = document.querySelector(".abc-delivery-reservation-form");
-		setupModalWithPricingAndCloseButtons();
+		
+		// elements needed by clearNotifications
+		const errorMessageContainer = document.querySelector(".abc-reservation-validation-errors");
+		const errorMessageListElement = errorMessageContainer.querySelector("ul");
+		
+		setupModal();
 		setupFormReset();
 		setupFormSubmit();
 		
@@ -63,7 +68,7 @@
 			calendar.init();
 		});
 		
-		function setupModalWithPricingAndCloseButtons() {
+		function setupModal() {
 			const deliveryReservationLink = document.querySelector(".abc-delivery-reservation-link");
 			const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
 			
@@ -71,33 +76,44 @@
 				deliveryReservationModal.classList.add("is-active");		
 			});
 			
+			// Setup close buttons
 			const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
 			[...reservationModalCloseButtons].forEach(closeButton => {
 				closeButton.addEventListener("click", () => {
 					deliveryReservationForm.reset();
 					deliveryReservationModal.classList.remove("is-active");
+					clearNotifications();
 				});
 			});
 
-			const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
-			const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
+            // Setup pricing link, including close functionality
+			{
+				const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
+				const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
 
-			abcDeliveryPricingLink.addEventListener("click", () => {
-				abcDeliveryPricingModal.classList.add("is-active");
-			});
-			
-			const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
-			[...pricingModalCloseButtons].forEach(closeButton => {
-				closeButton.addEventListener("click", () => {
-					abcDeliveryPricingModal.classList.remove("is-active");
+				abcDeliveryPricingLink.addEventListener("click", () => {
+					abcDeliveryPricingModal.classList.add("is-active");
 				});
-			});			
+				
+				const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
+				[...pricingModalCloseButtons].forEach(closeButton => {
+					closeButton.addEventListener("click", () => {
+						abcDeliveryPricingModal.classList.remove("is-active");
+					});
+				});	
+			}			
+		}
+		
+		function clearNotifications() {
+			// perform when clicking CLOSE and RESET and before form validation after clicking SUBMIT
+			console.log("CLEAR NOTIFICATIONS");
 		}
 		
 		function setupFormReset() {
 			const formResetButton = document.querySelector(".abc-delivery-reservation-form-reset");
 			formResetButton.addEventListener("click", () => {
 				deliveryReservationForm.reset();
+				clearNotifications();
 			});
 		}
 		
@@ -106,19 +122,19 @@
             formSubmitButton.addEventListener("click", () => {
 				const formDataObj = Object.fromEntries(new FormData(deliveryReservationForm));
 				const reservationData = coerceFormData(formDataObj);
-				let missingFields;
+				let fieldsMissingData;
 				
-				if (missingFields = evaluateReservationData(reservationData), missingFields) {
-					const errorMessageContainer = document.querySelector(".abc-reservation-validation-errors");
-					const errorMessageListElement = errorMessageContainer.querySelector("ul");
-					
-					missingFields.forEach(fieldLabel => {
+				clearNotifications();
+				
+				if (fieldsMissingData = evaluateReservationData(reservationData), fieldsMissingData) {
+					fieldsMissingData.forEach(fieldLabel => {
 						const li = document.createElement('li');
 						li.appendChild(document.createTextNode(fieldLabel));
 						errorMessageListElement.appendChild(li);						
 					});
 					
 					errorMessageContainer.classList.remove("is-hidden");
+					errorMessageContainer.scrollIntoView({behavior: "smooth"});
 				}
 				else {
 					// submit PHP for sending email
@@ -135,15 +151,15 @@
 			
 			function evaluateReservationData(reservationData) {
 			    const requiredFieldLabels = requiredReservationFields();
-				let missingFields = [];
+				let fieldsMissingData = [];
 				
 				for (const [fieldName, label] of requiredFieldLabels) {
 					if (!reservationData[fieldName]) {
-						missingFields.push(label);
+						fieldsMissingData.push(label);
 					}
 				}
 				
-				return missingFields.length ? missingFields : null;
+				return fieldsMissingData.length ? fieldsMissingData : null;
 				
 				function requiredReservationFields() {
 					const formFields = document.querySelectorAll("div.field");

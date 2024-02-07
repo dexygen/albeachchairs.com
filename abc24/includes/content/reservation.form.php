@@ -12,7 +12,7 @@
     <section class="modal-card-body pt-1">
 	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
 	  <div class="notification is-danger abc-reservation-validation-errors p-1 mb-1 is-hidden">
-		<span class="has-text-weight-semibold">Please provide values for the following</span>
+		<span class="has-text-weight-semibold is-underlined">Please provide values for the following</span>
 		<ul><!-- Will be populated by Javascript code --></ul>
 	  </div>
 	  <!-- 
@@ -160,6 +160,7 @@
 	<div class="modal-card">
 	  <section class="modal-card-body">
 		<?php require("./includes/delivery.pricing.php"); ?>
+		<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">** Setup/Pickup: $30 per day</div>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
 		<button class="button abc-delivery-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
