@@ -36,10 +36,12 @@
 	function setupReservationForm() {
 		const deliveryReservationForm = document.querySelector(".abc-delivery-reservation-form");
 		
-		// elements needed by clearNotifications
-		const errorMessageContainer = document.querySelector(".abc-reservation-validation-errors");
+		// elements needed by closeEntirely and/or clearNotifications (called by submit, reset, and closeEntirely)
+		const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
+		const errorMessageContainer = document.querySelector(".abc-delivery-submit-validation-errors");
 		const errorMessageListElement = errorMessageContainer.querySelector("ul");
-		const deliveryConfirmationNotification = document.querySelector(".abc-reservation-confirmation");
+		const deliveryServerErrorNotification = document.querySelector(".abc-delivery-submit-server-error");
+		const deliveryConfirmationNotification = document.querySelector(".abc-delivery-submit-confirmation");
 		
 		setupModal();
 		setupFormReset();
@@ -49,7 +51,7 @@
 			const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
 			const calendar = new VanillaCalendar('#abc-reservation-calendar', {
 				date: {
-					min: new Date().toISOString().substring(0, 10),
+					min: new Date().toISOString().substring(0, 10), // TODO: Today OR the beginning of season?
 					max: '2024-10-27',
 				},
 				settings: {
@@ -71,7 +73,6 @@
 		
 		function setupModal() {
 			const deliveryReservationLink = document.querySelector(".abc-delivery-reservation-link");
-			const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
 			
 			deliveryReservationLink.addEventListener("click", () => {
 				deliveryReservationModal.classList.add("is-active");		
@@ -81,9 +82,7 @@
 			const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
 			[...reservationModalCloseButtons].forEach(closeButton => {
 				closeButton.addEventListener("click", () => {
-					deliveryReservationForm.reset();
-					deliveryReservationModal.classList.remove("is-active");
-					clearNotifications();
+					closeEntirely();
 				});
 			});
 
@@ -103,6 +102,12 @@
 					});
 				});	
 			}			
+		}
+		
+		function closeEntirely() {
+			deliveryReservationForm.reset();
+			deliveryReservationModal.classList.remove("is-active");
+			clearNotifications();			
 		}
 		
 		function clearNotifications() {
@@ -140,8 +145,15 @@
 					errorMessageContainer.scrollIntoView({behavior: "smooth"});
 				}
 				else {
+					// For testing
+					deliveryServerErrorNotification.classList.remove("is-hidden");
+					deliveryServerErrorNotification.scrollIntoView({behavior: "smooth"});				    	
+				
+					/*
 					deliveryConfirmationNotification.classList.remove("is-hidden");
 					deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
+					setTimeout(() => { closeEntirely() }, 8000);
+					*/
 					// submit PHP for sending email
 				}
 			});
@@ -159,7 +171,7 @@
 				let invalidFormData = [];
 				
 				for (const [fieldName, label] of requiredFieldLabels) {
-					if (!reservationData[fieldName]) {
+					if (reservationData[fieldName] === "") {
 						invalidFormData.push(label);
 					}
 				}

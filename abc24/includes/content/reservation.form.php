@@ -11,18 +11,34 @@
 	</div>
     <section class="modal-card-body pt-1">
 	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
-	  <div class="notification is-danger abc-reservation-validation-errors p-1 mb-1 is-hidden">
+	  
+	  <!-- "Notifications" that begin as hidden -->
+	  <div class="notification is-danger abc-delivery-submit-validation-errors p-1 mb-1 is-hidden">
 		<span class="has-text-weight-semibold is-underlined">Please provide values for the following</span>
 		<ul><!-- Will be populated by Javascript code --></ul>
 	  </div>
-	  <div class="notification is-primary abc-reservation-confirmation p-1 mb-1 has-text-weight-bold is-hidden">
+      <div class="notification is-danger abc-delivery-submit-server-error is-size-5 p-1 mb-1 is-hidden">
+        <div class="has-text-left has-text-weight-semibold px-2">
+          There was a problem submitting your information.  You can try again,
+          or call us at 251-233-4000
+        </div>
+      </div>
+	  <div class="notification is-primary abc-delivery-submit-confirmation is-size-5 p-1 mb-1 is-hidden">
 	    <button class="delete abc-delivery-reservation-modal-close"></button>
-		<div>Thanks for your delivery reservation!</div>
-		<div>Please watch for an email from:</div>
-		<div>albeachchairs@gmail.com</div>
+		<div class="has-text-left has-text-weight-bold my-1 px-3">
+			Thanks for your delivery reservation!
+			Please watch for an email from
+			albeachchairs@gmail.com
+		</div>
+		<div class="has-background-primary-dark 
+					has-text-warning 
+					px-3 
+					mb-1 
+					font-pangolin">You will be redirected to the delivery page in a few seconds</div>
 	  </div>
+	  
 	  <!-- 
-		Form validation is dependent on the structure of this HTML, i.e. the fields and label/spans
+		Form validation is dependent on the structure of the form's HTML, i.e. the fields and label/spans
 		It might be better to generate the HTML and some accompanying JSON from PHP
 	  -->
       <form class="abc-delivery-reservation-form font-pangolin">
