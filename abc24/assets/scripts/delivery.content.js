@@ -42,6 +42,7 @@
 		const errorMessageListElement = errorMessageContainer.querySelector("ul");
 		const deliveryServerErrorNotification = document.querySelector(".abc-delivery-submit-server-error");
 		const deliveryConfirmationNotification = document.querySelector(".abc-delivery-submit-confirmation");
+		let calendar;
 		
 		setupModal();
 		setupFormReset();
@@ -49,7 +50,7 @@
 		
 		document.addEventListener('DOMContentLoaded', () => {
 			const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
-			const calendar = new VanillaCalendar('#abc-reservation-calendar', {
+			calendar = new VanillaCalendar('#abc-reservation-calendar', {
 				date: {
 					min: new Date().toISOString().substring(0, 10), // TODO: Today OR the beginning of season?
 					max: '2024-10-27',
@@ -106,6 +107,7 @@
 		
 		function closeEntirely() {
 			deliveryReservationForm.reset();
+			calendar.init();
 			deliveryReservationModal.classList.remove("is-active");
 			clearNotifications();			
 		}
@@ -145,25 +147,22 @@
 					errorMessageContainer.scrollIntoView({behavior: "smooth"});
 				}
 				else {
-					/* For testing
-					deliveryServerErrorNotification.classList.remove("is-hidden");
-					deliveryServerErrorNotification.scrollIntoView({behavior: "smooth"});				    	
-				
-					deliveryConfirmationNotification.classList.remove("is-hidden");
-					deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
-					setTimeout(() => { closeEntirely() }, 8000);
-					*/
 					const reservationPayload = JSON.stringify(reservationData);
 					axios.post("./includes/reservation.form.completion.php", reservationPayload)
 						.then(response => {
 							if (response.status === 200 && response.data.mail_success) {
+								deliveryConfirmationNotification.classList.remove("is-hidden");
+								deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
+								setTimeout(() => { closeEntirely() }, 8000);
 							}
 							else {
-								// handlePostResponseErrors(response.status);
+								deliveryServerErrorNotification.classList.remove("is-hidden");
+								deliveryServerErrorNotification.scrollIntoView({behavior: "smooth"});
 							}
 						})
 						.catch(err => { 
-							// handlePostResponseErrors(err);
+							deliveryServerErrorNotification.classList.remove("is-hidden");
+							deliveryServerErrorNotification.scrollIntoView({behavior: "smooth"});
 						});
 				}
 			});
