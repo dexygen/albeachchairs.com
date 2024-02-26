@@ -145,16 +145,26 @@
 					errorMessageContainer.scrollIntoView({behavior: "smooth"});
 				}
 				else {
-					// For testing
+					/* For testing
 					deliveryServerErrorNotification.classList.remove("is-hidden");
 					deliveryServerErrorNotification.scrollIntoView({behavior: "smooth"});				    	
 				
-					/*
 					deliveryConfirmationNotification.classList.remove("is-hidden");
 					deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
 					setTimeout(() => { closeEntirely() }, 8000);
 					*/
-					// submit PHP for sending email
+					const reservationPayload = JSON.stringify(reservationData);
+					axios.post("./includes/reservation.form.completion.php", reservationPayload)
+						.then(response => {
+							if (response.status === 200 && response.data.mail_success) {
+							}
+							else {
+								// handlePostResponseErrors(response.status);
+							}
+						})
+						.catch(err => { 
+							// handlePostResponseErrors(err);
+						});
 				}
 			});
 			
@@ -162,7 +172,9 @@
 				const coercedData = JSON.parse(JSON.stringify(formDataObj));
 				coercedData.deliveryCity = coercedData.deliveryCity || "";
 				coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates;
-				Object.keys(coercedData).forEach(key => coercedData[key] = coercedData[key].trim());
+				coercedData.reservationLength = coercedData.reservationDates.split(",").length;
+				console.log(coercedData.reservationDates, coercedData.reservationDates.split(","), coercedData.reservationLength);
+				Object.keys(coercedData).forEach(key => coercedData[key] = coercedData[key].toString().trim());
 				return coercedData;
 			}
 			
@@ -172,13 +184,21 @@
 				
 				for (const [fieldName, label] of requiredFieldLabels) {
 					if (reservationData[fieldName] === "") {
-						invalidFormData.push(label);
+						invalidFormData.push(label + " is required");
 					}
 				}
 				
 				// Special cases, move into function if they become too numerous
-				if (reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
-					invalidFormData.unshift("At least 2 sets required for delivery");
+				{
+					const emailRegex = /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/;
+					// as to the above, standards-based, regex, see: https://stackoverflow.com/a/26989421/34806
+					if (reservationData.email && !emailRegex.test(reservationData.email)) {
+						invalidFormData.unshift("Email address not in proper format");
+					}
+					
+					if (reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
+						invalidFormData.unshift("At least 2 sets required for delivery");
+					}
 				}
 				
 				return invalidFormData.length ? invalidFormData : null;

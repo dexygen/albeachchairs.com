@@ -23,6 +23,7 @@
 	<!-- Create separate order form page for including the following? -->
     <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
   </head>
   <body id="abc-viewport" class="has-text-centered px-1"><html>
     <!-- Google Tag Manager (noscript) -->

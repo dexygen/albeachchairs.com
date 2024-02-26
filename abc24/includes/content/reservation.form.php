@@ -14,7 +14,7 @@
 	  
 	  <!-- "Notifications" that begin as hidden -->
 	  <div class="notification is-danger abc-delivery-submit-validation-errors p-1 mb-1 is-hidden">
-		<span class="has-text-weight-semibold is-underlined">Please provide values for the following</span>
+		<span class="has-text-weight-semibold is-underlined is-size-5">Please correct the following</span>
 		<ul><!-- Will be populated by Javascript code --></ul>
 	  </div>
       <div class="notification is-danger abc-delivery-submit-server-error is-size-5 p-1 mb-1 is-hidden">
@@ -42,6 +42,9 @@
 		It might be better to generate the HTML and some accompanying JSON from PHP
 	  -->
       <form class="abc-delivery-reservation-form font-pangolin">
+	    <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
+		  <input class="input" type="hidden" value="DELIVERY" name="reservationType">
+		<?php endif; ?>
         <div class="field">
           <label class="label is-size-4 mb-0">
             <span class="mr-1 has-text-primary-dark">Your First Name</span>
@@ -125,6 +128,9 @@
 			<div class="is-flex is-justify-content-center">
 			  <div id="abc-reservation-calendar" class="pt-0"></div>
 			</div>
+			  <div class="control">
+				<input class="input" type="hidden" value="0" name="reservationLength">
+			  </div>
 			  <div class="control">
 				<input class="input" type="hidden" value="[]" name="reservationDates">
 			  </div>
