@@ -31,7 +31,7 @@
 				has-text-primary-dark 
 				has-text-weight-semibold">Click or tap a choice below for more info</div>
 	<div class="tabs is-toggle is-toggle-rounded is-centered is-medium is-boxed mb-1">
-	  <ul class="abc-delivery-tabs font-pangolin">
+	  <ul class="abc-condo-info-tabs font-pangolin">
 		<li class="is-active">
 		  <a>
 			<span>Condos We Serve</span>
@@ -57,10 +57,10 @@
 		  <?php } ?>
 		  </ul>
 		</section>
-		<section class="abc-condos-pricing">
+		<section class="abc-condos-pricing is-hidden">
 		  <div class="columns is-mobile is-centered">
 			<aside class="column has-text-left is-size-5-mobile is-3-tablet">
-			  <div id="abc-chair-set-pricing" class="has-text-primary-dark">2-person Chair Sets, with Umbrella</div>
+			  <div id="abc-chair-set-pricing" class="has-text-danger has-text-weight-semibold font-pangolin">2-person Chair Sets, with Umbrella</div>
 			  <ul class="has-text-weight-semibold">
 				<li>1 hour: $10</li>
 				<li>1 day: $40</li>
@@ -72,20 +72,20 @@
 				<li>7 days: $200</li>
 				<li>After 2pm: $25 that day</li>
 				<li>After 3pm: $15 that day</li>
-				<li class="mt-2 has-text-primary-dark has-text-weight-normal">
+				<li class="mt-2 has-text-danger has-text-weight-semibold font-pangolin">
 				  ONE chair, OR umbrella
 				</li>
 				<li>1 day: $25</li>
 			  </ul>
 			</aside>
 			<aside class="column has-text-left is-size-5-mobile is-4-tablet">
-			  <div class="has-text-primary-dark">Kayaks and Paddleboards, may switch between the two during your time</div>
+			  <div class="has-text-danger has-text-weight-semibold font-pangolin">Kayaks and Paddleboards, may switch between the two during your time</div>
 			  <ul class="has-text-weight-semibold">
 				<li>1 hour: $30</li>
 				<li>2 hours: $50</li>
 				<li>1 day: $100</li>
 			  </ul>
-			  <div class="has-text-primary-dark pt-2">Beach Games</div>
+			  <div class="has-text-danger has-text-weight-semibold font-pangolin pt-2">Beach Games</div>
 			  <ul class="has-text-weight-semibold">
 				<li>1 hour: $15</li>
 				<li>2 hours: $20</li>
@@ -102,8 +102,4 @@
 	require_once("./includes/content/reservation.form.php"); 
 ?>
 
-<!--
-<script src="./assets/scripts/delivery.content.js">
-  // includes code for this PHP include AND reservation form include
-</script>
--->
+<script src="./assets/scripts/condos.content.js"></script>
