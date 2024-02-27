@@ -68,14 +68,14 @@
 			</article>
 		</section>
 		<section class="abc-delivery-pricing is-hidden">
-			<?php require("./includes/delivery.pricing.php"); ?>
+			<?php require("./includes/content/pricing/delivery.pricing.php"); ?>
 		</section>
 	</div>
 </main>
 
 <?php
     $reservationType = ABC_RESERVATION_TYPE_DELIVERY; 
-	require_once("./includes/content/reservation.form.php"); 
+	require_once("./includes/content/reservations/reservation.form.php"); 
 ?>
 
 <script src="./assets/scripts/shared.content.js"></script>

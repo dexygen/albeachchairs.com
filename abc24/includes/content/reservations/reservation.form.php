@@ -187,7 +187,7 @@
 	<button class="modal-close is-large abc-delivery-pricing-modal-close"></button>
 	<div class="modal-card">
 	  <section class="modal-card-body">
-		<?php require("./includes/delivery.pricing.php"); ?>
+		<?php require("./includes/content/pricing/delivery.pricing.php"); ?>
 		<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">** Setup/Pickup: $30 per day</div>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
