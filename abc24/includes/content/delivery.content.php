@@ -29,7 +29,7 @@
 				has-text-primary-dark 
 				has-text-weight-semibold">Click or tap a choice below for more info</div>
 	<div class="tabs is-toggle is-toggle-rounded is-centered is-medium is-boxed mb-1">
-	  <ul class="abc-delivery-tabs font-pangolin">
+	  <ul class="abc-delivery-info-tabs font-pangolin">
 		<li class="is-active">
 		  <a>
 			<span>Delivery Sets</span>
@@ -78,6 +78,6 @@
 	require_once("./includes/content/reservation.form.php"); 
 ?>
 
-<script src="./assets/scripts/delivery.content.js">
-  // includes code for this PHP include AND reservation form include
-</script>
+<script src="./assets/scripts/shared.content.js"></script>
+<script>setupInfoTabs("delivery")</script>
+<script src="./assets/scripts/delivery.content.js"></script>

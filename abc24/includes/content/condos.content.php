@@ -31,7 +31,7 @@
 				has-text-primary-dark 
 				has-text-weight-semibold">Click or tap a choice below for more info</div>
 	<div class="tabs is-toggle is-toggle-rounded is-centered is-medium is-boxed mb-1">
-	  <ul class="abc-condo-info-tabs font-pangolin">
+	  <ul class="abc-condos-info-tabs font-pangolin">
 		<li class="is-active">
 		  <a>
 			<span>Condos We Serve</span>
@@ -102,4 +102,5 @@
 	require_once("./includes/content/reservation.form.php"); 
 ?>
 
-<script src="./assets/scripts/condos.content.js"></script>
+<script src="./assets/scripts/shared.content.js"></script>
+<script>setupInfoTabs("condos")</script>
