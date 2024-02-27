@@ -1,5 +1,5 @@
 <?php
-require_once('./jrmvc.lib.php');
+require_once('../jrmvc.lib.php');
 
 class ReservationFormController extends AbstractJrMvcController {  
     function applyInputToModel() {

@@ -75,7 +75,7 @@
 
 <?php
     $reservationType = ABC_RESERVATION_TYPE_DELIVERY; 
-	require_once("./includes/content/reservations/reservation.form.php"); 
+	require_once("./includes/reservations/reservation.form.php"); 
 ?>
 
 <script src="./assets/scripts/shared.content.js"></script>

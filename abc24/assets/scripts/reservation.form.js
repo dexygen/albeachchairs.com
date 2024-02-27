@@ -117,7 +117,7 @@
 			}
 			else {
 				const reservationPayload = JSON.stringify(reservationData);
-				axios.post("./includes/reservation.form.completion.php", reservationPayload)
+				axios.post("./includes/reservations/reservation.form.completion.php", reservationPayload)
 					.then(response => {
 						if (response.status === 200 && response.data.mail_success) {
 							deliveryConfirmationNotification.classList.remove("is-hidden");
