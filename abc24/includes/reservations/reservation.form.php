@@ -44,6 +44,8 @@
       <form class="abc-delivery-reservation-form font-pangolin">
 	    <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 		  <input class="input" type="hidden" value="DELIVERY" name="reservationType">
+	    <?php elseif ($reservationType == ABC_RESERVATION_TYPE_CONDOS): ?>
+		  <input class="input" type="hidden" value="CONDO" name="reservationType">
 		<?php endif; ?>
         <div class="field">
           <label class="label is-size-4 mb-0">
@@ -118,7 +120,26 @@
 			  </div>
 			</div>
 		  </div>
-		<?php endif; #if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY) ?>
+		<?php elseif ($reservationType == ABC_RESERVATION_TYPE_CONDOS): ?>
+			<div class="field">
+			  <label class="label abc-service-type-label is-size-4">
+				<span class="mr-1 has-text-primary-dark">Condo</span>
+			  </label>
+			  <div class="control">
+			    <select name="condominium">
+                <?php
+                  array_unshift($abcPropertyNamesAll, "CONDOS WE SERVE:");     
+                  foreach($abcPropertyNamesAll as $optValue => $optLabel) {
+					  $labelForValue = $optValue ? $optLabel : "";
+                ?>
+                  <option value="<?php echo $labelForValue; ?>">
+                  <?php echo $optLabel; ?>
+                  </option>
+                <?php } ?>	
+                </select>				
+			  </div>
+			</div>
+		<?php endif; ?>
 		
 		  <div class="field has-text-centered">
 			<label class="label is-size-4 mb-0">

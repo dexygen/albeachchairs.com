@@ -138,9 +138,11 @@
 		
 		function coerceFormData(formDataObj) {
 			const coercedData = JSON.parse(JSON.stringify(formDataObj));
-			coercedData.deliveryCity = coercedData.deliveryCity || "";
+			
+			coercedData.reservationType === 'DELIVERY' && (coercedData.deliveryCity = coercedData.deliveryCity || "");
 			coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates;
 			coercedData.reservationLength = coercedData.reservationDates.split(",").length;
+			
 			Object.keys(coercedData).forEach(key => coercedData[key] = coercedData[key].toString().trim());
 			return coercedData;
 		}
@@ -163,8 +165,12 @@
 					invalidFormData.unshift("Email address not in proper format");
 				}
 				
-				if (reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
+				if (reservationData.reservationType === "CONDO" && reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
 					invalidFormData.unshift("At least 2 sets required for delivery");
+				}
+				
+				if (reservationData.reservationType === "CONDO" && !reservationData.condominium) {
+					invalidFormData.unshift("Your condo (from the list) is required");
 				}
 			}
 			
