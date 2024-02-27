@@ -58,14 +58,14 @@
 
 		// Setup pricing link, including close functionality
 		{
-			const abcDeliveryPricingLink = document.querySelector(".abc-delivery-pricing-link");
-			const abcDeliveryPricingModal = document.querySelector(".abc-delivery-pricing-modal");
+			const abcDeliveryPricingLink = document.querySelector(".abc-reservations-pricing-link");
+			const abcDeliveryPricingModal = document.querySelector(".abc-reservations-pricing-modal");
 
 			abcDeliveryPricingLink.addEventListener("click", () => {
 				abcDeliveryPricingModal.classList.add("is-active");
 			});
 			
-			const pricingModalCloseButtons = document.querySelectorAll(".abc-delivery-pricing-modal-close");
+			const pricingModalCloseButtons = document.querySelectorAll(".abc-pricing-modal-close");
 			[...pricingModalCloseButtons].forEach(closeButton => {
 				closeButton.addEventListener("click", () => {
 					abcDeliveryPricingModal.classList.remove("is-active");

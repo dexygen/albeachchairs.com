@@ -141,9 +141,11 @@
             <span class="has-text-primary-dark">Number of Sets</span>
 			<div class="has-text-primary-dark">(1 set = 2 chairs + 1 umbrella)</div>
           </label>
-		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-delivery-pricing-link">Tap or click for pricing</div>
-		  <div class="mb-2 is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
-          <div class="control">
+		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-reservations-pricing-link">Tap or click for pricing</div>
+		  <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
+			<div class="is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
+		  <?php endif; ?>
+          <div class="control mt-1">
             <input class="input" type="number" name="numberOfSets" placeholder="Sets you need">
           </div>
         </div>
@@ -182,16 +184,20 @@
 </div>
 
 <!-- DELIVERY PRICING MODAL -->
-<div class="modal abc-delivery-pricing-modal">
+<div class="modal abc-reservations-pricing-modal">
 	<div class="modal-background has-background-info"></div>
-	<button class="modal-close is-large abc-delivery-pricing-modal-close"></button>
+	<button class="modal-close is-large abc-pricing-modal-close"></button>
 	<div class="modal-card">
 	  <section class="modal-card-body">
-		<?php require("./includes/content/pricing/delivery.pricing.php"); ?>
-		<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">** Setup/Pickup: $30 per day</div>
+	    <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
+			<?php require("./includes/content/pricing/delivery.pricing.php"); ?>
+			<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">** Setup/Pickup: $30 per day</div>
+	    <?php elseif ($reservationType == ABC_RESERVATION_TYPE_CONDOS): ?>
+			<?php require("./includes/content/pricing/condos.pricing.php"); ?>
+		<?php endif; ?>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-		<button class="button abc-delivery-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		<button class="button abc-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
 		  CLOSE
 		</button>
 	  </footer>
