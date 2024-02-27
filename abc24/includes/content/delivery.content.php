@@ -80,4 +80,4 @@
 
 <script src="./assets/scripts/shared.content.js"></script>
 <script>setupInfoTabs("delivery")</script>
-<script src="./assets/scripts/delivery.content.js"></script>
+<script src="./assets/scripts/reservation.form.js"></script>

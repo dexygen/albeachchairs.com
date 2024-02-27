@@ -19,7 +19,7 @@
 		abc-text-orange
 		has-text-weight-semibold
 		is-underlined">
-		<div class="pt-2 abc-line-height-1_1 pb-2 abc-condo-reservation-link font-pangolin">SERVICE at a select CONDO</div>
+		<div class="pt-2 abc-line-height-1_1 pb-2 abc-condos-reservation-link font-pangolin">SERVICE at a select CONDO</div>
 	  </a>
 	</div>
 	<div class="abc-return-home-link is-underlined has-text-link mb-2">Or click or tap this link to return to home page</div>
@@ -48,10 +48,10 @@
 		<section class="abc-condos-list">
 		  <ul class="has-text-left">
           <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
-		    <li class="is-size-4 has-text-weight-semibold"><?php echo $city; ?></li>
+		    <li class="is-size-4 has-text-weight-semibold has-text-danger has-text-weight-semibold font-pangolin"><?php echo $city; ?></li>
 			  <ul class="pb-3">
 				  <?php foreach($propertyDetail as $detail) { ?>
-					<li class="is-size-5"><?php echo $detail["name"]; ?></li>
+					<li class="is-size-5 abc-line-height-1_2"><?php echo $detail["name"]; ?></li>
 				  <?php } ?>
 			  </ul>
 		  <?php } ?>
@@ -104,3 +104,4 @@
 
 <script src="./assets/scripts/shared.content.js"></script>
 <script>setupInfoTabs("condos")</script>
+<script src="./assets/scripts/reservation.form.js"></script>

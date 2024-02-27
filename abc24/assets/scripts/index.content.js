@@ -8,8 +8,6 @@ abcDeliveryLink.addEventListener("click", () => {
 	document.location.href = "./delivery.php";
 });
 
-console.log(abcCondosLink);
-
 abcCondosLink.addEventListener("click", () => {
 	document.location.href = "./condos.php";
 });
