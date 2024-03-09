@@ -9,6 +9,7 @@
 </header>
 
 <main>
+    <!--
 	<div class="is-size-4 font-kalam has-text-primary-dark has-text-weight-semibold">Click or tap below to ORDER</div>
 	<div class="mb-1">
 	  <a class="button 
@@ -22,6 +23,27 @@
 		<div class="pt-2 abc-line-height-1_1 pb-2 abc-condos-reservation-link font-pangolin">SERVICE at a select CONDO</div>
 	  </a>
 	</div>
+	-->
+	<?php
+	if ($isPhone) :?>
+	  <div class="is-size-5 font-pangolin pt-1 mb-1">Tap to call and place your reservation</div>
+	  <div>
+		<a href="tel:2512334000" class="button 
+										abc-contact-button 
+										is-rounded 
+										abc-background-success-tint 
+										abc-text-orange 
+										is-size-3 
+										is-underlined
+										mb-2">
+		  251-233-4000
+		</a>
+	  </div>
+	<?php else :?>
+	  <div class="is-size-5 font-pangolin pt-1 mb-1">Call us to place your reservation</div>
+	  <div class="is-size-2 has-text-primary-dark has-text-weight-semibold">251-233-4000</div>  
+	<?php endif; ?>
+
 	<div class="abc-return-home-link is-underlined has-text-link mb-2">Or click or tap this link to return to home page</div>
 	<div class="mb- is-size-5">
 		Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, fun beach games, and a full rental inventory
