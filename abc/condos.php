@@ -20,12 +20,16 @@
 		crossorigin="anonymous" 
 		referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/abc.css" type="text/css">
+	<!-- Create separate order form page for including the following? -->
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
   </head>
   <body id="abc-viewport" class="has-text-centered px-1"><html>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2LTCZ"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <?php require("./includes/content/index.content.php"); ?>
+    <?php require("./includes/content/condos.content.php"); ?>
   </body>
 </html>
