@@ -1,11 +1,22 @@
-// having the following code outside a block or functions ensures correct functionality on both Android and iPhone
+// having the following code above the setTimeout ensures correct functionality on both Android and iPad/iPhone
 let calendar;
+let calendarTodayButton;
+
 document.addEventListener('DOMContentLoaded', () => {
+	initCalendar();
+});
+
+function initCalendar() {	
 	const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
+	const tomorrow = (() => {
+		const today = new Date();
+		return new Date(today.setDate(today.getDate() + 1));
+	})();
+	
 	calendar = new VanillaCalendar('#abc-reservation-calendar', {
 		date: {
-			min: new Date().toISOString().substring(0, 10), // TODO: Today OR the beginning of season?
-			max: '2024-10-27',
+			min: tomorrow.toISOString().substring(0, 10),
+			max: '2024-10-27'
 		},
 		settings: {
 			visibility: {
@@ -13,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			selection: {
 			  day: 'multiple-ranged',
-			},
+			}
 		},
 		  actions: {
 			clickDay() {
@@ -22,7 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		  },
 	});
 	calendar.init();
-});
+	
+	calendarTodayButtonContainer = document.querySelector(".vanilla-calendar-day__btn_today")?.parentNode;
+	calendarTodayButtonContainer?.addEventListener("click", () => {
+		alert("For same day reservations, please call 251-233-4000");
+	});
+}
 
 
 setTimeout(() => { 
@@ -77,10 +93,16 @@ setTimeout(() => {
 	}
 	
 	function closeEntirely() {
+		resetCalendar();
 		deliveryReservationForm.reset();
-		calendar.init();
 		deliveryReservationModal.classList.remove("is-active");
 		clearNotifications();			
+	}
+	
+	function resetCalendar() {
+		calendar.destroy();
+		calendar = null;
+		initCalendar();
 	}
 	
 	function clearNotifications() {
@@ -93,6 +115,7 @@ setTimeout(() => {
 	function setupFormReset() {
 		const formResetButton = document.querySelector(".abc-delivery-reservation-form-reset");
 		formResetButton.addEventListener("click", () => {
+			resetCalendar();
 			deliveryReservationForm.reset();
 			clearNotifications();
 		});
