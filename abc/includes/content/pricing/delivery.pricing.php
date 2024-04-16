@@ -17,5 +17,11 @@
 	  Extra chair, OR umbrella
 	</li>
 	<li>$15 each, per day</li>
+	<li>
+		<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">
+			** Setup/Pickup: $30 per day, Setup by 9 am, Pick up after 5 pm
+		    (to comply with city ordinances that equipment cannot be left out overnight)
+		</div>
+	</li>
   </ul>
 </section>

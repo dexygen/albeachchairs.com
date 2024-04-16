@@ -7,7 +7,14 @@
 				has-text-warning 
 				is-size-3 
 				font-kalam 
-				abc-line-height-1_1">Alabama Beach Chairs<br>Delivery Reservation
+				abc-line-height-1_1">
+				Alabama Beach Chairs<br>
+				<?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
+				  Delivery
+				<?php elseif ($reservationType == ABC_RESERVATION_TYPE_CONDOS): ?>
+				  Condo
+				<?php endif; ?>				
+				Reservation
 	</div>
     <section class="modal-card-body pt-1">
 	  <div class="mb-1 has-text-weight-semibold">After you submit your information you will be emailed a link for completing your order</div>
@@ -34,7 +41,7 @@
 					has-text-warning 
 					px-3 
 					mb-1 
-					font-pangolin">You will be redirected to the delivery page in a few seconds</div>
+					font-pangolin">You will be sent back to previous page in a few seconds</div>
 	  </div>
 	  
 	  <!-- 
@@ -165,6 +172,7 @@
 		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-reservations-pricing-link">Tap or click for pricing</div>
 		  <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 			<div class="is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
+			
 		  <?php endif; ?>
           <div class="control mt-1">
             <input class="input" type="number" name="numberOfSets" placeholder="Sets you need">
@@ -212,7 +220,6 @@
 	  <section class="modal-card-body">
 	    <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 			<?php require("./includes/content/pricing/delivery.pricing.php"); ?>
-			<div class="is-size-4 has-text-danger-dark font-pangolin mt-2">** Setup/Pickup: $30 per day</div>
 	    <?php elseif ($reservationType == ABC_RESERVATION_TYPE_CONDOS): ?>
 			<?php require("./includes/content/pricing/condos.pricing.php"); ?>
 		<?php endif; ?>

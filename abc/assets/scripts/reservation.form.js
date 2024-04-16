@@ -1,4 +1,4 @@
-// having the following code above the setTimeout ensures correct functionality on both Android and iPad/iPhone
+// the following code above initCalendar() and setTimeout() for compatibility on Android, and iPad/iPhone
 let calendar;
 let calendarTodayButton;
 
@@ -190,7 +190,7 @@ setTimeout(() => {
 					invalidFormData.unshift("Email address not in proper format");
 				}
 				
-				if (reservationData.reservationType === "CONDO" && reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
+				if (reservationData.reservationType === "DELIVERY" && reservationData.numberOfSets && reservationData.numberOfSets < 2 ) {
 					invalidFormData.unshift("At least 2 sets required for delivery");
 				}
 				

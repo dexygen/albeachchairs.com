@@ -59,7 +59,7 @@
 					  <li>One 7' beach umbrella</li>
 					  <li>Umbrellas secured by one of our friendly attendants</li>
 					  <li>Setup by 9 am, Pick up after 5 pm</li>
-					  <li>Setup/Pickup $30 per day</li>
+					  <li>Setup/Pickup $30 per day (to comply with city ordinances that equipment cannot be left out overnight)</li>
 					  <li>No extra delivery fee for more sets</li>
 					</ul>
 				  </section>
