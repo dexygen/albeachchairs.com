@@ -46,7 +46,7 @@
 	</div>
 	<div class="abc-condos-info-sections">
 		<section class="abc-condos-list">
-		  <ul class="has-text-left">
+		  <ul class="has-text-centered">
           <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
 		    <li class="is-size-4 has-text-weight-semibold has-text-danger has-text-weight-semibold font-pangolin"><?php echo $city; ?></li>
 			  <ul class="pb-3">

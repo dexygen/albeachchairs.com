@@ -163,13 +163,23 @@ setTimeout(() => {
 		
 		function coerceFormData(formDataObj) {
 			const coercedData = JSON.parse(JSON.stringify(formDataObj));
-			
 			coercedData.reservationType === 'DELIVERY' && (coercedData.deliveryCity = coercedData.deliveryCity || "");
-			coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates;
-			coercedData.reservationLength = coercedData.reservationDates.split(",").length;
+			
+			coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates.split(",");
+			if (coercedData.reservationDates) {
+				coerceReservationDates();
+			}
 			
 			Object.keys(coercedData).forEach(key => coercedData[key] = coercedData[key].toString().trim());
 			return coercedData;
+			
+			function coerceReservationDates() {
+				const reservationDates = coercedData.reservationDates;
+				let reservationLength = coercedData.reservationLength = reservationDates.length;
+                coercedData.reservationBegins = reservationDates[0];
+                coercedData.reservationEnds = reservationDates[reservationLength - 1];
+                delete coercedData.reservationDates;
+			}
 		}
 		
 		function evaluateReservationData(reservationData) {

@@ -7,7 +7,7 @@
 	Alabama Beach Chairs has the equipment you need!
   </div>
   <div class="columns is-centered is-mobile">
-	<div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin my-2 px-5 abc-line-height-1_2">
+	<div class="has-background-primary-dark has-text-warning is-size-3 font-pangolin pt-1 my-2 px-5 abc-line-height-1_2">
 	  RESERVE YOUR PLACE ON THE BEACH NOW!
 	</div>
   </div>
