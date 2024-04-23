@@ -1,10 +1,12 @@
-// the following code above initCalendar() and setTimeout() for compatibility on Android, and iPad/iPhone
+// the following code, above initCalendar() and setTimeout(), is for compatibility on Android, and iPad/iPhone
 let calendar;
 let calendarTodayButton;
 
 document.addEventListener('DOMContentLoaded', () => {
 	initCalendar();
 });
+// end code for compatability
+
 
 function initCalendar() {	
 	const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
@@ -164,6 +166,8 @@ setTimeout(() => {
 		function coerceFormData(formDataObj) {
 			const coercedData = JSON.parse(JSON.stringify(formDataObj));
 			coercedData.reservationType === 'DELIVERY' && (coercedData.deliveryCity = coercedData.deliveryCity || "");
+			// the above and below must be an empty string
+			coercedData.deliveryFeeAgreement = coercedData.deliveryFeeAgreement || "";
 			
 			coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates.split(",");
 			if (coercedData.reservationDates) {
@@ -229,6 +233,7 @@ setTimeout(() => {
 				}, new Map());
 				
 				fieldLabels.set("reservationDates", "Reservation Dates");
+				fieldLabels.set("deliveryFeeAgreement", "Delivery Fee Agreement (AGREE or OPT-OUT)");
 				return fieldLabels;
 			}
 		}

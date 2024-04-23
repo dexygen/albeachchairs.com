@@ -171,12 +171,37 @@
           </label>
 		  <div class="is-size-5 abc-line-height-1_1 is-underlined has-text-link abc-reservations-pricing-link">Tap or click for pricing</div>
 		  <?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
-			<div class="is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>
-			
+			<div class="is-size-5 is-italic has-text-danger-dark">Minimum 2 sets for Delivery</div>	
 		  <?php endif; ?>
           <div class="control mt-1">
             <input class="input" type="number" name="numberOfSets" placeholder="Sets you need">
           </div>
+			<?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
+			<div class="field mt-3">
+			  <label class="label is-size-4 mb-1 abc-line-height-1_1">
+				<span class="has-text-primary-dark">Delivery Fee Agreement</span>
+				<div class="is-size-5 has-text-danger-dark mt-1">
+				Per city ordinances, all equipment must be removed from the beach by sunset.  For just $30 per day, we will setup (by 9 AM) and remove  
+				(after 5 pm) all equipment every day for your convenience.  If you opt out, you bear all responsibility for complying with city ordinances.
+				</div>
+			  </label>
+			  <div class="control">
+				<label class="radio is-size-5">
+				  <input 
+					type="radio" 
+					name="deliveryFeeAgreement"
+					value="AGREE">
+				  I agree to the fee
+				</label>
+				<label class="radio is-size-5">
+				  <input 
+					type="radio" 
+					name="deliveryFeeAgreement"
+					value="OPT OUT">
+				  I opt out
+				</label>
+			  </div>
+			<?php endif; ?>
         </div>
         <div class="field">
           <label class="label is-size-4 mb-0">
