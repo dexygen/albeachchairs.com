@@ -46,12 +46,13 @@
 	</div>
 	<div class="abc-condos-info-sections">
 		<section class="abc-condos-list">
+		  <div class="mb-2">Click or tap condo name for image</div>
 		  <ul class="has-text-centered">
           <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
 		    <li class="is-size-4 has-text-weight-semibold has-text-danger has-text-weight-semibold font-pangolin"><?php echo $city; ?></li>
 			  <ul class="pb-3">
 				  <?php foreach($propertyDetail as $detail) { ?>
-					<li class="is-size-5 abc-line-height-1_2"><?php echo $detail["name"]; ?></li>
+					<li class="is-size-5 abc-condo-img-link is-underlined" data-condo-img-src="<?php echo $detail["imgSrcPath"]; ?>"><?php echo $detail["name"]; ?></li>
 				  <?php } ?>
 			  </ul>
 		  <?php } ?>
@@ -65,9 +66,12 @@
 
 <?php
     $reservationType = ABC_RESERVATION_TYPE_CONDOS; 
-	require_once("./includes/reservations/reservation.form.php"); 
+	require_once("./includes/reservations/reservation.form.php");
+    require_once("./includes/content/condos.image.modal.php");	
 ?>
 
 <script src="./assets/scripts/shared.content.js"></script>
 <script>setupInfoTabs("condos")</script>
 <script src="./assets/scripts/reservation.form.js"></script>
+
+<script src="./assets/scripts/condo.images.modal.content.js"></script>

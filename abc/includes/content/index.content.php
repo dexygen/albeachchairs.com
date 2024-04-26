@@ -36,17 +36,19 @@
 		<div class="mx-2">I'M STAYING AT A CONDO</div>
 	  </a>
 	</div>
-	<div class="is-size-4 font-pangolin abc-line-height-1_2">** Click or tap below for</div>
+	<div class="is-size-4 font-pangolin abc-line-height-1_2 mt-2">** Click or tap below for</div>
 	<div class="is-size-3 
+	            is-underlined
 				has-text-primary-dark 
 				has-text-weight-semibold 
 				is-underlined 
 				abc-line-height-1_2
+				is-underlined
 				abc-condos-link">Condos We Serve
 	</div>
 	<?php	  
 	  if ($isPhone) :?>
-	<div class="is-size-4 font-pangolin pt-1">Click or tap below to speak with us</div>
+	<div class="is-size-4 font-pangolin pt-1 mt-2">Click or tap below to speak with us</div>
 	<div>
 	  <a href="tel:2512334000" class="is-size-2 abc-text-orange has-text-weight-semibold is-underlined abc-line-height-1_2">
 	  251-233-4000
@@ -57,7 +59,7 @@
 	<div class="is-size-2 abc-text-orange has-text-weight-semibold abc-line-height-1_2">251-233-4000</div>
 	<?php endif; ?>
   </div>
-  <div class="is-size-2 mt-4">* * *</div>
+  <div class="is-size-2 mt-3">* * *</div>
   <section>
 	<header class="has-text-danger-dark is-size-2 has-text-weight-semibold font-kalam abc-line-height-1_1">
 	  ABOUT US
@@ -89,7 +91,7 @@
 
 <!-- CONDOS LIST MODAL -->
 <div class="modal abc-condos-list-modal">
-	<div class="modal-background has-background-info"></div>
+	<div class="modal-background has-background-primary-dark"></div>
 	<div class="modal-card">
 	  <header class="modal-card-head">
 		<button class="abc-condos-list-close modal-close is-large " aria-label="close"></button>
@@ -99,27 +101,31 @@
 				py-3
 				has-text-weight-semibold 
 				font-kalam">
-			<div class="mb-1">CONDOS WE SERVE</div>
+			<div class="mb-1 has-text-weight-bold has-text-primary">CONDOS WE SERVE</div>
 		  </div>
 	  </header>
 	  <section class="modal-card-body">
+	      <div class="mb-2">Click or tap condo name for image</div>
 		  <ul class="has-text-left">
           <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
-		    <li class="is-size-4 has-text-weight-semibold"><?php echo $city; ?></li>
+		    <li class="is-size-4 has-text-weight-bold has-text-primary-dark"><?php echo $city; ?></li>
 			  <ul class="pb-3">
 				  <?php foreach($propertyDetail as $detail) { ?>
-					<li class="is-size-5"><?php echo $detail["name"]; ?></li>
+					<li class="is-size-5 abc-condo-img-link is-underlined" data-condo-img-src="<?php echo $detail["imgSrcPath"]; ?>"><?php echo $detail["name"]; ?></li>
 				  <?php } ?>
 			  </ul>
 		  <?php } ?>
 		  </ul>
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-		<button class="button abc-condos-list-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		<button class="button abc-condos-list-close column is-narrow-mobile is-2 is-offset-5 is-link is-large has-background-primary">
 		  CLOSE
 		</button>
 	  </footer>
 	</div>
 </div>
 
+<?php require_once("./includes/content/condos.image.modal.php"); ?>
+
 <script src="./assets/scripts/index.content.js"></script>
+<script src="./assets/scripts/condo.images.modal.content.js"></script>

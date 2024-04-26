@@ -42,6 +42,10 @@ body#abc-viewport {
   font-size: 1.875rem;
 }
 
+.abc-condos-link:hover {
+	cursor: pointer;
+}
+
 .abc-delivery-list-items {
   list-style: disc outside;
 }
