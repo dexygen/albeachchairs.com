@@ -71,6 +71,20 @@
 			Alabama Beach Chairs provides folding beach chairs, beach umbrellas, kayaks, paddleboards, fun beach games, and a full rental inventory,
 			at properties we serve, or we deliver chairs and umbrellas to your location.
 		  </div>
+          <div id="abc-carousel" class="mt-2 mb-5 is-flex is-justify-content-center">
+            <!-- 
+              Appending small query string to each image url to force refresh 
+              especially after uploading and on mobile, if these images are altered,
+              e.g. resized, the query string "h=180" should be changed, e.g. perhaps
+              appending the date: "h=180-apr01-2023", or some such, or do programmatically
+            -->
+            <!--<div class="is-block"><img src="./assets/images/slideshow/flag-at-beach.jpg?h=180"></img></div>-->
+            <div class="is-block"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/sunrise.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/gull-over-chairs.jpg?h=180"></img></div>
+            <div class="is-hidden"><img src="./assets/images/slideshow/beachside.jpg?h=180"></img></div>
+            <!--<div class="is-hidden"><img src="./assets/images/slideshow/surf-sunrise.jpg?h=180"></img></div>-->
+          </div>
 		  <div class="mb-4">
 			Alabama Beach Chairs' proprietor has over three decades experience 
 			in the on-site, beach rental industry, which ensures the safest, most professionally operated beach service for all guests, 
