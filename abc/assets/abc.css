@@ -29,7 +29,8 @@ body#abc-viewport {
 }
 
 .abc-need-delivery-button {
-  padding: 2.875rem !important;
+  padding: 3.75rem 2.75rem !important;
+  border-radius: 32px;
   font-size: 1.875rem;
 }
 
@@ -38,7 +39,8 @@ body#abc-viewport {
 }
 
 .abc-staying-condo-button {
-  padding: 0 !important;
+  padding: 2.75rem 0 !important;
+  border-radius: 32px;
   font-size: 1.875rem;
 }
 

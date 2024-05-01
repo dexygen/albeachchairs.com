@@ -18,35 +18,35 @@
 	<div class="is-size-4 font-kalam has-text-primary-dark has-text-weight-semibold">Click or tap a choice below</div>
 	<div>
 	  <a class="button 
-		is-rounded 
 		abc-need-delivery-button
 		has-background-info 
 		has-text-white
 		is-underlined">
-		<div class="mx-2 abc-line-height-1_2">I NEED DELIVERY<br />To my rental home</div>
+		<div class="mx-2 abc-line-height-1_2">I NEED DELIVERY<br />To my rental home<br />(NOT listed below)</div>
 	  </a>
 	</div>
 	<div class="mt-2 mb-1">
 	  <a class="button 
-		is-rounded
 		abc-staying-condo-button
 		has-background-info 
 		has-text-white
 		is-underlined">
-		<div class="mx-2">I'M STAYING AT A CONDO</div>
+		<div class="mx-2 abc-line-height-1_2">I'M STAYING AT A CONDO<br />(from list below)</div>
 	  </a>
 	</div>
-	<div class="is-size-4 font-pangolin abc-line-height-1_2 mt-2">** Click or tap below for</div>
-	<div class="is-size-3 
-	            is-underlined
-				has-text-primary-dark 
-				has-text-weight-semibold 
-				is-underlined 
-				abc-line-height-1_2
-				is-underlined
-				abc-condos-link">Condos We Serve
+	<div class="abc-line-height-1_2 font-kalam has-text-weight-semibold mt-2">
+		<div class="is-size-3 has-text-primary-dark">Condos We Serve</div>
+		<div class="is-size-4 has-text-danger-dark">(Delivery NOT Required)</div>
 	</div>
-	<?php	  
+	<ul class="is-size-5 abc-line-height-1_2 has-text-link-dark">
+	<?php
+	  sort($abcPropertyNamesAll);
+	  foreach($abcPropertyNamesAll as $propertyName) {
+		 echo "<li>$propertyName</li>"; 
+	  }
+	?>
+	</ul>
+	<?php	
 	  if ($isPhone) :?>
 	<div class="is-size-4 font-pangolin pt-1 mt-2">Click or tap below to speak with us</div>
 	<div>
