@@ -165,9 +165,12 @@ setTimeout(() => {
 		
 		function coerceFormData(formDataObj) {
 			const coercedData = JSON.parse(JSON.stringify(formDataObj));
-			coercedData.reservationType === 'DELIVERY' && (coercedData.deliveryCity = coercedData.deliveryCity || "");
-			// the above and below must be an empty string
-			coercedData.deliveryFeeAgreement = coercedData.deliveryFeeAgreement || "";
+			
+			// sets delivery type dependent radio buttons to empty strings if not indicated
+			if (coercedData.reservationType === 'DELIVERY') {
+				coercedData.deliveryCity = coercedData.deliveryCity || "";
+				coercedData.deliveryFeeAgreement = coercedData.deliveryFeeAgreement || ""
+			}	
 			
 			coercedData.reservationDates = coercedData.reservationDates === "[]" ? "" : coercedData.reservationDates.split(",");
 			if (coercedData.reservationDates) {
@@ -233,7 +236,10 @@ setTimeout(() => {
 				}, new Map());
 				
 				fieldLabels.set("reservationDates", "Reservation Dates");
-				fieldLabels.set("deliveryFeeAgreement", "Delivery Fee Agreement (AGREE or OPT-OUT)");
+				if (reservationData.reservationType === 'DELIVERY') {
+					fieldLabels.set("deliveryFeeAgreement", "Delivery Fee Agreement (AGREE or OPT-OUT)");
+				}
+				
 				return fieldLabels;
 			}
 		}
