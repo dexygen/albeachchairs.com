@@ -12,7 +12,10 @@ function initCalendar() {
 	const hiddenReservationDatesField = document.querySelector('input[name="reservationDates"]');
 	const tomorrow = (() => {
 		const today = new Date();
-		return new Date(today.setDate(today.getDate() + 1));
+		const localTomorrow = new Date(today.setDate(today.getDate() + 1));
+		const tomorrowTimestamp = localTomorrow.getTime() - localTomorrow.getTimezoneOffset() * 60000;
+		// above is necessary as toISOString uses UTC time
+		return new Date(tomorrowTimestamp);
 	})();
 	
 	calendar = new VanillaCalendar('#abc-reservation-calendar', {
