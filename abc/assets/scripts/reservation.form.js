@@ -53,7 +53,7 @@ setTimeout(() => {
 	const errorMessageContainer = document.querySelector(".abc-delivery-submit-validation-errors");
 	const errorMessageListElement = errorMessageContainer.querySelector("ul");
 	const deliveryServerErrorNotification = document.querySelector(".abc-delivery-submit-server-error");
-	const deliveryConfirmationNotification = document.querySelector(".abc-delivery-submit-confirmation");
+	const reservationConfirmationModal = document.querySelector(".abc-reservation-confirmation-modal");
 	
 	setupModal();
 	setupFormReset();
@@ -75,7 +75,15 @@ setTimeout(() => {
 		const reservationModalCloseButtons = document.querySelectorAll(".abc-delivery-reservation-modal-close");
 		[...reservationModalCloseButtons].forEach(closeButton => {
 			closeButton.addEventListener("click", () => {
-				closeEntirely();
+				closeAll();
+			});
+		});
+		
+		const reservationConfirmationCloseButtons = document.querySelectorAll(".abc-reservation-confirmation-close");
+		[...reservationConfirmationCloseButtons].forEach(closeButton => {
+			closeButton.addEventListener("click", () => {
+				reservationConfirmationModal.classList.remove("is-active");
+				closeAll();
 			});
 		});
 
@@ -92,12 +100,13 @@ setTimeout(() => {
 			[...pricingModalCloseButtons].forEach(closeButton => {
 				closeButton.addEventListener("click", () => {
 					abcDeliveryPricingModal.classList.remove("is-active");
+					closeAll();
 				});
 			});	
 		}			
 	}
 	
-	function closeEntirely() {
+	function closeAll() {
 		resetCalendar();
 		deliveryReservationForm.reset();
 		deliveryReservationModal.classList.remove("is-active");
@@ -114,7 +123,6 @@ setTimeout(() => {
 		// perform when clicking CLOSE and RESET and before form validation after clicking SUBMIT
 		errorMessageListElement.innerHTML = ""; // remove errors
 		errorMessageContainer.classList.add("is-hidden");
-		deliveryConfirmationNotification.classList.add("is-hidden");
 	}
 	
 	function setupFormReset() {
@@ -150,9 +158,7 @@ setTimeout(() => {
 				axios.post("./includes/reservations/reservation.form.completion.php", reservationPayload)
 					.then(response => {
 						if (response.status === 200 && response.data.mail_success) {
-							deliveryConfirmationNotification.classList.remove("is-hidden");
-							deliveryConfirmationNotification.scrollIntoView({behavior: "smooth"});
-							setTimeout(() => { closeEntirely() }, 8000);
+							reservationConfirmationModal.classList.add("is-active");
 						}
 						else {
 							deliveryServerErrorNotification.classList.remove("is-hidden");

@@ -30,19 +30,6 @@
           or call us at 251-233-4000
         </div>
       </div>
-	  <div class="notification is-primary abc-delivery-submit-confirmation is-size-5 p-1 mb-1 is-hidden">
-	    <button class="delete abc-delivery-reservation-modal-close"></button>
-		<div class="has-text-left has-text-weight-bold my-1 px-3">
-			Thanks for your delivery reservation!
-			Please watch for an email from
-			albeachchairs@gmail.com
-		</div>
-		<div class="has-background-primary-dark 
-					has-text-warning 
-					px-3 
-					mb-1 
-					font-pangolin">You will be sent back to previous page in a few seconds</div>
-	  </div>
 	  
 	  <!-- 
 		Form validation is dependent on the structure of the form's HTML, i.e. the fields and label/spans
@@ -251,6 +238,30 @@
 	  </section>
 	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
 		<button class="button abc-pricing-modal-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
+		  CLOSE
+		</button>
+	  </footer>
+	</div>
+</div>
+
+<!-- RESERVATION CONFIRMATION MODAL -->
+<div class="modal abc-reservation-confirmation-modal">
+	<div class="modal-background has-background-info"></div>
+	<button class="modal-close is-large abc-reservation-confirmation-close"></button>
+	<div class="modal-card">
+	  <section class="modal-card-body is-size-4">
+		Thanks for your reservation!  A link will be emailed to you shortly to complete your order.
+        <div class="my-3 has-text-danger-dark has-text-weight-semibold">		
+		Please submit your reservation only once.  
+		</div>
+		If you need to change any details, please, so we can send you an updated link, 
+		don't delay emailing us at 
+		<div>
+		albeachchairs@gmail.com
+		</div>
+	  </section>
+	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
+		<button class="button abc-reservation-confirmation-close column is-narrow-mobile is-2 is-offset-5 is-link is-large">
 		  CLOSE
 		</button>
 	  </footer>
