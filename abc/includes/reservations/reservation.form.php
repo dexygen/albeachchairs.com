@@ -254,8 +254,7 @@
         <div class="my-3 has-text-danger-dark has-text-weight-semibold">		
 		Please submit your reservation only once.  
 		</div>
-		If you need to change any details, please, so we can send you an updated link, 
-		don't delay emailing us at 
+		If you need to change any details, please don't delay emailing us at 
 		<div>
 		albeachchairs@gmail.com
 		</div>

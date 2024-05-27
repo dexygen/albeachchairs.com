@@ -172,6 +172,10 @@ setTimeout(() => {
 			}
 		});
 		
+		const numberOfSetsField = document.querySelector('input[name="numberOfSets"]');
+		const extraChairsField = document.querySelector('input[name="extraChairs"]');
+		const extraUmbrellasField = document.querySelector('input[name="extraUmbrellas"]');
+		
 		function coerceFormData(formDataObj) {
 			const coercedData = JSON.parse(JSON.stringify(formDataObj));
 			
@@ -220,8 +224,24 @@ setTimeout(() => {
 					invalidFormData.unshift("At least 2 sets required for delivery");
 				}
 				
-				if (reservationData.reservationType === "CONDO" && !reservationData.condominium) {
-					invalidFormData.unshift("Your condo (from the list) is required");
+				if (reservationData.reservationType === "CONDO") { 
+  				    if (!reservationData.condominium) { 
+					    invalidFormData.unshift("Your condo (from the list) is required");
+					}
+					if (reservationData.numberOfSets && reservationData.numberOfSets < 0) {
+						invalidFormData.push("Number of sets cannot be a negative value");
+						numberOfSetsField.value = "";
+					}
+				}
+				
+				if (reservationData.extraChairs && reservationData.extraChairs < 0) {
+					invalidFormData.push("Extra chairs cannot be a negative value");
+					extraChairsField.value = "";
+				}
+				
+				if (reservationData.extraUmbrellas && reservationData.extraUmbrellas < 0) {
+					invalidFormData.push("Extra umbrellas cannot be a negative value");
+					extraUmbrellasField.value = "";
 				}
 			}
 			
