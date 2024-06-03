@@ -17,7 +17,7 @@
     <div class="is-size-4 font-pangolin pt-2 abc-line-height-1_2">For pricing, and to order</div>
 	<div class="is-size-4 font-kalam has-text-primary-dark has-text-weight-semibold">Click or tap a choice below</div>
 	<div>
-	  <a class="button 
+	  <a href="./delivery.php" class="button 
 		abc-need-delivery-button
 		has-background-info 
 		has-text-white
@@ -26,7 +26,8 @@
 	  </a>
 	</div>
 	<div class="mt-2 mb-1">
-	  <a class="button 
+	  <a 
+	    href="./condos.php" class="button 
 		abc-staying-condo-button
 		has-background-info 
 		has-text-white

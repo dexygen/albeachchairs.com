@@ -11,7 +11,7 @@
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alabama Beach Chairs, providing beach equipment to Orange Beach and Gulf Shores</title>
+    <title>Alabama Beach Chairs, provider of beach equipment to Orange Beach and Gulf Shores, offers convenient online reservations</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Pangolin&display=swap');
     </style>
