@@ -140,7 +140,7 @@ setTimeout(() => {
 		errorMessageListElement.innerHTML = ""; // remove errors
 		errorMessageContainer.classList.add("is-hidden");
 		deliveryServerErrorNotification.classList.add("is-hidden");
-		deliveryFeeOptOutNotification.classList.add("is-hidden");
+		deliveryFeeOptOutNotification?.classList.add("is-hidden");
 	}
 	
 	function setupFormReset() {
