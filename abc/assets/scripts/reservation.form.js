@@ -48,12 +48,28 @@ function initCalendar() {
 
 setTimeout(() => { 
 	// setTimeout ensures availability of the following DOM references, corrects issue on iPhone/iPad
+	// TODO: rename fields getting rid of "delivery" suffix, they also apply to condos
 	const deliveryReservationForm = document.querySelector(".abc-delivery-reservation-form");
 	const deliveryReservationModal = document.querySelector(".abc-delivery-reservation-modal");
 	const errorMessageContainer = document.querySelector(".abc-delivery-submit-validation-errors");
 	const errorMessageListElement = errorMessageContainer.querySelector("ul");
 	const deliveryServerErrorNotification = document.querySelector(".abc-delivery-submit-server-error");
 	const reservationConfirmationModal = document.querySelector(".abc-reservation-confirmation-modal");
+	
+	// The following ARE specific to delivery
+	const deliveryFeeAgreeButton = document.querySelector('input[value="AGREE"]');
+	const deliveryFeeOptOutButton = document.querySelector('input[value="OPT OUT"]');
+	const deliveryFeeOptOutNotification = document.querySelector(".abc-delivery-fee-opt-out-notification");
+	
+	if (deliveryFeeAgreeButton && deliveryFeeOptOutButton) {
+		deliveryFeeAgreeButton.addEventListener("click", () => {
+			deliveryFeeOptOutNotification.classList.add("is-hidden");
+		});
+		deliveryFeeOptOutButton.addEventListener("click", () => {
+			deliveryFeeOptOutNotification.classList.remove("is-hidden");
+			deliveryFeeOptOutNotification.scrollIntoView({behavior: "smooth"});			
+		});
+	}
 	
 	setupModal();
 	setupFormReset();
@@ -123,6 +139,8 @@ setTimeout(() => {
 		// perform when clicking CLOSE and RESET and before form validation after clicking SUBMIT
 		errorMessageListElement.innerHTML = ""; // remove errors
 		errorMessageContainer.classList.add("is-hidden");
+		deliveryServerErrorNotification.classList.add("is-hidden");
+		deliveryFeeOptOutNotification.classList.add("is-hidden");
 	}
 	
 	function setupFormReset() {

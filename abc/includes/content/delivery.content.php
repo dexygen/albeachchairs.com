@@ -61,6 +61,7 @@
 					  <li>Setup by 9 am, Pick up after 5 pm</li>
 					  <li>Setup/Pickup $30 per day (to comply with city ordinances that equipment cannot be left out overnight)</li>
 					  <li>No extra delivery fee for more sets</li>
+					  <li>We will be responsible for and replace equipment as necessary during your stay</li>
 					</ul>
 				  </section>
 				</div>

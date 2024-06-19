@@ -166,11 +166,20 @@
 			<?php if ($reservationType == ABC_RESERVATION_TYPE_DELIVERY): ?>
 			<div class="field mt-3">
 			  <label class="label is-size-4 mb-1 abc-line-height-1_1">
-				<span class="has-text-primary-dark">Delivery Fee Agreement</span>
+				<span class="has-text-primary-dark">Setup & Pick up Fee Agreement</span>
 				<div class="is-size-5 has-text-danger-dark mt-1">
 				Per city ordinances, all equipment must be removed from the beach by sunset.  For just $30 per day, we will setup (by 9 AM) and remove  
-				(after 5 pm) all equipment every day for your convenience.  If you opt out, you bear all responsibility for complying with city ordinances.
+				(after 5 pm) all equipment every day for your convenience.
+				<br /><br />  
+				If you opt out, you bear all responsibility for complying with city ordinances regarding bringing all rental equipment off the beach before by 8 pm,
+				each night of your reservation, including the last night, and you agree to be responsible for the security of the equipment.
 				</div>
+				  <div class="notification is-danger is-light abc-delivery-fee-opt-out-notification mt-2 mb-1 is-size-5 is-hidden">
+					<div class="has-text-left has-text-weight-semibold px-2">
+					If you opt out, you also agree to a $175 replacement fee per chair and/or umbrella for any missing equipment.
+					After your last day, please leave equipment where it was dropped off, NOT on the beach, thanks.
+					</div>
+				  </div>
 			  </label>
 			  <div class="control">
 				<label class="radio is-size-5">
