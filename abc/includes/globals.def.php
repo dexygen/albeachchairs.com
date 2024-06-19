@@ -15,7 +15,7 @@
 			),
 			array(
 				"name" => "Shoalwater", 
-				"imgSrcPath" => "./assets/images/properties/windward.jpg"
+				"imgSrcPath" => "./assets/images/properties/shoalwater.jpeg"
 			),
 			array(
 				"name" => "Seascape Condiminiums", 
