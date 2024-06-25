@@ -39,9 +39,9 @@
 		<div class="is-size-3 has-text-primary-dark">Condos We Serve</div>
 		<div class="is-size-4 has-text-danger-dark">(Delivery NOT Required)</div>
 	</div>
-	<ul class="is-size-5 abc-line-height-1_2 has-text-link-dark">
+	<ul class="is-size-5 abc-line-height-1_2 has-text-link-dark mt-1">
 	<?php
-	  sort($abcPropertyNamesAll);
+	  # sort($abcPropertyNamesAll);
 	  foreach($abcPropertyNamesAll as $propertyName) {
 		 echo "<li>$propertyName</li>"; 
 	  }
@@ -51,13 +51,13 @@
 	  if ($isPhone) :?>
 	<div class="is-size-4 font-pangolin pt-1 mt-2">Click or tap below to speak with us</div>
 	<div>
-	  <a href="tel:2512334000" class="is-size-2 abc-text-orange has-text-weight-semibold is-underlined abc-line-height-1_2">
+	  <a href="tel:2512334000" class="is-size-2 has-text-primary-dark has-text-weight-semibold is-underlined abc-line-height-1_2">
 	  251-233-4000
 	  </a>
 	</div>
 	<?php else :?>
 	<div class="is-size-4 font-pangolin pt-1">Call to speak with us</div>
-	<div class="is-size-2 abc-text-orange has-text-weight-semibold abc-line-height-1_2">251-233-4000</div>
+	<div class="is-size-2 has-text-primary-dark has-text-weight-semibold abc-line-height-1_2">251-233-4000</div>
 	<?php endif; ?>
   </div>
   <div class="is-size-2 mt-3">* * *</div>
@@ -74,6 +74,7 @@
 		  </div>
           <div id="abc-carousel" class="mt-2 mb-5 is-flex is-justify-content-center">
             <div class="is-block"><img src="./assets/images/slideshow/parallel_shore.jpeg"></img></div>
+			<div class="is-hidden"><img src="./assets/images/slideshow/delivery-kit.jpg?h=180"></img></div>
             <div class="is-hidden"><img src="./assets/images/slideshow/condos_background.jpeg"></img></div>
           </div>
 		  <div class="mb-4">
@@ -93,42 +94,6 @@
 	</article>
   </section>
 </main>
-
-<!-- CONDOS LIST MODAL -->
-<div class="modal abc-condos-list-modal">
-	<div class="modal-background has-background-primary-dark"></div>
-	<div class="modal-card">
-	  <header class="modal-card-head">
-		<button class="abc-condos-list-close modal-close is-large " aria-label="close"></button>
-		  <div class="modal-card-title 
-				is-size-3 
-				has-text-info-dark
-				py-3
-				has-text-weight-semibold 
-				font-kalam">
-			<div class="mb-1 has-text-weight-bold has-text-primary">CONDOS WE SERVE</div>
-		  </div>
-	  </header>
-	  <section class="modal-card-body">
-	      <div class="mb-2">Click or tap condo name for image</div>
-		  <ul class="has-text-left">
-          <?php foreach($abcPropertyDetailsByCity as $city => $propertyDetail) { ?>
-		    <li class="is-size-4 has-text-weight-bold has-text-primary-dark"><?php echo $city; ?></li>
-			  <ul class="pb-3">
-				  <?php foreach($propertyDetail as $detail) { ?>
-					<li class="is-size-5 abc-condo-img-link is-underlined" data-condo-img-src="<?php echo $detail["imgSrcPath"]; ?>"><?php echo $detail["name"]; ?></li>
-				  <?php } ?>
-			  </ul>
-		  <?php } ?>
-		  </ul>
-	  </section>
-	  <footer class="modal-card-foot abc-property-img-modal-footer columns is-flex-mobile">
-		<button class="button abc-condos-list-close column is-narrow-mobile is-2 is-offset-5 is-link is-large has-background-primary">
-		  CLOSE
-		</button>
-	  </footer>
-	</div>
-</div>
 
 <?php require_once("./includes/content/condos.image.modal.php"); ?>
 

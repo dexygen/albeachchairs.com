@@ -42,7 +42,11 @@
 			array(
 				"name" => "Gulf House Condiminiums", 
 				"imgSrcPath" => "./assets/images/properties/gulf-house.png"
-			)		
+			),
+			array(
+				"name" => "Comfort Inn (Gulf Shores)", 
+				"imgSrcPath" => "./assets/images/properties/comfort-inn.jpg"
+			)
 		)
 	);
 
